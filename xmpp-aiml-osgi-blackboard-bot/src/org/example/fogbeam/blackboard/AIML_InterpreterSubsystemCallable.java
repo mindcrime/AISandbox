@@ -4,8 +4,6 @@ import java.util.concurrent.Callable;
 
 public class AIML_InterpreterSubsystemCallable implements Callable<String> 
 {
-
-	private volatile boolean keepRunning = true;
 	private String message;
 	
 	public AIML_InterpreterSubsystemCallable( String message )
@@ -16,17 +14,11 @@ public class AIML_InterpreterSubsystemCallable implements Callable<String>
 	@Override
 	public String call() 
 	{
-		System.out.println( "SubsystemTwo handling input: " + message );
+		System.out.println( "AIML_InterpreterSubsystem handling input: " + message );
 		
-		try 
-		{
-			Thread.sleep( 345 );
-		} 
-		catch (InterruptedException e)
-		{
-		}
+		// TODO: invoke AIML interpreter here
 		
-		String response = "Gnarly, dude!";
+		String response = "";
 		return response;
 	}
 }

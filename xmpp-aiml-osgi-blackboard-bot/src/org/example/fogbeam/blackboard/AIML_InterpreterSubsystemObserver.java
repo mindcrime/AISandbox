@@ -17,9 +17,11 @@ public class AIML_InterpreterSubsystemObserver implements Observer
 	@Override
 	public void update(Observable o, Object input) 
 	{
-		System.out.println( this.getClass().getName() + " : received input message: " + (String)input);
+		Conversation conversation = (Conversation)input;
 		
-		AIML_InterpreterSubsystemCallable task = new AIML_InterpreterSubsystemCallable( (String)input);
+		System.out.println( this.getClass().getName() + " : received input message: " + conversation.toString());
+		
+		AIML_InterpreterSubsystemCallable task = new AIML_InterpreterSubsystemCallable( conversation.toString() );
 		Future<String> taskFuture = executorService.submit(task);
 		
 		while( true )

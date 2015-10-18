@@ -4,8 +4,6 @@ import java.util.concurrent.Callable;
 
 public class AtCommandSubsystemCallable implements Callable<String>
 {
-
-	private volatile boolean keepRunning = true;
 	
 	private String message;
 	
@@ -17,17 +15,11 @@ public class AtCommandSubsystemCallable implements Callable<String>
 	@Override
 	public String call() 
 	{
-		System.out.println( "SubsystemOne handling input: " + message );
+		System.out.println( "AtCommandSubsystem handling input: " + message );
 		
-		try 
-		{
-			Thread.sleep( 750 );
-		} 
-		catch (InterruptedException e)
-		{
-		}
-		
-		String response = "Yeah, right!";
+		String response = "";
+
+		// TODO: invoke @command subsystem here
 		
 		return response;
 	}	

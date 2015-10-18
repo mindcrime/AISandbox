@@ -4,8 +4,6 @@ import java.util.concurrent.Callable;
 
 public class AutoSPARQLSubsystemCallable implements Callable<String>
 {
-
-	private volatile boolean keepRunning = true;
 	
 	private String message;
 	
@@ -17,17 +15,11 @@ public class AutoSPARQLSubsystemCallable implements Callable<String>
 	@Override
 	public String call() 
 	{
-		System.out.println( "SubsystemOne handling input: " + message );
-		
-		try 
-		{
-			Thread.sleep( 750 );
-		} 
-		catch (InterruptedException e)
-		{
-		}
-		
+		System.out.println( "AutoSPARQLSubsystem handling input: " + message );
+				
 		String response = "Yeah, right!";
+		
+		// TODO: invoke AutoSPARQL subsystem here
 		
 		return response;
 	}	

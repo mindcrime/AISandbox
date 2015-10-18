@@ -17,9 +17,11 @@ public class AtCommandSubsystemObserver implements Observer
 	@Override
 	public void update(Observable o, Object input) 
 	{
-		System.out.println( this.getClass().getName() + " : received input message: " + (String)input);
+		Conversation conversation = (Conversation)input;
 		
-		AtCommandSubsystemCallable task = new AtCommandSubsystemCallable( (String)input);
+		System.out.println( this.getClass().getName() + " : received input message: " + conversation.toString());
+				
+		AtCommandSubsystemCallable task = new AtCommandSubsystemCallable( conversation.toString() );
 		Future<String> taskFuture = executorService.submit(task);
 		
 		while( true )

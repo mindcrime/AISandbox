@@ -9,14 +9,14 @@ public class ExecutiveRunnable implements Runnable
 {
 	private volatile boolean keepRunning = true;
 	
-	private BlockingQueue<String> workQueue;
+	private Blackboard blackboard;
+	
 	private Set<Observer> subsystemObservers = new HashSet<Observer>();
 	
-	public ExecutiveRunnable( BlockingQueue<String> workQueue )
+	public ExecutiveRunnable( Blackboard blackboard )
 	{
-		this.workQueue = workQueue;
+		this.blackboard = blackboard;
 	}
-	
 	
 	@Override
 	public void run() 
@@ -25,7 +25,7 @@ public class ExecutiveRunnable implements Runnable
 		{
 			try 
 			{
-				String input = workQueue.take();
+				Conversation input = blackboard.take();
 				
 				System.out.println( "Dispatcher received message: " + input );
 				
