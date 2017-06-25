@@ -1,0 +1,20 @@
+An approach to abductive reasoning:
+
+1. Think "semantic networks".  Build up the network as we observe things in the
+real world.
+2. Form rules (would existing "rule induction" methods apply here?) / patterns as data is seen.
+3. Look for exceptions to the rule. Exceptions penalize the weight assigned to the rule.
+4. More complex paths through the network are treated as less likely?  (in real life, Occam's Razor seems to hold, usually)
+
+5. To query, use something like spreading activation through the network, starting from existing evidence
+6. If we connect a viable network, return that result.
+
+7. If we get a favorable response (reinforcement) strengthen the connections / weight for that particular network.
+
+Question: when does a network deserve a label of it's own (eg, when do we have a "concept") which can then
+be associated with *other* networks?  Maybe every result becomes such a network, but we "forget" the low-value
+ones? OTOH, something which is seen again and again becomes more heavily weighted against forgetting?
+
+Should the network even have a built in bias like the "availability heuristic" that humans seem to have?
+
+ 
