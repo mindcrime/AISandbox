@@ -53,7 +53,6 @@
 			<groupId>program-ab</groupId>
 			<artifactId>program-ab</artifactId>
 			<version>0.0.6.26</version>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>commons-codec</groupId>
@@ -129,7 +128,7 @@
 	<repositories>
 		<repository>
 			<id>fogbeam.org</id>
-			<url>http://dev.fogbeam.org:8082/repository/internal/</url>
+			<url>http://dev.fogbeam.org:8082/artifactory/fogbeam-main</url>
 		</repository>
 	</repositories>
 		

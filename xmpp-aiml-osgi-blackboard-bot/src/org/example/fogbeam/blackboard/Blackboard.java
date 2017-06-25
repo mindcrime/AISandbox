@@ -12,4 +12,9 @@ public class Blackboard
 		return blackboardQueue.take();
 	}
 	
+	public void offer( final Conversation conversation )
+	{
+		blackboardQueue.offer(conversation);
+	}
+	
 }

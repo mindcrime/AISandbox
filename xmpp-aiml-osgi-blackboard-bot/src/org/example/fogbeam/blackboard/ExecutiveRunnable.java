@@ -9,13 +9,29 @@ public class ExecutiveRunnable implements Runnable
 {
 	private volatile boolean keepRunning = true;
 	
-	private Blackboard blackboard;
+	private BlockingQueue<String> inputMessageQueue;
+	private Blackboard blackboard = new Blackboard();	
+	private Set<BlackboardAgent> blackboardAgents = new HashSet<BlackboardAgent>();
 	
-	private Set<Observer> subsystemObservers = new HashSet<Observer>();
 	
-	public ExecutiveRunnable( Blackboard blackboard )
+	public ExecutiveRunnable( final BlockingQueue<String> inputMessageQueue )
 	{
-		this.blackboard = blackboard;
+		this.inputMessageQueue = inputMessageQueue;
+	}
+	
+	public void offerMessage( final String message )
+	{
+		this.inputMessageQueue.offer(message);
+	}
+	
+	public String getResponse()
+	{
+		String response = "";
+
+		// TODO: how does the executive know when a response is ready? 
+		
+		
+		return response;
 	}
 	
 	@Override
@@ -25,15 +41,27 @@ public class ExecutiveRunnable implements Runnable
 		{
 			try 
 			{
-				Conversation input = blackboard.take();
+				String input = inputMessageQueue.take();
 				
-				System.out.println( "Dispatcher received message: " + input );
+				System.out.println( "Executive received message: " + input );
+				
+				// is there a currently valid conversation?  If so, add this input to that
+				// conversation, otherwise, start a new one
+				
+				// NOTE: do we *really* need the "Conversation" concept?  Could we just have
+				// the Blackboard keep track of the messages and let it effectively
+				// *be* the "Conversation"?  What does this buy us? 
+				
+				Conversation conversation = new Conversation();
+				conversation.addMessage( input );
+				
+				blackboard.offer( conversation );
 				
 				// we received an input message, deliver it to all of the registered
 				// subsystems
-				for( Observer subsystemObserver : subsystemObservers )
+				for( Observer blackboardAgent: blackboardAgents )
 				{
-					subsystemObserver.update(null, input );
+					blackboardAgent.update(null, blackboard );
 				}
 				
 			} 
@@ -47,9 +75,9 @@ public class ExecutiveRunnable implements Runnable
 	}
 
 	
-	public void registerSubsystem( Observer subsystemObserver )
+	public void registerSubsystem( BlackboardAgent blackboardAgent )
 	{
-		this.subsystemObservers.add( subsystemObserver );
+		this.blackboardAgents.add( blackboardAgent );
 	}
 	
 	public void stop()

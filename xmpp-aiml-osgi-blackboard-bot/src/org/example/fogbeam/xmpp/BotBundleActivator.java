@@ -5,7 +5,10 @@ import java.io.InputStream;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
+import org.example.fogbeam.blackboard.ExecutiveRunnable;
 import org.jivesoftware.smack.AbstractXMPPConnection;
 import org.jivesoftware.smack.ReconnectionManager;
 import org.jivesoftware.smack.chat.ChatManager;
@@ -57,6 +60,13 @@ public class BotBundleActivator implements BundleActivator
 		// make sure auto reconnect is turned on.
 		ReconnectionManager.getInstanceFor(connection).enableAutomaticReconnection();
 		
+		BlockingQueue<String> inputMessageQueue = new LinkedBlockingQueue<String>();
+		
+		ExecutiveRunnable blackboardExecutive = new ExecutiveRunnable( inputMessageQueue );
+		Thread blackboardThread = new Thread( blackboardExecutive );
+		
+		blackboardThread.start();
+		
 		try
 		{				
 			System.out.println( "Connecting...");
@@ -71,7 +81,7 @@ public class BotBundleActivator implements BundleActivator
 			connection.login();
 	
 			ChatManager chatManager = ChatManager.getInstanceFor(connection);
-			XmppChatListener chatListener = new XmppChatListener();
+			BlackboardXmppChatListener chatListener = new BlackboardXmppChatListener( inputMessageQueue );
 			chatManager.addChatListener(chatListener);	
 		
 			System.out.println( "bot running..." );
