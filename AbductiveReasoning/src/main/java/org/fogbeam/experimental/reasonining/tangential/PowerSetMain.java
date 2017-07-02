@@ -1,9 +1,12 @@
 package org.fogbeam.experimental.reasonining.tangential;
 
-import java.util.HashSet;
 import java.util.Set;
 
+import org.apache.commons.lang3.StringUtils;
+import org.eclipse.collections.api.set.UnsortedSetIterable;
+import org.eclipse.collections.impl.set.mutable.UnifiedSet;
 import org.fogbeam.experimental.reasoning.abductive.queries.QueryManifestationsStrategy;
+
 
 public class PowerSetMain {
 
@@ -24,46 +27,16 @@ public class PowerSetMain {
 		
 		Set<String> manifestations = query.listAll();
 		
-		Set<Set<String>> powerSet = this.powerSet(manifestations);
+		UnifiedSet<String> uSet = new UnifiedSet<String>();
+		uSet.addAll(manifestations);
 		
-		for( Set<String> setInPowerSet : powerSet )
+		Set<UnsortedSetIterable<String>> powerSet = uSet.powerSet(); 
+		
+		for( UnsortedSetIterable<String> setInPowerSet : powerSet )
 		{
-			setInPowerSet.forEach( (k) -> { System.out.println( k ); } );
-			System.out.println( "\n" );
+			System.out.print( "{ ");
+			setInPowerSet.forEach( (k) -> { System.out.print( StringUtils.substringAfter(k, "#") + " " ); } );
+			System.out.println( "}\n" );
 		}
-		
-		
 	}
-	
-	public Set<Set<String>> powerSet( final Set<String> baseSet )
-	{
-		Set<Set<String>> powerSet = new HashSet<Set<String>>();
-
-		int cardinalityBase = baseSet.size();
-		
-		for( int i = cardinalityBase; i > 0; i-- )
-		{
-			// find subsets of cardinality i
-			// and add those
-			Set<Set<String>> subsetsOfSpecificCardinality = findSubsets(baseSet, i );
-			powerSet.addAll(subsetsOfSpecificCardinality);
-		}
-		
-		Set<String> theta = new HashSet<String>();
-		theta.add("θ");
-		powerSet.add(theta);
-		
-		return powerSet;
-	}
-
-	private Set<Set<String>> findSubsets(Set<String> baseSet, int i) 
-	{
-		Set<Set<String>> subsets = new HashSet<Set<String>>();
-		
-	
-		
-		
-		return subsets;
-	}
-	
 }
