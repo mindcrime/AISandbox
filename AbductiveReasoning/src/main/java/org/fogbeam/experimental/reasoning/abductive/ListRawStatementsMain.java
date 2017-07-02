@@ -1,6 +1,6 @@
-package org.fogbeam.experimental.reasonining.abductive;
+package org.fogbeam.experimental.reasoning.abductive;
 
-import static org.fogbeam.experimental.reasonining.abductive.AbductionConstants1.TDB_DIR;
+import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.TDB_DIR;
 
 import java.io.File;
 

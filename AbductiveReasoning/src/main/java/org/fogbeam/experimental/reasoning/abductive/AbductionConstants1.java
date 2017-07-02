@@ -1,4 +1,4 @@
-package org.fogbeam.experimental.reasonining.abductive;
+package org.fogbeam.experimental.reasoning.abductive;
 
 public interface AbductionConstants1 
 {
