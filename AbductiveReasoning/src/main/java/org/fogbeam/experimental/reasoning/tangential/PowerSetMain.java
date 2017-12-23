@@ -1,4 +1,4 @@
-package org.fogbeam.experimental.reasonining.tangential;
+package org.fogbeam.experimental.reasoning.tangential;
 
 import java.util.HashSet;
 import java.util.Set;
