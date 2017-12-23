@@ -1,6 +1,7 @@
 package org.fogbeam.experimental.reasoning.tangential;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -11,64 +12,43 @@ public class PowerSetExp
 	public static void main(String[] args) 
 	{
 
-		String[] aSet =  { "a", "b", "c", "d", "e", "f" };
+		Set<String> aSet =  new HashSet<String>();
+		String[] data = { "a", "b", "c", "d", "e", "f" };
+		aSet.addAll( Arrays.asList( data ) );
 		
-		Set<Set<String>> subsets = new HashSet<Set<String>>();
+		Set<Set<String>> powerSet = powerSet( aSet );
 		
-		int desiredCardinality = 3;
-		int added = 0;
-		List<Integer> skipList = new ArrayList<Integer>();
-		
-		System.out.println( "( aSet.length - desiredCardinality ) = " + ( aSet.length - desiredCardinality ));
-		
-		for( int i = 0; i <= ( aSet.length - desiredCardinality ); i++ )
+		for( Set<String> subset : powerSet )
 		{
-			System.out.println( "i = " + i );
-			
-			Set<String> subset = new HashSet<String>();
-		
-			skipList.clear();
-			
-			for( int k = 0; k < ( aSet.length - desiredCardinality ); k++ )
-			{
-			
-			
-			for( int j = i; j< aSet.length; j++ )
-			{
-				
-				System.out.println( "j = " + j );
-				
-				if( skipList.contains(j) ) 
-				{
-					continue;
-				}	
-
-				// our "lookahead" variable, while i always defines
-				// the starting point...
-				subset.add(aSet[j]);	
-				added++;
-				if( added == desiredCardinality)
-				{
-					skipList.add(j);
-					subsets.add( subset );
-					subset = new HashSet<String>();
-					// j = i;
-					added = 0;
-				}
-									
-			}
-			}
-		}
-		
-		
-		for( Set<String> aSubset : subsets )
-		{
-			System.out.print( "{");
-			aSubset.forEach( (k) -> { System.out.print( k + " " ); } );
+			System.out.print( "{ ");
+			subset.forEach( (k) -> { System.out.print( k + " " ); } ); 
 			System.out.println( "}");
 		}
 		
 		System.out.println( "done" );
 		
 	}
+	
+	
+	public static Set<Set<String>> powerSet(Set<String> originalSet) {
+	    Set<Set<String>> sets = new HashSet<Set<String>>();
+	    if (originalSet.isEmpty()) {
+	    	Set<String> empty = new HashSet<String>();
+	    	sets.add(empty);
+	        return sets;
+	    }
+	    
+	    List<String> list = new ArrayList<String>(originalSet);
+	    String head = list.get(0);
+	    Set<String> rest = new HashSet<String>(list.subList(1, list.size())); 
+	    for (Set<String> set : powerSet(rest)) {
+	        Set<String> newSet = new HashSet<String>();
+	        newSet.add(head);
+	        newSet.addAll(set);
+	        sets.add(newSet);
+	        sets.add(set);
+	    }       
+	    
+	    return sets;
+	} 	
 }
