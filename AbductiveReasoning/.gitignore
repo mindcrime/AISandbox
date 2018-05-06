@@ -3,3 +3,8 @@ jena/
 /target/
 *~
 *.*~
+/technotes.aux
+/technotes.dvi
+/technotes.log
+/technotes.pdf
+/technotes.synctex.gz

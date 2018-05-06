@@ -1,9 +1,10 @@
-package org.fogbeam.experimental.reasoning.abductive;
+package org.fogbeam.experimental.reasoning.abductive.kbmanagement;
 
 import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.RESOURCE_BASE;
 import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.TDB_DIR;
 
 import java.io.File;
+import java.lang.invoke.MethodHandles;
 
 import org.apache.jena.query.Dataset;
 import org.apache.jena.query.ReadWrite;
@@ -14,18 +15,18 @@ import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.tdb.TDBFactory;
 import org.apache.jena.vocabulary.OWL;
 
-public class LoadDataToTriplestoremain 
+public class LoadAbstractKBToTriplestoremain 
 {
 
 	public static void main(String[] args) throws Exception
 	{
-		File tdbDir = new File(TDB_DIR);
-		if( !tdbDir.exists())
+		File tdbDir = new File( TDB_DIR + "/abstract" );
+		if( !tdbDir.exists() )
 		{
 			tdbDir.mkdirs();
 		}
 		
-		Dataset ds = TDBFactory.createDataset(TDB_DIR);
+		Dataset ds = TDBFactory.createDataset(TDB_DIR + "/abstract");
 		Model model = ds.getDefaultModel();
 		ds.begin(ReadWrite.WRITE);
 		
@@ -93,7 +94,7 @@ public class LoadDataToTriplestoremain
 		ds.commit();
 		ds.close();
 		
-		System.out.println( "done");
+		System.out.println( "done: " + MethodHandles.lookup().lookupClass() );
 
 	}
 

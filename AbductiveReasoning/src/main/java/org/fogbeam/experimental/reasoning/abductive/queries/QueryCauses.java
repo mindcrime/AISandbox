@@ -1,12 +1,11 @@
 package org.fogbeam.experimental.reasoning.abductive.queries;
 
+import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.RESOURCE_BASE;
 import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.TDB_DIR;
 
 import java.io.File;
-import java.util.HashSet;
 import java.util.Set;
 
-import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.RESOURCE_BASE;
 import org.apache.jena.query.Dataset;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;

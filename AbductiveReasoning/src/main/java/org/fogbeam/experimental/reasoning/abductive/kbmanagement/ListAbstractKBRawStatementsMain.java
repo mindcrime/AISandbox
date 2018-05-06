@@ -1,8 +1,9 @@
-package org.fogbeam.experimental.reasoning.abductive;
+package org.fogbeam.experimental.reasoning.abductive.kbmanagement;
 
 import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.TDB_DIR;
 
 import java.io.File;
+import java.lang.invoke.MethodHandles;
 
 import org.apache.jena.query.Dataset;
 import org.apache.jena.query.ReadWrite;
@@ -11,19 +12,19 @@ import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.tdb.TDBFactory;
 
-public class ListRawStatementsMain 
+public class ListAbstractKBRawStatementsMain 
 {
 
 	public static void main(String[] args) 
 	{
 		
-		File tdbDir = new File(TDB_DIR);
+		File tdbDir = new File( TDB_DIR + "/abstract" );
 		if( !tdbDir.exists())
 		{
 			tdbDir.mkdirs();
 		}
 		
-		Dataset ds = TDBFactory.createDataset(TDB_DIR);
+		Dataset ds = TDBFactory.createDataset( TDB_DIR + "/abstract" );
 		Model model = ds.getDefaultModel();
 		ds.begin(ReadWrite.READ);
 		
@@ -39,7 +40,7 @@ public class ListRawStatementsMain
 		
 		ds.close();
 		
-		System.out.println( "done");
+		System.out.println( "done: " + MethodHandles.lookup().lookupClass() );
 
 	}
 }
