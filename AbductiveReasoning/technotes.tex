@@ -1,0 +1,260 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+``And where a mathematical reasoning can be had, it is as great a folly to make
+use of any other, as to grope for a thing in the dark, when you have a candle
+standing by you'' -- John Arbuthnot, \textit{On The Laws of Chance}
+\newline
+
+\par 
+
+\textbf{Definition} 3.1: A \textit{diagnostic problem} P is a 4-tuple \textless
+D, M, C, M$^{+}$\textgreater {} where $D = \{d_1, d_2, \ldots, d_n\}$ is a finite,
+non-empty set of objects, called disorders, $M = \{m_1, m_2, \ldots, m_n\}$ is a
+finite, non-empty set of objects called manifestations, and $C \subseteq D
+\times M$ is a relation with \textit{domain}(C) = D and \textit{range}(C) = M,
+called causation, and $M^{+} \subseteq M$ is a distinguished subset of M which is said to be
+\textbf{present}.
+\newline
+
+\par 
+\textbf{Definition} 3.2: For any element $d_i \in D$ and $m_j \in M$ in a
+diagnostic problem \textless D, M, C, M$^{+}$\textgreater,
+\textit{effects}($d_i) = \{ m_j\:|\:\langle d_i, m_j\rangle \in C\}$, the set
+of objects directly caused by $d_i$, and 
+\textit{causes}($m_j) = \{ d_i\:|\:\langle d_i, m_j\rangle \in C\}$, the set of
+objects which can directly cause $m_j$
+\newline
+
+\par 
+\textbf{Definition} 3.3: For any $D_I \subseteq D$ and $M_J \subseteq M$ in a
+diagnostic problem \textless D, M, C, M$^{+}$\textgreater,
+\textit{effects}($D_I$) = $\bigcup\limits_{d_i \in D_I} effects(d_i)$, and
+\textit{causes}($M_J$) = $\bigcup\limits_{m_j \in M_J} causes(m_j)$
+\newline
+\par 
+Thus, for example, the effects of a set of disorders are just the union
+(``sum'') of effects of individual disorders in the set.
+\newline
+
+\par 
+\textbf{Definition} 3.4: The set $D_I \subseteq D$ is said to be a
+\textit{cover} of $M_J \subseteq M$ if $M_J \subseteq effects(D_I)$
+\newline
+
+\par 
+\textbf{Definition} 3.5: A set $E \subseteq D$ is said to be an
+\textit{explanation} of M$^{+}$ for a problem P = \textless
+D, M, C, M$^{+}$\textgreater if E \textit{covers} M$^{+}$ and E satisfies a
+given parsimony condition.
+\newline
+
+\par 
+\textbf{Definition} 3.6: 
+\begin{enumerate}
+\item A cover, $D_I$ of $M_J$ is said to be \textit{minimum}
+if its cardinality is smallest among all covers of $M_J$.
+\item A cover, $D_I$ of $M_J$ is said to be \textit{irredundant} if none of its
+proper subsets is also a cover of $M_J$. It is said to be \textit{redundant}
+otherwise.
+\item A cover, $D_I$ of M$^{+}$ is said to be \textit{relevant} if it is a
+subset of $causes(M^{+})$; it is \textit{irrelevant} otherwise.
+\end{enumerate}
+
+\par 
+\textbf{Definition} 3.7: The \textit{solution} to a diagnostic problem
+P = \textless D, M, C, M$^{+}$\textgreater designated $Sol(P)$ is the set of all
+explanations of M$^{+}$.
+\newline
+
+\par 
+\textbf{Lemma} 3.1: TBD
+\newline
+
+\par 
+\textbf{Lemma} 3.2: TBD
+\newline
+
+\par 
+\textbf{Lemma} 3.3: TBD
+\newline
+
+\par 
+\textbf{Thereom} 3.4: TBD
+\newline
+
+\par 
+\textbf{Lemma} 3.5: TBD
+\newline
+
+\par 
+\textbf{Lemma} 3.6: TBD
+\newline
+
+\par 
+\textbf{Lemma} 3.7: TBD
+\newline
+
+\par 
+\textbf{Thereom} 3.8: TBD
+\newline
+
+\par 
+\textbf{Lemma} 3.9: TBD
+\newline
+
+\par 
+\textbf{Lemma} 3.10: TBD
+\newline
+
+
+
+\par 
+\textbf{Definition} 3.8: TBD
+\newline
+
+
+\par 
+\textbf{Definition} 3.9: TBD
+\newline
+
+
+\par 
+\textbf{Definition} 3.10: Let $G_I = (g_1, g_2, \ldots, g_n)$ be a generator 
+and let $H_1 \subseteq D$ where $H_1 \neq \theta$. 
+
+Then $Q = \{ Q_k |Q_k$ is a generator $\}$ is a division of $G_I$ by $H_1$ if
+for all k, $1 < k < n$, $Q_k$ = $( \, q_{k1}, q_{k2}, \ldots, q_{kn} ) \,$ where
+\[
+	\begin{cases}
+		g_j - H_1, \text{ if } j < k,\\
+		g_j \cap H_1, \text{ if } j = k,\\
+		g_j \text{ if } j > k
+	\end{cases}
+\]
+
+
+\par 
+\textbf{Definition} 3.11:
+\newline
+
+\par 
+\textbf{Lemma} 3.11:
+\newline
+
+\par 
+\textbf{Definition} 3.12:
+\newline
+
+\par 
+\textbf{Lemma} 3.12:
+\newline
+
+
+\par 
+\textbf{Definition} 3.13:
+\newline
+
+\par 
+\textbf{Lemma} 3.13:
+\newline
+
+
+\par 
+\textbf{Definition} 3.14:
+\newline
+
+\par 
+\textbf{Lemma} 3.14:
+\newline
+
+
+
+\par 
+\textbf{Definition} 3.15:
+\newline
+
+\par 
+\textbf{Lemma} 3.15:
+\newline
+
+
+\par 
+\textbf{Lemma} 3.16:
+\newline
+
+\par 
+\textbf{Lemma} 3.17:
+\newline
+
+\par 
+\textbf{Lemma} 3.18:
+\newline
+
+\par 
+\textbf{Thereom} 3.19:
+\newline
+
+
+\par 
+\textbf{Definition} 3.16:
+\newline
+
+\par 
+\textbf{Lemma} 3.20:
+\newline
+
+\par 
+\textbf{Definition} 3.17:
+\newline
+
+\par 
+\textbf{Lemma} 3.21:
+\newline
+
+
+\par 
+\textbf{Definition} 3.18:
+\newline
+
+\par 
+\textbf{Lemma} 3.22:
+\newline
+
+\par 
+\textbf{Thereom} 3.23:
+\newline
+
+\par 
+\textbf{Definition} 3.19:
+\newline
+
+\par 
+\textbf{Definition} 3.20:
+\newline
+
+\par 
+\textbf{Lemma} 3.24:
+\newline
+
+\par 
+\textbf{Thereom} 3.25:
+\newline
+
+
+
+
+
+
+
+
+
+
+\end{document}
