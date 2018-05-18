@@ -23,13 +23,14 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.ReasonerRegistry;
 import org.apache.jena.tdb.TDBFactory;
+import org.eclipse.collections.impl.set.mutable.UnifiedSet;
 
 public class QueryDiseasesStrategy 
 {
 	
-	public Set<String> listAll()
+	public UnifiedSet<String> listAll()
 	{
-		Set<String> diseases = new HashSet<String>();
+		UnifiedSet<String> diseases = new UnifiedSet<String>();
 
 		
 		File tdbDir = new File(TDB_DIR);

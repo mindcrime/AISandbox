@@ -24,11 +24,12 @@ import org.eclipse.collections.impl.set.mutable.UnifiedSet;
 
 public class QueryCauses 
 {
-	public UnifiedSet<String> doQuery( final Set<String> manifestations )
+
+	
+	public UnifiedSet<String> doQuery( final String manifestation )
 	{
 		UnifiedSet<String> causes = new UnifiedSet<String>();
-		
-		
+	
 		File tdbDir = new File(TDB_DIR);
 		if( !tdbDir.exists())
 		{
@@ -40,50 +41,57 @@ public class QueryCauses
 		
 		
 		Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
-		InfModel infmodel = ModelFactory.createInfModel(reasoner, model );		
+		InfModel infmodel = ModelFactory.createInfModel(reasoner, model );
 		
-
-		for( String manifestation : manifestations )
-		{
-			
-			UnifiedSet<String> disorders = new UnifiedSet<String>();
-			
-			// build up our SPARQL query for all entries in mPlus
-			
-			String sparqlQuery = "select ?disorder where {" + ( " ?disorder <" + RESOURCE_BASE + "#causes>" + " <" + RESOURCE_BASE + "/manifestation#" + manifestation + "> . }" );
-					
+		// build up our SPARQL query for all entries in mPlus
 		
-			// System.out.println( "query: \n" + sparqlQuery + "\n" );
-		
-			// execute the query
-			Query query = QueryFactory.create(sparqlQuery);
-			QueryExecution qexec = QueryExecutionFactory.create(query, infmodel) ;
+		String sparqlQuery = "select ?disorder where {" + ( " ?disorder <" + RESOURCE_BASE + "#causes>" + " <" + RESOURCE_BASE + "/manifestation#" + manifestation + "> . }" );
+				
 	
-			try
-			{
-			    ResultSet resultSet = qexec.execSelect() ;
-			    for ( ; resultSet.hasNext() ; )
-			    {
-			    	QuerySolution soln = resultSet.nextSolution() ;
-			    	Resource m = soln.getResource("disorder");
-			      
-			    	String res = m.toString();
-			    	// System.out.println( res );
-		
-					// plug query results in our results
-			    	causes.add( res );
-			    
-			    }
-			}
-			finally
-			{
-				qexec.close();
-			}			
+		// System.out.println( "query: \n" + sparqlQuery + "\n" );
+	
+		// execute the query
+		Query query = QueryFactory.create(sparqlQuery);
+		QueryExecution qexec = QueryExecutionFactory.create(query, infmodel) ;
+
+		try
+		{
+		    ResultSet resultSet = qexec.execSelect() ;
+		    for ( ; resultSet.hasNext() ; )
+		    {
+		    	QuerySolution soln = resultSet.nextSolution() ;
+		    	Resource m = soln.getResource("disorder");
+		      
+		    	String res = m.toString();
+		    	// System.out.println( res );
+	
+				// plug query results in our results
+		    	causes.add( res );
+		    
+		    }
 		}
-		
+		finally
+		{
+			qexec.close();
+		}			
+	
 		infmodel.close();	
 
 		ds.close();
+
+	
+		return causes;
+	
+	}
+	
+	public UnifiedSet<String> doQuery( final Set<String> manifestations )
+	{
+		UnifiedSet<String> causes = new UnifiedSet<String>();		
+
+		for( String manifestation : manifestations )
+		{
+			causes.addAll( this.doQuery( manifestation ) );
+		}
 		
 		return causes;
 	}

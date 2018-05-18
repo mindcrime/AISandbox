@@ -23,15 +23,16 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.ReasonerRegistry;
 import org.apache.jena.tdb.TDBFactory;
+import org.eclipse.collections.impl.set.mutable.UnifiedSet;
 
 public class QueryManifestationsStrategy 
 {
 	
-	public Set<String> listAll()
+	public UnifiedSet<String> listAll()
 	{
-		Set<String> manifestations = new HashSet<String>();
+		UnifiedSet<String> manifestations = new UnifiedSet<String>();
 
-		
+		System.out.println( "TBD_DIR: " + TDB_DIR );
 		File tdbDir = new File(TDB_DIR);
 		if( !tdbDir.exists())
 		{
