@@ -1,15 +1,13 @@
 package org.fogbeam.experimental.reasoning.abductive;
 
-import java.util.ArrayList;
+import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.TDB_DIR;
+
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
-import org.eclipse.collections.api.LazyIterable;
-import org.eclipse.collections.api.tuple.Pair;
-import org.eclipse.collections.impl.factory.Sets;
-import org.eclipse.collections.impl.set.mutable.UnifiedSet;
+import org.eclipse.collections.api.set.MutableSet;
+import org.eclipse.collections.impl.set.mutable.SetAdapter;
 import org.fogbeam.experimental.reasoning.abductive.queries.QueryCauses;
 
 public class QueryCausesMain {
@@ -18,15 +16,15 @@ public class QueryCausesMain {
 	public static void main(String[] args) 
 	{
 		
-		QueryCauses query = new QueryCauses();
+		QueryCauses query = new QueryCauses( TDB_DIR + "/trivial" );
 		
 		Set<String> mPlus = new HashSet<String>();
 		mPlus.add( "m1" );
 		mPlus.add( "m3" );
 		mPlus.add( "m4" );
 		
-		
-		UnifiedSet<String> results = query.doQuery( mPlus );
+		LinkedHashSet<String> backingSet = new LinkedHashSet<String>();
+		MutableSet<String> results = SetAdapter.adapt( backingSet );
 		
 		System.out.print( "{ ");
 		
@@ -51,7 +49,7 @@ public class QueryCausesMain {
 		Set<String> a = new HashSet<String>();
 		Set<String> b = new HashSet<String>();
 		
-		List<UnifiedSet<String>> resultsAsList = new ArrayList<UnifiedSet<String>>();
+		List<MutableSet<String>> resultsAsList = new ArrayList<MutableSet<String>>();
 		resultsAsList.addAll(results);
 		
 		for( int i = 0; i < resultsAsList.size(); i++ )

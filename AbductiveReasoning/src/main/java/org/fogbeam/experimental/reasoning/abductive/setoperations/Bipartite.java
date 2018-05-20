@@ -1,14 +1,24 @@
 package org.fogbeam.experimental.reasoning.abductive.setoperations;
 
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
-import org.eclipse.collections.impl.set.mutable.UnifiedSet;
+import org.eclipse.collections.api.set.MutableSet;
+import org.eclipse.collections.impl.set.mutable.SetAdapter;
 import org.fogbeam.experimental.reasoning.abductive.domain.Generator;
 import org.fogbeam.experimental.reasoning.abductive.domain.GeneratorSet;
 import org.fogbeam.experimental.reasoning.abductive.queries.QueryCauses;
 
 public class Bipartite 
 {
+	
+	private String dir;
+	
+	public Bipartite( final String dir ) 
+	{
+		this.dir = dir;
+	}
 	
 	public GeneratorSet process(   // disorders
 								   Set<String> disordersAll, 
@@ -17,10 +27,12 @@ public class Bipartite
 								   Set<String> manifestationsAll, 
 								
 								   // present manifestations
-								   UnifiedSet<String> mPlus)
+								   MutableSet<String> mPlus)
 	{
 		// hypothesis = {Θ}, so our GeneratorSet starts out containing one empty set (Generator)
 		GeneratorSet hypothesis = new GeneratorSet();
+		hypothesis.initEmpty( new Generator() );
+		
 		
 		for( String manifestation : mPlus )
 		{
@@ -34,29 +46,16 @@ public class Bipartite
 	}
 
 	
-	private UnifiedSet<String> causes( String manifestation )
+	private MutableSet<String> causes( String manifestation )
 	{
-		QueryCauses causesQuery = new QueryCauses();
-		UnifiedSet<String> causesForManifestation = causesQuery.doQuery( manifestation );
+		QueryCauses causesQuery = new QueryCauses(dir);
+		MutableSet<String> causesForManifestation = causesQuery.doQuery( manifestation );
 		
 		return causesForManifestation;
 	}
 
 
-	private GeneratorSet divideGeneratorByDisorderSet( Generator GsubI, Set<String> Hsub1 )
-	{
-		GeneratorSet result = new GeneratorSet();
-		
-		if( true )
-		{
-			throw new RuntimeException( "divideGeneratorByDisorderSet() - Not implemented yet!");
-		}
-		
-		return result;
-	}
-
-
-	private GeneratorSet divideGeneratorSetByDisorderSet( GeneratorSet G, Set<String> Hsub1 )
+	private GeneratorSet divideGeneratorSetByDisorderSet( GeneratorSet G, MutableSet<String> Hsub1 )
 	{
 		
 		// dividing a GeneratorSet by a DisorderSet is the union of the
@@ -75,8 +74,70 @@ public class Bipartite
 	}
 
 	
-	private GeneratorSet augresGeneratorSetBySet( GeneratorSet G, UnifiedSet<String> Hsub1 )
+	private GeneratorSet divideGeneratorByDisorderSet( Generator GsubI, MutableSet<String> Hsub1 )
 	{
+		GeneratorSet result = new GeneratorSet();
+		
+		int n = GsubI.size(); // by definition, we can have at most n generators resulting from this division
+		
+				
+		for( int k = 1; k <= n; k++ )
+		{
+			Iterator<MutableSet<String>> gsubiIterator = GsubI.getExplanationSets().iterator();
+			Generator qk = new Generator();
+			
+			for( int j = 1; j <= n; j++ )
+			{
+				MutableSet<String> gsubj = gsubiIterator.next();
+				
+				if( j < k )
+				{
+					MutableSet<String> q_kj = gsubj.difference(Hsub1);
+					
+					// if q_kj is the empty set, don't include it
+					if( !(q_kj.size() == 0) )
+					{
+						qk.addExplanationSet( q_kj );
+					}
+				}
+				else if( j == k )
+				{
+
+					MutableSet<String> q_kj = gsubj.intersect(Hsub1);
+					
+					// if q_kj is the empty set, don't include it
+					if( !(q_kj.size() == 0) )
+					{
+						qk.addExplanationSet( q_kj );
+					}
+				}
+				else if( j > k )
+				{
+					MutableSet<String> q_kj = gsubj.clone();
+					
+					// if q_kj is the empty set, don't include it
+					if( !(q_kj.size() == 0) )
+					{
+						qk.addExplanationSet( q_kj );
+					}
+				}
+			}
+			
+			result.addGenerator( qk );
+
+		}
+		
+		return result;
+	}
+	
+	
+	private GeneratorSet augresGeneratorSetBySet( GeneratorSet G, MutableSet<String> Hsub1 )
+	{
+		
+		System.out.println( "in augresGeneratorSetBySet, G = " + G );
+		System.out.println( "in augresGeneratorSetBySet, Hsub1 = " + Hsub1 );
+		
+		
 		GeneratorSet result = new GeneratorSet();
 		
 		// augres of a GeneratorSet by a disorder set is the union of
@@ -86,126 +147,257 @@ public class Bipartite
 		for( Generator GsubOne : G.getGenerators() )
 		{
 			GeneratorSet temp = augresGeneratorBySet(GsubOne, Hsub1);
+			System.out.println( "in augresGeneratorSetBySet, temp = " + temp );
 			result = union( result, temp );
+			System.out.println( "in augresGeneratorSetBySet, temp result = " + result );
+			
 		}
+		
+		System.out.println( "in augresGeneratorSetBySet, result = " + result );
 		
 		return result;
 	}
 
 
-	private GeneratorSet augresGeneratorBySet( Generator G, UnifiedSet<String> Hsub1 )
+	private GeneratorSet augresGeneratorBySet( Generator G, MutableSet<String> Hsub1 )
 	{
-		GeneratorSet result = new GeneratorSet();
+		System.out.println( "in augresGeneratorBySet, G = " + G );
+		System.out.println( "in augresGeneratorBySet, Hsub1 = " + Hsub1 );
 		
+		GeneratorSet result = new GeneratorSet();
 		
 		// the result is the set difference, in turn, between each explanation-set in the Generator and Hsub1,
 		// plus A, where A is the set difference of HsubOne and the union of all the explanation-sets
 		
-		for( UnifiedSet<String> explanationSet : G.getExplanationSets() )
+		Generator generator = new Generator();
+		
+		for( MutableSet<String> explanationSet : G.getExplanationSets() )
 		{
 			// for each of these, take the relative complement between it and Hsub1
 			// and that gets added to the result GeneratorSet
+			MutableSet<String> temp = explanationSet.difference(Hsub1);
+			
+			System.out.println( "in augresGeneratorBySet, temp = " + temp );
+		
+			if( !( temp.size() == 0 ) )
+			{
+				// do we make a new Generator for each of these, or ???
+				generator.addExplanationSet( temp );
+			}
+			
+			System.out.println( "in augresGeneratorBySet, temp generator = " + generator );
 		}
 		
 		// then we calculate A and add that to the result GeneratorSet
-		// A is a Generator? 
-		UnifiedSet explanationsUnion = new UnifiedSet();
-		Generator A = setDifference( Hsub1, explanationsUnion );
 		
-		
-		if( true )
+		// A is an ExplanationSet? 
+		MutableSet<String> explanationsUnion = SetAdapter.adapt( new LinkedHashSet<String>() );
+		MutableSet<MutableSet<String>> explanationsInG = G.getExplanationSets();
+		for( MutableSet<String> explanationSet : explanationsInG )
 		{
-			throw new RuntimeException( "" );
+			explanationsUnion = explanationsUnion.union(explanationSet);
 		}
 		
+		System.out.println( "in augresGeneratorBySet, explanationsUnion = " + explanationsUnion );
+		
+		MutableSet<String> A = Hsub1.difference( explanationsUnion );
+		
+		System.out.println( "in augresGeneratorBySet, A = " + A );
+		
+		if( !( A.size() == 0 ))
+		{
+			generator.addExplanationSet( A );		
+		}
+		
+		System.out.println( "in augresGeneratorBySet, final generator = " + generator );
+		
+		if( !generator.isEmpty() )
+		{
+			result.addGenerator( generator );
+		}
+		
+		System.out.println( "in augresGeneratorBySet, returning result = " + result );
 		
 		return result;
 	}
 
-	
-	private Generator setDifference( UnifiedSet<String> hsub1, UnifiedSet explanationsUnion) 
+	/* 
+	private Generator setDifference( MutableSet<String> hsub1, MutableSet<String> explanationsUnion) 
 	{
 		Generator result = new Generator();
 		
-		if( true )
-		{
-			throw new RuntimeException( "setDifference() - Not implemented yet!" );
-		}
+		MutableSet<String> difference = hsub1.difference( explanationsUnion );
+		
+		result.addExplanationSet( difference );
 		
 		return result;
 	}
+	*/
 
-
-	private GeneratorSet resGeneratorSetByGeneratorSet( GeneratorSet Q, GeneratorSet F )
+	private GeneratorSet resGeneratorSetByGeneratorSet( GeneratorSet G, GeneratorSet Q )
 	{
-		GeneratorSet result = new GeneratorSet();
+		GeneratorSet result = null;
 		
-		if( true )
+		System.out.println( "in resGeneratorSetByGeneratorSet(), G = " + G );
+		System.out.println( "in resGeneratorSetByGeneratorSet(), Q = " + Q );
+		
+		if( Q.isEmpty())
 		{
-			throw new RuntimeException( "resGeneratorSetByGeneratorSet() - Not implemented yet!");
+			System.out.println( "returning G, since Q is empty set" );
+			result = G;
 		}
+		else
+		{	// otherwise...
+			System.out.println( "selecting arbitrary Generator QsubJ from Q" );
+			Generator QsubJ = Q.getArbitraryElement(0);
+			System.out.println( "in resGeneratorSetByGeneratorSet(), QsubJ = " + QsubJ );
+			result = resGeneratorSetByGeneratorSet( resGeneratorSetByGenerator(G, QsubJ), Q.removeGenerator( QsubJ ) ); 
+		}
+		
+		System.out.println( "in resGeneratorSetByGeneratorSet(), result = " + result );
 		
 		return result;
 	}
 	
 	private GeneratorSet resGeneratorSetByGenerator( GeneratorSet Q, Generator F )
 	{
-		GeneratorSet result = new GeneratorSet();
+		System.out.println( "in resGeneratorSetByGenerator(), Q = " + Q );
+		System.out.println( "in resGeneratorSetByGenerator(), F = " + F );
 		
-		if( true )
+		GeneratorSet result = new GeneratorSet();
+
+		
+		MutableSet<Generator> generators = Q.getGenerators();
+		for( Generator generator : generators )
 		{
-			throw new RuntimeException( "resGeneratorSetByGenerator() - Not implemented yet!");
+			GeneratorSet temp = resGeneratorByGenerator(generator, F);
+			System.out.println( "in resGeneratorSetByGenerator(), temp = " + temp );
+			
+			result.unionInto( temp );
+			System.out.println( "in resGeneratorSetByGenerator(), result = " + result );
+		}
+		
+		return result;
+	}
+	
+	
+	private GeneratorSet resGeneratorByGenerator( Generator GsubI, Generator QsubJ )
+	{
+		GeneratorSet result = null;	
+		
+		if( QsubJ.isEmpty())
+		{
+			// if QsubJ is empty, we return an empty GeneratorSet by definition
+			result = new GeneratorSet();
+			return result;
+		}
+		else
+		{
+			MutableSet<String> qsubj = QsubJ.getArbitraryElement(0);
+			GeneratorSet temp = resGeneratorBySet( GsubI, qsubj );			
+			
+			GeneratorSet temp2 = resGeneratorSetByGenerator( divideGeneratorByDisorderSet(GsubI, qsubj), QsubJ.removeSet( qsubj ) );
+			
+			temp.unionInto(temp2);
+			
+			result = temp;
+			
 		}
 		
 		return result;
 	}
 
-	private GeneratorSet resGeneratorByGenerator( Generator Q, Generator F )
+	
+	private GeneratorSet resGeneratorBySet(Generator GsubI, MutableSet<String> qsubj) 
 	{
 		GeneratorSet result = new GeneratorSet();
+				
 		
-		if( true )
+		// NOTE: this is a lot like augres, but without the additional 
+		// A term being added.  For each g_i element in GsubI, you take
+		// the difference of that and qsubj
+		
+		
+		Generator generator = new Generator();
+		
+		for( MutableSet<String> explanationSet : GsubI.getExplanationSets() )
 		{
-			throw new RuntimeException( "resGeneratorByGenerator() - Not implemented yet!");
+			// for each of these, take the relative complement between it and qsubj
+			// and that gets added to the result GeneratorSet
+			MutableSet<String> temp = explanationSet.difference(qsubj);
+			
+			System.out.println( "in resGeneratorBySet, temp = " + temp );
+		
+			if( !( temp.size() == 0 ) )
+			{
+				// do we make a new Generator for each of these, or ???
+				generator.addExplanationSet( temp );
+			}
+			
+			System.out.println( "in resGeneratorBySet, temp generator = " + generator );
 		}
+
+		result.addGenerator(generator);
 		
 		return result;
 	}
+
 
 	private GeneratorSet union( GeneratorSet F, GeneratorSet Q )
 	{
+		
+		System.out.println( "in union() F = " + F );
+		System.out.println( "in union() Q = " + Q );
+		
 		GeneratorSet result = new GeneratorSet();
 		
-		if( true )
+		MutableSet<Generator> union = F.getGenerators().union(Q.getGenerators());
+		
+		System.out.println( "in union() union = " + union + "union.size = " + union.size() );
+		
+		if( !union.isEmpty())
 		{
-			throw new RuntimeException( "union() - Not implemented yet!");
+			result.addAllGenerators( union );
 		}
+		
+		System.out.println( "in union() result = " + result );
 		
 		return result;
 	}
 	
 	
-	private GeneratorSet revise( GeneratorSet G, UnifiedSet<String> Hsub1 )
+	private GeneratorSet revise( GeneratorSet G, MutableSet<String> Hsub1 )
 	{
-		// TODO: implement divideGeneratorByHypothesis()
+		if( Hsub1 == null || Hsub1.isEmpty() )
+		{
+			throw new RuntimeException( "no valid Hsub1 passed to revise!" );
+		}
+		
+		System.out.println( "\n\n-----------------------------------------------------------\n");
+		System.out.println( "in revise() current hypothesis G = " + G );
+		System.out.println( "in revise() causes(m_new) Hsub1 = " + Hsub1 );
+		
+		
 		GeneratorSet F = divideGeneratorSetByDisorderSet( G, Hsub1 );
 		
-		System.out.println( "F = " + F );
+		System.out.println( "in revise() F = " + F );
 		
-		// TODO: implement augres()
 		GeneratorSet Q = augresGeneratorSetBySet( G, Hsub1 );
 		
-		System.out.println( "Q = " + Q );
+		System.out.println( "in revise() Q = " + Q );
 		
-		// TODO: implement resGeneratorSetByGeneratorSet()
 		GeneratorSet temp = resGeneratorSetByGeneratorSet( Q, F );
 		
-		System.out.println( "temp = " + temp );
+		System.out.println( "in revise() temp = " + temp );
 		
-		// TODO: implement union()
+		if( F.isEmpty() && temp.isEmpty() )
+		{
+			throw new RuntimeException( "this shouldn't happen: F and TEMP can't both be empty" );
+		}
+		
 		GeneratorSet answer = union( F, temp );
 		
-		System.out.println( "answer = " + answer );
+		System.out.println( "in revise(() answer = " + answer );
 		
 		return answer;
 	}

@@ -1,8 +1,11 @@
 package org.fogbeam.experimental.reasoning.abductive;
 
+import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.TDB_DIR;
+
 import java.util.Set;
 
 import org.fogbeam.experimental.reasoning.abductive.queries.QueryManifestationsStrategy;
+
 
 public class QueryManifestationsMain 
 {
@@ -10,7 +13,7 @@ public class QueryManifestationsMain
 	public static void main(String[] args) 
 	{
 
-		QueryManifestationsStrategy query = new QueryManifestationsStrategy();
+		QueryManifestationsStrategy query = new QueryManifestationsStrategy( TDB_DIR + "/trivial" );
 
 		Set<String> manifestationsAll = query.listAll();
 		

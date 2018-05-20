@@ -5,6 +5,7 @@ import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.T
 
 import java.io.File;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 import org.apache.jena.query.Dataset;
@@ -23,23 +24,32 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.ReasonerRegistry;
 import org.apache.jena.tdb.TDBFactory;
-import org.eclipse.collections.impl.set.mutable.UnifiedSet;
+import org.eclipse.collections.api.set.MutableSet;
+import org.eclipse.collections.impl.set.mutable.SetAdapter;
 
 public class QueryManifestationsStrategy 
 {
-	
-	public UnifiedSet<String> listAll()
-	{
-		UnifiedSet<String> manifestations = new UnifiedSet<String>();
 
-		System.out.println( "TBD_DIR: " + TDB_DIR );
-		File tdbDir = new File(TDB_DIR);
+	private String dir;
+	
+	public QueryManifestationsStrategy( final String dir )
+	{
+		this.dir = dir;
+	}
+	
+	public MutableSet<String> listAll()
+	{
+		LinkedHashSet<String> backingSet = new LinkedHashSet<String>();
+		MutableSet<String> manifestations = SetAdapter.adapt( backingSet );
+
+		System.out.println( "TBD_DIR: " + dir );
+		File tdbDir = new File(dir);
 		if( !tdbDir.exists())
 		{
 			tdbDir.mkdirs();
 		}
 		
-		Dataset ds = TDBFactory.createDataset(TDB_DIR);
+		Dataset ds = TDBFactory.createDataset(dir);
 		Model model = ds.getDefaultModel();
 		
 		

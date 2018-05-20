@@ -1,0 +1,22 @@
+digraph "trivial" {
+d1 [id="d1",label="d1"]
+d2 [id="d2",label="d2"]
+d3 [id="d3",label="d3"]
+d5 [id="d5",label="d5"]
+d4 [id="d4",label="d4"]
+m1 [id="m1",label="m1"]
+m2 [id="m2",label="m2"]
+m4 [id="m4",label="m4"]
+m3 [id="m3",label="m3"]
+m5 [id="m5",label="m5"]
+d1 -> m1
+d5 -> m5
+d1 -> m2
+d4 -> m5
+d2 -> m4
+d3 -> m4
+d2 -> m1
+d3 -> m2
+d5 -> m4
+d4 -> m3
+}

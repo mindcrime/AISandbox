@@ -4,6 +4,7 @@ import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.R
 import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.TDB_DIR;
 
 import java.io.File;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 import org.apache.jena.query.Dataset;
@@ -20,23 +21,31 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.ReasonerRegistry;
 import org.apache.jena.tdb.TDBFactory;
-import org.eclipse.collections.impl.set.mutable.UnifiedSet;
+import org.eclipse.collections.api.set.MutableSet;
+import org.eclipse.collections.impl.set.mutable.SetAdapter;
 
 public class QueryCauses 
 {
 
+	private String dir;
 	
-	public UnifiedSet<String> doQuery( final String manifestation )
+	public QueryCauses( final String dir )
 	{
-		UnifiedSet<String> causes = new UnifiedSet<String>();
+		this.dir = dir;
+	}
 	
-		File tdbDir = new File(TDB_DIR);
+	public MutableSet<String> doQuery( final String manifestation )
+	{
+		LinkedHashSet<String> backingSet = new LinkedHashSet<String>();
+		MutableSet<String> causes = SetAdapter.adapt(backingSet);
+	
+		File tdbDir = new File(dir);
 		if( !tdbDir.exists())
 		{
 			tdbDir.mkdirs();
 		}
 		
-		Dataset ds = TDBFactory.createDataset(TDB_DIR);
+		Dataset ds = TDBFactory.createDataset(dir);
 		Model model = ds.getDefaultModel();
 		
 		
@@ -84,9 +93,10 @@ public class QueryCauses
 	
 	}
 	
-	public UnifiedSet<String> doQuery( final Set<String> manifestations )
+	public MutableSet<String> doQuery( final Set<String> manifestations )
 	{
-		UnifiedSet<String> causes = new UnifiedSet<String>();		
+		LinkedHashSet<String> backingSet = new LinkedHashSet<String>();
+		MutableSet<String> causes = SetAdapter.adapt(backingSet);		
 
 		for( String manifestation : manifestations )
 		{
