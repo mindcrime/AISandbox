@@ -1,15 +1,17 @@
 package org.fogbeam.experimental.reasoning.abductive.domain;
 
+import java.io.Serializable;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 
+import org.apache.commons.lang3.SerializationUtils;
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.set.mutable.SetAdapter;
 
-public class GeneratorSet implements Cloneable
+public class GeneratorSet implements Cloneable, Serializable
 {
 	private static int instanceCount = 0;
 	private int id;
@@ -110,5 +112,13 @@ public class GeneratorSet implements Cloneable
 	public String toString()
 	{
 		return this.id + " : " + this.generators.makeString( "\\" );
-	}	
+	}
+	
+	@Override
+	public GeneratorSet clone() throws CloneNotSupportedException 
+	{
+		GeneratorSet clone = SerializationUtils.clone(this);
+		
+		return clone;
+	}
 }

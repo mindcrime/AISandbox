@@ -1,5 +1,6 @@
 package org.fogbeam.experimental.reasoning.abductive.domain;
 
+import java.io.Serializable;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -9,7 +10,7 @@ import java.util.List;
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.set.mutable.SetAdapter;
 
-public class Generator  implements Cloneable
+public class Generator  implements Cloneable, Serializable
 {
 	private static int instanceCount = 0;
 	private int id;
@@ -85,6 +86,9 @@ public class Generator  implements Cloneable
 		
 		return temp.get(index);
 	}
-	
-	
+
+	public void initEmpty( MutableSet<String> empty ) 
+	{
+		this.explanationSets.add( empty );
+	}
 }

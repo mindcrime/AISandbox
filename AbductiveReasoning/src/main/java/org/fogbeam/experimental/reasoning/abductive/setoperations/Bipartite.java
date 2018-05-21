@@ -27,19 +27,23 @@ public class Bipartite
 								   Set<String> manifestationsAll, 
 								
 								   // present manifestations
-								   MutableSet<String> mPlus)
+								   MutableSet<String> mPlus
+							    
+			  					)  throws Exception
 	{
 		// hypothesis = {Θ}, so our GeneratorSet starts out containing one empty set (Generator)
 		GeneratorSet hypothesis = new GeneratorSet();
-		hypothesis.initEmpty( new Generator() );
+		Generator gen = new Generator(); 
+		// gen.initEmpty(SetAdapter.adapt( new LinkedHashSet<String>()));
+		hypothesis.initEmpty(gen);
 		
 		
-		for( String manifestation : mPlus )
+		for( String mNew : mPlus )
 		{
 			// overwrite the existing values in hypothesis since we take stuff out as well as add stuff? 
 			// each time revise is called it returns the right set of stuff based on what's already there? 
 			// or does this need to accumulate...  
-			hypothesis = revise( hypothesis, causes( manifestation ) );	
+			hypothesis = revise( hypothesis, causes( mNew ) );	
 		}
 		
 		return hypothesis;
@@ -61,13 +65,17 @@ public class Bipartite
 		// dividing a GeneratorSet by a DisorderSet is the union of the
 		// division of each Generator in the GeneratorSet, by the DisorderSet
 		
+		System.out.println( "in divideGeneratorSetByDisorderSet(), G = " + G );
+		System.out.println( "in divideGeneratorSetByDisorderSet(), Hsub1 = " + Hsub1 );
 		
 		GeneratorSet result = new GeneratorSet();
 				
 		for( Generator GsubOne : G.getGenerators() )
 		{
 			GeneratorSet temp = divideGeneratorByDisorderSet(GsubOne, Hsub1);
+			System.out.println( "in divideGeneratorSetByDisorderSet(), temp (result of divideGeneratorByDisorderSet) = " + temp );
 			result = union( result, temp );
+			System.out.println( "in divideGeneratorSetByDisorderSet(), result (after union of result and temp) = " + result );
 		}
 		
 		return result;
@@ -76,18 +84,25 @@ public class Bipartite
 	
 	private GeneratorSet divideGeneratorByDisorderSet( Generator GsubI, MutableSet<String> Hsub1 )
 	{
+		System.out.println( "in divideGeneratorByDisorderSet(), GsubI = " + GsubI );
+		System.out.println( "in divideGeneratorByDisorderSet(), Hsub1 = " + Hsub1 );
+		
 		GeneratorSet result = new GeneratorSet();
 		
 		int n = GsubI.size(); // by definition, we can have at most n generators resulting from this division
-		
+		System.out.println( "in divideGeneratorByDisorderSet(), n = " + n );
 				
 		for( int k = 1; k <= n; k++ )
 		{
+			System.out.println( "in divideGeneratorByDisorderSet(), k = " + k );
+			
 			Iterator<MutableSet<String>> gsubiIterator = GsubI.getExplanationSets().iterator();
 			Generator qk = new Generator();
 			
 			for( int j = 1; j <= n; j++ )
 			{
+				System.out.println( "in divideGeneratorByDisorderSet(), j = " + j );
+				
 				MutableSet<String> gsubj = gsubiIterator.next();
 				
 				if( j < k )
@@ -104,11 +119,17 @@ public class Bipartite
 				{
 
 					MutableSet<String> q_kj = gsubj.intersect(Hsub1);
+					System.out.println( "in divideGeneratorByDisorderSet(), q_kj = " + q_kj );
 					
 					// if q_kj is the empty set, don't include it
 					if( !(q_kj.size() == 0) )
 					{
+						System.out.println( "in divideGeneratorByDisorderSet(), adding disorderSet q_kj to generator qk" );
 						qk.addExplanationSet( q_kj );
+					}
+					else
+					{
+						System.out.println( "in divideGeneratorByDisorderSet(), disorderSet q_kj is empty, so NOT adding it to generator qk" );
 					}
 				}
 				else if( j > k )
@@ -123,9 +144,12 @@ public class Bipartite
 				}
 			}
 			
+			System.out.println( "in divideGeneratorByDisorderSet(), adding generator qk to result GeneratorSet" );
 			result.addGenerator( qk );
 
 		}
+		
+		System.out.println( "in divideGeneratorByDisorderSet(), returning result = " + result );
 		
 		return result;
 	}
@@ -301,7 +325,6 @@ public class Bipartite
 			temp.unionInto(temp2);
 			
 			result = temp;
-			
 		}
 		
 		return result;
@@ -312,8 +335,7 @@ public class Bipartite
 	{
 		GeneratorSet result = new GeneratorSet();
 				
-		
-		// NOTE: this is a lot like augres, but without the additional 
+		// this is a lot like augres, but without the additional 
 		// A term being added.  For each g_i element in GsubI, you take
 		// the difference of that and qsubj
 		
@@ -366,7 +388,7 @@ public class Bipartite
 	}
 	
 	
-	private GeneratorSet revise( GeneratorSet G, MutableSet<String> Hsub1 )
+	private GeneratorSet revise( GeneratorSet G, MutableSet<String> Hsub1 ) throws Exception
 	{
 		if( Hsub1 == null || Hsub1.isEmpty() )
 		{
@@ -378,24 +400,27 @@ public class Bipartite
 		System.out.println( "in revise() causes(m_new) Hsub1 = " + Hsub1 );
 		
 		
-		GeneratorSet F = divideGeneratorSetByDisorderSet( G, Hsub1 );
+		GeneratorSet F = divideGeneratorSetByDisorderSet( G.clone(), Hsub1.clone() );
 		
 		System.out.println( "in revise() F = " + F );
 		
-		GeneratorSet Q = augresGeneratorSetBySet( G, Hsub1 );
+		
+		GeneratorSet Q = augresGeneratorSetBySet( G.clone(), Hsub1.clone() );
 		
 		System.out.println( "in revise() Q = " + Q );
 		
-		GeneratorSet temp = resGeneratorSetByGeneratorSet( Q, F );
+		
+		GeneratorSet temp = resGeneratorSetByGeneratorSet( Q.clone(), F.clone() );
 		
 		System.out.println( "in revise() temp = " + temp );
+		System.out.println( "in revise() F = " + F );
 		
 		if( F.isEmpty() && temp.isEmpty() )
 		{
 			throw new RuntimeException( "this shouldn't happen: F and TEMP can't both be empty" );
 		}
 		
-		GeneratorSet answer = union( F, temp );
+		GeneratorSet answer = union( F.clone(), temp.clone() );
 		
 		System.out.println( "in revise(() answer = " + answer );
 		
