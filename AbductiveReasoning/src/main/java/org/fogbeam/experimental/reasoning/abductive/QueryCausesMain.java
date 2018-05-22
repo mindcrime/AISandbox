@@ -21,6 +21,7 @@ public class QueryCausesMain
 	{
 		
 		QueryCausesStrategy query = new QueryCausesStrategy( TDB_DIR + "/trivial" );
+		query.getClass();
 		
 		Set<String> mPlus = new HashSet<String>();
 		mPlus.add( "m1" );
