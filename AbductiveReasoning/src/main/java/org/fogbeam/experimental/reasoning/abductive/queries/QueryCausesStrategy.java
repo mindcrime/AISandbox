@@ -1,7 +1,6 @@
 package org.fogbeam.experimental.reasoning.abductive.queries;
 
 import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.RESOURCE_BASE;
-import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.TDB_DIR;
 
 import java.io.File;
 import java.util.LinkedHashSet;
@@ -23,13 +22,15 @@ import org.apache.jena.reasoner.ReasonerRegistry;
 import org.apache.jena.tdb.TDBFactory;
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.set.mutable.SetAdapter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class QueryCauses 
+public class QueryCausesStrategy 
 {
-
+	final static Logger logger = LoggerFactory.getLogger(QueryCausesStrategy.class);
 	private String dir;
 	
-	public QueryCauses( final String dir )
+	public QueryCausesStrategy( final String dir )
 	{
 		this.dir = dir;
 	}
@@ -57,7 +58,7 @@ public class QueryCauses
 		String sparqlQuery = "select ?disorder where {" + ( " ?disorder <" + RESOURCE_BASE + "#causes>" + " <" + RESOURCE_BASE + "/manifestation#" + manifestation + "> . }" );
 				
 	
-		// System.out.println( "query: \n" + sparqlQuery + "\n" );
+		// logger.debug( "query: \n" + sparqlQuery + "\n" );
 	
 		// execute the query
 		Query query = QueryFactory.create(sparqlQuery);
@@ -72,7 +73,7 @@ public class QueryCauses
 		    	Resource m = soln.getResource("disorder");
 		      
 		    	String res = m.toString();
-		    	// System.out.println( res );
+		    	// logger.debug( res );
 	
 				// plug query results in our results
 		    	causes.add( res );

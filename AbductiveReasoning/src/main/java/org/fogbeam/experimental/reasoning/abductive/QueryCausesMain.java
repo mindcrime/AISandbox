@@ -8,15 +8,19 @@ import java.util.Set;
 
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.set.mutable.SetAdapter;
-import org.fogbeam.experimental.reasoning.abductive.queries.QueryCauses;
+import org.fogbeam.experimental.reasoning.abductive.queries.QueryCausesStrategy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class QueryCausesMain {
+public class QueryCausesMain 
+{
 
-	@SuppressWarnings("unchecked")
+	final static Logger logger = LoggerFactory.getLogger(QueryCausesMain.class);
+	
 	public static void main(String[] args) 
 	{
 		
-		QueryCauses query = new QueryCauses( TDB_DIR + "/trivial" );
+		QueryCausesStrategy query = new QueryCausesStrategy( TDB_DIR + "/trivial" );
 		
 		Set<String> mPlus = new HashSet<String>();
 		mPlus.add( "m1" );
@@ -34,13 +38,13 @@ public class QueryCausesMain {
 			
 		}
 
-		System.out.println( " }\n");
+		logger.debug( " }\n");
 
 		
-		System.out.println( "----------------------------------------------------\n");
+		logger.debug( "----------------------------------------------------\n");
 		
 		
-		System.out.println( "done" );
+		logger.debug( "done" );
 	}
 }
 
@@ -87,7 +91,7 @@ public class QueryCausesMain {
 		
 		for( Object o : foo )
 		{
-			System.out.println( o );
+			logger.debug( o );
 		}
 
 */

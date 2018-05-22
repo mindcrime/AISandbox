@@ -13,14 +13,16 @@ import org.fogbeam.experimental.reasoning.abductive.domain.GeneratorSet;
 import org.fogbeam.experimental.reasoning.abductive.queries.QueryDiseasesStrategy;
 import org.fogbeam.experimental.reasoning.abductive.queries.QueryManifestationsStrategy;
 import org.fogbeam.experimental.reasoning.abductive.setoperations.Bipartite;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class PCTAbductionMain 
 {
-
+	final static Logger logger = LoggerFactory.getLogger(PCTAbductionMain.class);
+	
 	public static void main(String[] args) throws Exception
-	{
-
+	{	
 		String tdbDir = TDB_DIR + "/trivial";
 		
 		QueryManifestationsStrategy manifestationsQuery = new QueryManifestationsStrategy( tdbDir );
@@ -49,13 +51,13 @@ public class PCTAbductionMain
 					mPlus.add(userInput);
 				}
 				
-				System.out.println( "Enter a Manifestation ('q' to quit): " );
+				logger.debug( "Enter a Manifestation ('q' to quit): " );
 				userInput = console.readLine();
 				
 			} while( !userInput.equalsIgnoreCase("q"));
 			
 
-			System.out.println( "Manifestations: " + mPlus );
+			logger.debug( "Manifestations: " + mPlus );
 
 			
 			// run through the PCT / BIPARTITE algorithm
@@ -69,12 +71,12 @@ public class PCTAbductionMain
 		}
 		
 		
-		System.out.println( "\n\n*********************************************\n");
-		System.out.println( "Hypothesis: " + hypothesis );
-		System.out.println( "\n\n*********************************************\n\n\n");
+		logger.debug( "\n\n*********************************************\n");
+		logger.debug( "Hypothesis: " + hypothesis );
+		logger.debug( "\n\n*********************************************\n\n\n");
 		
 		
-		System.out.println( "done: " + MethodHandles.lookup().lookupClass() );
+		logger.debug( "done: " + MethodHandles.lookup().lookupClass() );
 	}
 
 }

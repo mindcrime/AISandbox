@@ -6,9 +6,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class PowerSetExp 
 {
-
+	final static Logger logger = LoggerFactory.getLogger(PowerSetExp.class);
+	
 	public static void main(String[] args) 
 	{
 
@@ -22,10 +26,10 @@ public class PowerSetExp
 		{
 			System.out.print( "{ ");
 			subset.forEach( (k) -> { System.out.print( k + " " ); } ); 
-			System.out.println( "}");
+			logger.debug( "}");
 		}
 		
-		System.out.println( "done" );
+		logger.debug( "done" );
 		
 	}
 	

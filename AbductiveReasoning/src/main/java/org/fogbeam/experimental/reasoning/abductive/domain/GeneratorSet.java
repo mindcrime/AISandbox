@@ -10,9 +10,15 @@ import java.util.List;
 import org.apache.commons.lang3.SerializationUtils;
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.set.mutable.SetAdapter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class GeneratorSet implements Cloneable, Serializable
 {
+	private static final long serialVersionUID = 1L;
+
+	final static Logger logger = LoggerFactory.getLogger(GeneratorSet.class);
+	
 	private static int instanceCount = 0;
 	private int id;
 	private MutableSet<Generator> generators = SetAdapter.adapt( new LinkedHashSet<Generator>() );
@@ -34,12 +40,12 @@ public class GeneratorSet implements Cloneable, Serializable
 	
 	public void addGenerator( Generator gen )
 	{
-		System.out.println( "in addGenerator(), gen passed in = " + gen );
-		System.out.println( "in addGenerator(), existing generators = " + this.generators );
+		logger.debug( "in addGenerator(), gen passed in = " + gen );
+		logger.debug( "in addGenerator(), existing generators = " + this.generators );
 	
 		if( gen.isEmpty() )
 		{
-			System.out.println( "passed an empty Generator, ignoring it..." );
+			logger.debug( "passed an empty Generator, ignoring it..." );
 			return;
 		}
 		
@@ -54,8 +60,8 @@ public class GeneratorSet implements Cloneable, Serializable
 	
 	public void addAllGenerators( final MutableSet<Generator> generators )
 	{	
-		System.out.println( "in addAllGenerators, generators already existing = " + this.generators );
-		System.out.println( "in addAllGenerators, generators supplied = " + generators );
+		logger.debug( "in addAllGenerators, generators already existing = " + this.generators );
+		logger.debug( "in addAllGenerators, generators supplied = " + generators );
 		
 		boolean result = this.generators.addAll( generators );
 		if( !result )

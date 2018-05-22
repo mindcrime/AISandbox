@@ -29,9 +29,12 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.ReasonerRegistry;
 import org.apache.jena.tdb.TDBFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class VisualizeTrivialKBMain 
 {
+	final static Logger logger = LoggerFactory.getLogger(VisualizeTrivialKBMain.class);
 
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
@@ -54,7 +57,7 @@ public class VisualizeTrivialKBMain
 		String sparqlQuery = "select ?disorder ?manifestation where {" + ( " ?disorder <" + RESOURCE_BASE + "#causes>" + " ?manifestation . }" );
 		
 		
-		// System.out.println( "query: \n" + sparqlQuery + "\n" );
+		// logger.debug( "query: \n" + sparqlQuery + "\n" );
 	
 		// execute the query
 		Query query = QueryFactory.create(sparqlQuery);
@@ -80,7 +83,7 @@ public class VisualizeTrivialKBMain
 		    	String disorder = d.toString();
 		    	String manifestation = m.toString();
 		    	
-		    	System.out.println( disorder + " causes " + manifestation );
+		    	logger.debug( disorder + " causes " + manifestation );
 		    	
 		    	if( !disorders.contains( disorder ) )
 		    	{
@@ -101,7 +104,7 @@ public class VisualizeTrivialKBMain
 			qexec.close();
 		}			
 	
-		System.out.println( "Links: " + links );
+		logger.debug( "Links: " + links );
 		
 	
 		
@@ -126,7 +129,7 @@ public class VisualizeTrivialKBMain
 			
 			for( String disorder: disorders )
 			{
-				System.out.println( "adding DOT vertex for disorder: " + disorder );
+				logger.debug( "adding DOT vertex for disorder: " + disorder );
 				String disorderId = StringUtils.substringAfter(disorder, "#");
 				dotFileWriter.write( disorderId + " [id=\"" + disorderId + "\",label=\"" + disorderId + "\"]"+"\n" );
 				dotFileWriter.flush();
@@ -134,7 +137,7 @@ public class VisualizeTrivialKBMain
 			
 			for( String manifestation : manifestations )
 			{
-				System.out.println( "adding DOT vertext for manifestation: " + manifestation );
+				logger.debug( "adding DOT vertext for manifestation: " + manifestation );
 				String manifestationId = StringUtils.substringAfter(manifestation, "#");
 				dotFileWriter.write( manifestationId + " [id=\"" + manifestationId + "\",label=\"" + manifestationId + "\"]"+"\n" );
 				dotFileWriter.flush();
@@ -170,13 +173,14 @@ public class VisualizeTrivialKBMain
 
 		kgraphProcess.waitFor();
 		
-		System.out.println( "done: " + MethodHandles.lookup().lookupClass() );
+		logger.debug( "done: " + MethodHandles.lookup().lookupClass() );
 
 	}
 
 	static class Link extends Pair<String,String>
 	{
 		
+		private static final long serialVersionUID = 1L;
 		private String left;
 		private String right;
 		

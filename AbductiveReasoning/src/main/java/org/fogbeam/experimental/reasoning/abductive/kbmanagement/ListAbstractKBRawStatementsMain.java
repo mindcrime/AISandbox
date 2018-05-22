@@ -11,10 +11,13 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.tdb.TDBFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ListAbstractKBRawStatementsMain 
 {
-
+	final static Logger logger = LoggerFactory.getLogger(ListAbstractKBRawStatementsMain.class);
+	
 	public static void main(String[] args) 
 	{
 		
@@ -34,13 +37,13 @@ public class ListAbstractKBRawStatementsMain
 		while( sIter.hasNext() )
 		{
 			Statement s = sIter.nextStatement();
-			System.out.println( "s: " + s.toString() );
+			logger.debug( "s: " + s.toString() );
 		}
 		
 		
 		ds.close();
 		
-		System.out.println( "done: " + MethodHandles.lookup().lookupClass() );
+		logger.debug( "done: " + MethodHandles.lookup().lookupClass() );
 
 	}
 }

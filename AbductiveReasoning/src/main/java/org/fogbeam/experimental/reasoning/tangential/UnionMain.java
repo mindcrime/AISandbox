@@ -3,16 +3,20 @@ package org.fogbeam.experimental.reasoning.tangential;
 import java.util.Set;
 
 import org.eclipse.collections.impl.set.mutable.UnifiedSet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class UnionMain 
 {
+	final static Logger logger = LoggerFactory.getLogger(UnionMain.class);
+	
 	public static void main( String[] args ) 
 	{
 		UnionMain main = new UnionMain();
 		
 		main.run();
 
-		System.out.println( "done" );
+		logger.debug( "done" );
 		
 	}
 
@@ -28,9 +32,9 @@ public class UnionMain
 		uSet2.add( "d" );
 		uSet2.add( "e" );
 		
-		Set union = uSet1.union( uSet2 );
+		Set<String> union = uSet1.union( uSet2 );
 		
-		System.out.println( "union: " + union );
+		logger.debug( "union: " + union );
 		
 	}
 }

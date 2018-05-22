@@ -26,9 +26,13 @@ import org.apache.jena.reasoner.ReasonerRegistry;
 import org.apache.jena.tdb.TDBFactory;
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.set.mutable.SetAdapter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class QueryDiseasesStrategy 
 {
+	final static Logger logger = LoggerFactory.getLogger(QueryDiseasesStrategy.class);
+	
 	private String dir;
 	
 	public QueryDiseasesStrategy( final String dir )
@@ -109,7 +113,7 @@ public class QueryDiseasesStrategy
 		    	Resource d = soln.getResource("disease");
 		      
 		    	String res = d.toString();
-		    	// System.out.println( res );
+		    	// logger.debug( res );
 		    	diseases.add(res);
 		    }
 		}

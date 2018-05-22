@@ -9,9 +9,15 @@ import java.util.List;
 
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.set.mutable.SetAdapter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Generator  implements Cloneable, Serializable
 {
+	private static final long serialVersionUID = 1L;
+
+	final static Logger logger = LoggerFactory.getLogger(Generator.class);
+	
 	private static int instanceCount = 0;
 	private int id;
 	private MutableSet<MutableSet<String>> explanationSets = SetAdapter.adapt( new LinkedHashSet<MutableSet<String>>() );
@@ -40,7 +46,7 @@ public class Generator  implements Cloneable, Serializable
 	{
 		if( q_kj.isEmpty() )
 		{
-			System.out.println( "passed empty ExplanationSet, ignoring...");
+			logger.debug( "passed empty ExplanationSet, ignoring...");
 			
 			return;
 		}

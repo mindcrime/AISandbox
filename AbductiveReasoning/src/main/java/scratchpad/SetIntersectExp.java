@@ -5,10 +5,13 @@ import java.util.LinkedHashSet;
 
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.set.mutable.SetAdapter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SetIntersectExp 
 {
-
+	final static Logger logger = LoggerFactory.getLogger(SetIntersectExp.class);
+	
 	public static void main(String[] args) 
 	{
 		LinkedHashSet<String> setOneBackingSet = new LinkedHashSet<String>();
@@ -24,10 +27,10 @@ public class SetIntersectExp
 		setTwo.add( "d1" );
 		setTwo.add( "d3" );
 		
-		System.out.println( "setOne ∩ setTwo = " + setOne.intersect( setTwo ) );
+		logger.debug( "setOne ∩ setTwo = " + setOne.intersect( setTwo ) );
 		
 		
-		System.out.println( "\ndone - " +  MethodHandles.lookup().lookupClass() );
+		logger.debug( "\ndone - " +  MethodHandles.lookup().lookupClass() );
 		
 		
 	}

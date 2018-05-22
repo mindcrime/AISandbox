@@ -4,9 +4,13 @@ import java.util.LinkedHashSet;
 
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.set.mutable.SetAdapter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class AugResExperiment 
 {
+	final static Logger logger = LoggerFactory.getLogger(AugResExperiment.class);
+	
 	public static void main( String[] args )
 	{
 		MutableSet<String> gsubi = SetAdapter.adapt( new LinkedHashSet<String>() );
@@ -17,14 +21,14 @@ public class AugResExperiment
 		hsub1.add( "d2" );
 		
 		
-		System.out.println( "g_i - H_1 = " + gsubi.difference( hsub1 ) );
+		logger.debug( "g_i - H_1 = " + gsubi.difference( hsub1 ) );
 		
 		MutableSet<String> unioned = gsubi.union( SetAdapter.adapt( new LinkedHashSet<String>() ) );
-		System.out.println( "unioned = " + unioned );
+		logger.debug( "unioned = " + unioned );
 		
 		MutableSet<String> A = hsub1.difference( unioned );
 		
-		System.out.println( "( A = hsub1 - unioned ) = " + A );
+		logger.debug( "( A = hsub1 - unioned ) = " + A );
 		
 	}
 }

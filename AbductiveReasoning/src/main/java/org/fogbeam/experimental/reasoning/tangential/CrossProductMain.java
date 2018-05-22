@@ -1,13 +1,19 @@
 package org.fogbeam.experimental.reasoning.tangential;
 
-public class CrossProductMain {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-	public static void main(String[] args) {
+public class CrossProductMain 
+{
+	final static Logger logger = LoggerFactory.getLogger(CrossProductMain.class);
+	
+	public static void main(String[] args) 
+	{
 		
 		CrossProductMain main = new CrossProductMain();
 		main.run();
 
-		System.out.println( "done" );
+		logger.debug( "done" );
 	}
 
 	public void run()

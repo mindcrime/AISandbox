@@ -6,10 +6,14 @@ import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.T
 import java.util.Set;
 
 import org.fogbeam.experimental.reasoning.abductive.queries.QueryDiseasesStrategy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class QueryDiseasesMain 
 {
+	
+	final static Logger logger = LoggerFactory.getLogger(QueryDiseasesMain.class);
 
 	public static void main(String[] args) 
 	{
@@ -18,16 +22,16 @@ public class QueryDiseasesMain
 		
 		
 		Set<String> diseasesAll = query.listAll();
-		diseasesAll.forEach( (k) -> { System.out.println( k ); } );
+		diseasesAll.forEach( (k) -> { logger.debug( k ); } );
 		
-		System.out.println( "-----------------------------");
+		logger.debug( "-----------------------------");
 		
 		Set<String> diseases = query.doQuery( "m1" );
 		
-		diseases.forEach( (k) -> { System.out.println( k ); } );
+		diseases.forEach( (k) -> { logger.debug( k ); } );
 		
 		
-		System.out.println( "done" );
+		logger.debug( "done" );
 
 	}
 

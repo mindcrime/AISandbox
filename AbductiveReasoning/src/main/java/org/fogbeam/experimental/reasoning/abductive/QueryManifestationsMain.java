@@ -5,11 +5,15 @@ import static org.fogbeam.experimental.reasoning.abductive.AbductionConstants1.T
 import java.util.Set;
 
 import org.fogbeam.experimental.reasoning.abductive.queries.QueryManifestationsStrategy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class QueryManifestationsMain 
 {
-
+	final static Logger logger = LoggerFactory.getLogger(QueryManifestationsMain.class);
+	
+	
 	public static void main(String[] args) 
 	{
 
@@ -18,16 +22,16 @@ public class QueryManifestationsMain
 		Set<String> manifestationsAll = query.listAll();
 		
 		
-		manifestationsAll.forEach( (k) -> { System.out.println( k ); } ); 
+		manifestationsAll.forEach( (k) -> { logger.debug( k ); } ); 
 		
 		
-		System.out.println( "-------------------------------------" );
+		logger.debug( "-------------------------------------" );
 		
 		Set<String> manifestations = query.doQuery( "d1" );
 		
-		manifestations.forEach( (k) -> { System.out.println( k ); } ); 
+		manifestations.forEach( (k) -> { logger.debug( k ); } ); 
 		
-		System.out.println( "done" );
+		logger.debug( "done" );
 
 	}
 

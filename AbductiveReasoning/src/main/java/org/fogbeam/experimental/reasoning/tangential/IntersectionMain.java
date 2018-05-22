@@ -3,9 +3,12 @@ package org.fogbeam.experimental.reasoning.tangential;
 import java.util.Set;
 
 import org.eclipse.collections.impl.set.mutable.UnifiedSet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class IntersectionMain 
 {
+	final static Logger logger = LoggerFactory.getLogger(IntersectionMain.class);
 
 	public static void main(String[] args) 
 	{
@@ -13,7 +16,7 @@ public class IntersectionMain
 		IntersectionMain main = new IntersectionMain();
 		main.run();
 
-		System.out.println( "done" );
+		logger.debug( "done" );
 		
 	}
 
@@ -32,9 +35,9 @@ public class IntersectionMain
 		uSet2.add( "q" );
 		
 		
-		Set intersection = uSet1.intersect(uSet2);
+		Set<String> intersection = uSet1.intersect(uSet2);
 		
-		System.out.println( "intersection: " + intersection );
+		logger.debug( "intersection: " + intersection );
 		
 	}
 	

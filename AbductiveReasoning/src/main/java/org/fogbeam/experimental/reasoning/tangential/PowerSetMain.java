@@ -8,16 +8,20 @@ import org.apache.commons.lang3.StringUtils;
 import org.eclipse.collections.api.set.UnsortedSetIterable;
 import org.eclipse.collections.impl.set.mutable.UnifiedSet;
 import org.fogbeam.experimental.reasoning.abductive.queries.QueryManifestationsStrategy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class PowerSetMain {
-
+public class PowerSetMain 
+{
+	final static Logger logger = LoggerFactory.getLogger(PowerSetMain.class);
+	
 	public static void main(String[] args) 
 	{
 
 		PowerSetMain main = new PowerSetMain();
 		main.run();
 
-		System.out.println( "done" );
+		logger.debug( "done" );
 		
 	}
 
@@ -37,7 +41,7 @@ public class PowerSetMain {
 		{
 			System.out.print( "{ ");
 			setInPowerSet.forEach( (k) -> { System.out.print( StringUtils.substringAfter(k, "#") + " " ); } );
-			System.out.println( "}\n" );
+			logger.debug( "}\n" );
 		}
 	}
 }

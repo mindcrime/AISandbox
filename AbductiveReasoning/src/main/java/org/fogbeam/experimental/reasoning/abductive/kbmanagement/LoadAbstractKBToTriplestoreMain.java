@@ -14,19 +14,22 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.tdb.TDBFactory;
 import org.apache.jena.vocabulary.OWL;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class LoadTrivialKBToTriplestoremain 
+public class LoadAbstractKBToTriplestoreMain 
 {
-
+	final static Logger logger = LoggerFactory.getLogger(LoadAbstractKBToTriplestoreMain.class);
+	
 	public static void main(String[] args) throws Exception
 	{
-		File tdbDir = new File( TDB_DIR + "/trivial" );
+		File tdbDir = new File( TDB_DIR + "/abstract" );
 		if( !tdbDir.exists() )
 		{
 			tdbDir.mkdirs();
 		}
 		
-		Dataset ds = TDBFactory.createDataset(TDB_DIR + "/trivial");
+		Dataset ds = TDBFactory.createDataset(TDB_DIR + "/abstract");
 		Model model = ds.getDefaultModel();
 		ds.begin(ReadWrite.WRITE);
 		
@@ -46,6 +49,12 @@ public class LoadTrivialKBToTriplestoremain
 		Resource d3 = model.createResource( RESOURCE_BASE + "/disease#d3" ); 
 		Resource d4 = model.createResource( RESOURCE_BASE + "/disease#d4" ); 
 		Resource d5 = model.createResource( RESOURCE_BASE + "/disease#d5" ); 
+		Resource d6 = model.createResource( RESOURCE_BASE + "/disease#d6" );
+		Resource d7 = model.createResource( RESOURCE_BASE + "/disease#d7" );
+		Resource d8 = model.createResource( RESOURCE_BASE + "/disease#d8" ); 
+		Resource d9 = model.createResource( RESOURCE_BASE + "/disease#d9" ); 
+		
+		
 		
 		// create a few Manifestations
 		Resource m1 = model.createResource( RESOURCE_BASE + "/manifestation#m1" ); 
@@ -53,6 +62,7 @@ public class LoadTrivialKBToTriplestoremain
 		Resource m3 = model.createResource( RESOURCE_BASE + "/manifestation#m3" ); 
 		Resource m4 = model.createResource( RESOURCE_BASE + "/manifestation#m4" ); 
 		Resource m5 = model.createResource( RESOURCE_BASE + "/manifestation#m5" ); 
+		Resource m6 = model.createResource( RESOURCE_BASE + "/manifestation#m6" );
 		
 		
 		// create the set C of "causes" that links a Disease to the Manifestations it can cause
@@ -61,40 +71,83 @@ public class LoadTrivialKBToTriplestoremain
 		Statement sD1CausesM1 = model.createStatement( d1, pCauses, m1 );
 		model.add( sD1CausesM1 );
 		
-		Statement sD1CausesM2 = model.createStatement( d1, pCauses, m2 );
-		model.add( sD1CausesM2 );
+		Statement sD1CausesM4 = model.createStatement( d1, pCauses, m4 );
+		model.add( sD1CausesM4 );
 		
 		
 		Statement sD2CausesM1 = model.createStatement( d2, pCauses, m1 );
 		model.add( sD2CausesM1 );
 		
+		Statement sD2CausesM3 = model.createStatement( d2, pCauses, m3 );
+		model.add( sD2CausesM3 );
+		
 		Statement sD2CausesM4 = model.createStatement( d2, pCauses, m4 );
-		model.add( sD2CausesM4 );
+		model.add( sD2CausesM4);
 		
-		Statement sD3CausesM2 = model.createStatement( d3, pCauses, m2 );
-		model.add( sD3CausesM2 );
-		
-		Statement sD3CausesM4 = model.createStatement( d3, pCauses, m4 );
-		model.add( sD3CausesM4 );
+		Statement sD2CausesM6 = model.createStatement( d2, pCauses, m6 );
+		model.add( sD2CausesM6 );
 		
 		
-		Statement sD4CausesM3 = model.createStatement( d4, pCauses, m3 );
-		model.add( sD4CausesM3 );
 		
-		Statement sD4CausesM5 = model.createStatement( d4, pCauses, m5 );
-		model.add( sD4CausesM5 );
+		Statement sD3CausesM1 = model.createStatement( d3, pCauses, m1 );
+		model.add( sD3CausesM1 );
 		
-		Statement sD5CausesM4 = model.createStatement( d5, pCauses, m4 );
-		model.add( sD5CausesM4 );
-		
-		Statement sD5CausesM5 = model.createStatement( d5, pCauses, m5 );
-		model.add( sD5CausesM5 );
+		Statement sD3CausesM3 = model.createStatement( d3, pCauses, m3 );
+		model.add( sD3CausesM3 );
 		
 		
+		Statement sD4CausesM1 = model.createStatement( d4, pCauses, m1 );
+		model.add( sD4CausesM1 );
+		
+		Statement sD4CausesM6 = model.createStatement( d4, pCauses, m6 );
+		model.add( sD4CausesM6 );
+		
+		
+		
+		Statement sD5CausesM2 = model.createStatement( d5, pCauses, m2 );
+		model.add( sD5CausesM2 );
+		
+		Statement sD5CausesM3 = model.createStatement( d5, pCauses, m3 );
+		model.add( sD5CausesM3 );
+		
+
+		Statement sD6CausesM2 = model.createStatement( d6, pCauses, m2 );
+		model.add( sD6CausesM2 );
+		
+		Statement sD6CausesM3 = model.createStatement( d6, pCauses, m3 );
+		model.add( sD6CausesM3 );
+
+		
+		
+		Statement sD7CausesM2 = model.createStatement( d7, pCauses, m2 );
+		model.add( sD7CausesM2 );
+		
+		Statement sD7CausesM5 = model.createStatement( d7, pCauses, m5 );
+		model.add( sD7CausesM5 );
+
+
+		
+		Statement sD8CausesM4 = model.createStatement( d8, pCauses, m4);
+		model.add( sD8CausesM4 );
+		
+		Statement sD8CausesM5 = model.createStatement( d8, pCauses, m5 );
+		model.add( sD8CausesM5 );
+		
+		Statement sD8CausesM6 = model.createStatement( d8, pCauses, m6 );
+		model.add( sD8CausesM6 );
+		
+		
+		Statement sD9CausesM2 = model.createStatement( d9, pCauses, m2 );
+		model.add( sD9CausesM2 );
+		
+		Statement sD9CausesM5 = model.createStatement( d9, pCauses, m5 );
+		model.add( sD9CausesM5 );
+
+
 		ds.commit();
 		ds.close();
 		
-		System.out.println( "done: " + MethodHandles.lookup().lookupClass() );
+		logger.debug( "done: " + MethodHandles.lookup().lookupClass() );
 
 	}
 

@@ -26,10 +26,14 @@ import org.apache.jena.reasoner.ReasonerRegistry;
 import org.apache.jena.tdb.TDBFactory;
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.set.mutable.SetAdapter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class QueryManifestationsStrategy 
 {
 
+	final static Logger logger = LoggerFactory.getLogger(QueryManifestationsStrategy.class);
+	
 	private String dir;
 	
 	public QueryManifestationsStrategy( final String dir )
@@ -42,7 +46,7 @@ public class QueryManifestationsStrategy
 		LinkedHashSet<String> backingSet = new LinkedHashSet<String>();
 		MutableSet<String> manifestations = SetAdapter.adapt( backingSet );
 
-		System.out.println( "TBD_DIR: " + dir );
+		logger.debug( "TBD_DIR: " + dir );
 		File tdbDir = new File(dir);
 		if( !tdbDir.exists())
 		{
@@ -112,7 +116,7 @@ public class QueryManifestationsStrategy
 		    	Resource m = soln.getResource("manifestation");
 		      
 		    	String res = m.toString();
-		    	// System.out.println( res );
+		    	// logger.debug( res );
 		    	manifestations.add( res );
 		    }
 		}

@@ -1,10 +1,13 @@
 package scratchpad;
 
 import org.eclipse.collections.impl.set.mutable.UnifiedSet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SetDifferenceMain 
 {
-
+	final static Logger logger = LoggerFactory.getLogger(SetDifferenceMain.class);
+	
 	public static void main(String[] args) 
 	{
 		
@@ -23,9 +26,9 @@ public class SetDifferenceMain
 		
 		UnifiedSet<String> C = (UnifiedSet<String>) A.difference(B);
 		
-		System.out.println( "C = " + C );
+		logger.debug( "C = " + C );
 		
-		System.out.println( "done" );
+		logger.debug( "done" );
 
 	}
 
