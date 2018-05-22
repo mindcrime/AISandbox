@@ -271,11 +271,19 @@ public class Bipartite
 			result = G;
 		}
 		else
-		{	// otherwise...
+		{	
+			// otherwise...
 			System.out.println( "selecting arbitrary Generator QsubJ from Q" );
 			Generator QsubJ = Q.getArbitraryElement(0);
+			
 			System.out.println( "in resGeneratorSetByGeneratorSet(), QsubJ = " + QsubJ );
-			result = resGeneratorSetByGeneratorSet( resGeneratorSetByGenerator(G, QsubJ), Q.removeGenerator( QsubJ ) ); 
+			GeneratorSet QminusQsubJ = Q.removeGenerator( QsubJ );
+			
+			System.out.println( "in resGeneratorSetByGeneratorSet(), QminusQsubJ = " + QminusQsubJ );
+			GeneratorSet temp = resGeneratorSetByGenerator(G, QsubJ);
+			
+			System.out.println( "in resGeneratorSetByGeneratorSet(), temp = " + temp );
+			result = resGeneratorSetByGeneratorSet( temp, QminusQsubJ );		
 		}
 		
 		System.out.println( "in resGeneratorSetByGeneratorSet(), result = " + result );
@@ -333,6 +341,11 @@ public class Bipartite
 	
 	private GeneratorSet resGeneratorBySet(Generator GsubI, MutableSet<String> qsubj) 
 	{
+		
+		System.out.println( "in resGeneratorBySet(), GsubI = " + GsubI );
+		System.out.println( "in resGeneratorBySet(), qsubj = " + qsubj );
+		
+		
 		GeneratorSet result = new GeneratorSet();
 				
 		// this is a lot like augres, but without the additional 

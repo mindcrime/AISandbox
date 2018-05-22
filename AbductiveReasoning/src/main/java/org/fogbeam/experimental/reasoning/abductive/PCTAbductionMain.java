@@ -69,7 +69,10 @@ public class PCTAbductionMain
 		}
 		
 		
+		System.out.println( "\n\n*********************************************\n");
 		System.out.println( "Hypothesis: " + hypothesis );
+		System.out.println( "\n\n*********************************************\n\n\n");
+		
 		
 		System.out.println( "done: " + MethodHandles.lookup().lookupClass() );
 	}

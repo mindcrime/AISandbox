@@ -67,7 +67,7 @@ public class GeneratorSet implements Cloneable, Serializable
 	
 	public void unionInto( GeneratorSet temp )
 	{
-		this.generators.union(temp.getGenerators());
+		this.generators = this.generators.union(temp.getGenerators());
 	}
 
 	public Generator getArbitraryElement()
