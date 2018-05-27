@@ -37,9 +37,7 @@ public class Bipartite
 		// hypothesis = {Θ}, so our GeneratorSet starts out containing one empty set (Generator)
 		GeneratorSet hypothesis = new GeneratorSet();
 		Generator gen = new Generator(); 
-		// gen.initEmpty(SetAdapter.adapt( new LinkedHashSet<String>()));
 		hypothesis.initEmpty(gen);
-		
 		
 		for( String mNew : mPlus )
 		{

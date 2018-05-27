@@ -34,7 +34,7 @@ public class Generator  implements Cloneable, Serializable
 	
 	public String toString()
 	{
-		return this.id + " # " + this.explanationSets.makeString( "|" );
+		return "Generator(" + this.id + ") |" + this.explanationSets.size() + "| % " + this.explanationSets.makeString( "( ", " | ", " )" );
 	}
 	
 	public int size()

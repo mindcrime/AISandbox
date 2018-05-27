@@ -117,7 +117,7 @@ public class GeneratorSet implements Cloneable, Serializable
 	
 	public String toString()
 	{
-		return this.id + " : " + this.generators.makeString( "\\" );
+		return "GeneratorSet(" + this.id + ") |" + this.generators.size() + "| : " + this.generators.makeString( "{ ", " # ", " }" );
 	}
 	
 	@Override
