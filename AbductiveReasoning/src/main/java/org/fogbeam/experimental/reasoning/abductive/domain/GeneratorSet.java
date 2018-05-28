@@ -45,14 +45,14 @@ public class GeneratorSet implements Cloneable, Serializable
 	
 		if( gen.isEmpty() )
 		{
-			logger.debug( "passed an empty Generator, ignoring it..." );
+			logger.warn( "passed an empty Generator, ignoring it..." );
 			return;
 		}
 		
 		boolean result = this.generators.add( gen );
 		if( !result )
 		{
-			System.err.println( "WARN: failed to add in addGenerator() call!" );
+			logger.error( "failed to add in addGenerator() call!" );
 			throw new RuntimeException( "failed to add in addGenerator() call!" );
 		}
 		
@@ -66,7 +66,7 @@ public class GeneratorSet implements Cloneable, Serializable
 		boolean result = this.generators.addAll( generators );
 		if( !result )
 		{
-			System.err.println( "WARN: failed to add in addAllGenerators() call!" );
+			logger.warn( "failed to add in addAllGenerators() call!" );
 			// throw new RuntimeException( "failed to add in addAllGenerators() call!" );
 		}
 	}
@@ -105,14 +105,34 @@ public class GeneratorSet implements Cloneable, Serializable
 
 	public GeneratorSet removeGenerator(Generator qsubJ) 
 	{
-		this.generators.remove( qsubJ );
+		try
+		{
+			GeneratorSet resultGS = this.clone();
 		
-		return this;
+			boolean removeSucceeded = resultGS.generators.remove( qsubJ );
+		
+			if( !removeSucceeded )
+			{
+				logger.warn( "Failed to remove element " + qsubJ + " from GeneratorSet " + resultGS );
+				throw new RuntimeException( "Failed to remove element " + qsubJ + " from GeneratorSet " + resultGS );
+			}
+		
+			return resultGS;
+		}
+		catch( CloneNotSupportedException e )
+		{
+			throw new RuntimeException( e );
+		}
 	}
 	
 	public  boolean isEmpty()
 	{
 		return this.generators.isEmpty();
+	}
+	
+	public int size()
+	{
+		return this.generators.size();
 	}
 	
 	public String toString()

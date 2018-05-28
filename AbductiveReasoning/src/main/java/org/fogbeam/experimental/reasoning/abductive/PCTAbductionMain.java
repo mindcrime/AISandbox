@@ -27,7 +27,6 @@ public class PCTAbductionMain
 		QueryManifestationsStrategy manifestationsQuery = new QueryManifestationsStrategy( tdbDir );
 		MutableSet<String> manifestationsAll = manifestationsQuery.listAll();
 		
-		
 		QueryDiseasesStrategy diseasesQuery = new QueryDiseasesStrategy( tdbDir );
 		MutableSet<String> diseasesAll = diseasesQuery.listAll();
 		

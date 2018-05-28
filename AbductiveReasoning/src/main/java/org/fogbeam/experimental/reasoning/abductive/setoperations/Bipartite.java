@@ -41,17 +41,22 @@ public class Bipartite
 		
 		for( String mNew : mPlus )
 		{
+			logger.info( "In main loop, processing mNew: " + mNew );
+			MutableSet<String> causesMNew = causes( mNew );
+			logger.info( "In main loop, processing causes(mNew): " + causesMNew );
+			
 			// overwrite the existing values in hypothesis since we take stuff out as well as add stuff? 
 			// each time revise is called it returns the right set of stuff based on what's already there? 
 			// or does this need to accumulate...  
-			hypothesis = revise( hypothesis, causes( mNew ) );	
+			hypothesis = revise( hypothesis, causesMNew );
+			logger.info( "In main loop, interim hypothesis =  " + hypothesis );
 		}
 		
 		return hypothesis;
 	}
 
 	
-	private MutableSet<String> causes( String manifestation )
+	MutableSet<String> causes( String manifestation )
 	{
 		QueryCausesStrategy causesQuery = new QueryCausesStrategy(dir);
 		MutableSet<String> causesForManifestation = causesQuery.doQuery( manifestation );
@@ -60,12 +65,12 @@ public class Bipartite
 	}
 
 
-	private GeneratorSet divideGeneratorSetByDisorderSet( GeneratorSet G, MutableSet<String> Hsub1 )
+	GeneratorSet divideGeneratorSetByDisorderSet( GeneratorSet G, MutableSet<String> Hsub1 )
 	{
 		
 		// dividing a GeneratorSet by a DisorderSet is the union of the
 		// division of each Generator in the GeneratorSet, by the DisorderSet
-		
+		logger.info( "Entering divideGeneratorSetByDisorderSet()");
 		logger.debug( "in divideGeneratorSetByDisorderSet(), G = " + G );
 		logger.debug( "in divideGeneratorSetByDisorderSet(), Hsub1 = " + Hsub1 );
 		
@@ -83,8 +88,9 @@ public class Bipartite
 	}
 
 	
-	private GeneratorSet divideGeneratorByDisorderSet( Generator GsubI, MutableSet<String> Hsub1 )
+	GeneratorSet divideGeneratorByDisorderSet( Generator GsubI, MutableSet<String> Hsub1 )
 	{
+		logger.info( "Entering divideGeneratorByDisorderSet()");
 		logger.debug( "in divideGeneratorByDisorderSet(), GsubI = " + GsubI );
 		logger.debug( "in divideGeneratorByDisorderSet(), Hsub1 = " + Hsub1 );
 		
@@ -92,17 +98,19 @@ public class Bipartite
 		
 		int n = GsubI.size(); // by definition, we can have at most n generators resulting from this division
 		logger.debug( "in divideGeneratorByDisorderSet(), n = " + n );
-				
+			
+		
+		
 		for( int k = 1; k <= n; k++ )
 		{
-			logger.debug( "in divideGeneratorByDisorderSet(), k = " + k );
-			
+			logger.trace( "in divideGeneratorByDisorderSet(), k = " + k );
 			Iterator<MutableSet<String>> gsubiIterator = GsubI.getExplanationSets().iterator();
+			
 			Generator qk = new Generator();
 			
 			for( int j = 1; j <= n; j++ )
 			{
-				logger.debug( "in divideGeneratorByDisorderSet(), j = " + j );
+				logger.trace( "in divideGeneratorByDisorderSet(), j = " + j );
 				
 				MutableSet<String> gsubj = gsubiIterator.next();
 				
@@ -114,6 +122,11 @@ public class Bipartite
 					if( !(q_kj.size() == 0) )
 					{
 						qk.addExplanationSet( q_kj );
+					}
+					else
+					{
+						// flag this generator since there's a "bad" set we would have been including
+						qk.setFlagged(true);
 					}
 				}
 				else if( j == k )
@@ -131,6 +144,8 @@ public class Bipartite
 					else
 					{
 						logger.debug( "in divideGeneratorByDisorderSet(), disorderSet q_kj is empty, so NOT adding it to generator qk" );
+						// flag this generator to skip, since there's a "bad" set we would have been inserting
+						qk.setFlagged(true);
 					}
 				}
 				else if( j > k )
@@ -142,23 +157,28 @@ public class Bipartite
 					{
 						qk.addExplanationSet( q_kj );
 					}
+					else
+					{
+						throw new RuntimeException("this shouldn't happen!");
+					}
 				}
 			}
 			
 			logger.debug( "in divideGeneratorByDisorderSet(), adding generator qk to result GeneratorSet" );
-			result.addGenerator( qk );
-
+			if( !qk.isFlagged() )
+			{
+				result.addGenerator( qk );
+			}
 		}
 		
-		logger.debug( "in divideGeneratorByDisorderSet(), returning result = " + result );
-		
+		logger.debug( "in divideGeneratorByDisorderSet(), returning result = " + result );	
 		return result;
 	}
 	
 	
-	private GeneratorSet augresGeneratorSetBySet( GeneratorSet G, MutableSet<String> Hsub1 )
+	GeneratorSet augresGeneratorSetBySet( GeneratorSet G, MutableSet<String> Hsub1 )
 	{
-		
+		logger.info( "Entering augresGeneratorSetBySet()");
 		logger.debug( "in augresGeneratorSetBySet, G = " + G );
 		logger.debug( "in augresGeneratorSetBySet, Hsub1 = " + Hsub1 );
 		
@@ -184,8 +204,9 @@ public class Bipartite
 	}
 
 
-	private GeneratorSet augresGeneratorBySet( Generator G, MutableSet<String> Hsub1 )
+	GeneratorSet augresGeneratorBySet( Generator G, MutableSet<String> Hsub1 )
 	{
+		logger.info( "Entering augresGeneratorBySet()");
 		logger.debug( "in augresGeneratorBySet, G = " + G );
 		logger.debug( "in augresGeneratorBySet, Hsub1 = " + Hsub1 );
 		
@@ -208,6 +229,11 @@ public class Bipartite
 			{
 				// do we make a new Generator for each of these, or ???
 				generator.addExplanationSet( temp );
+			}
+			else
+			{
+				generator.setFlagged(true);
+				// throw new RuntimeException( "Nope, shouldn't happen either");
 			}
 			
 			logger.debug( "in augresGeneratorBySet, temp generator = " + generator );
@@ -233,10 +259,14 @@ public class Bipartite
 		{
 			generator.addExplanationSet( A );		
 		}
+		else
+		{
+			throw new RuntimeException( "Bad, bad, bad...");
+		}
 		
 		logger.debug( "in augresGeneratorBySet, final generator = " + generator );
 		
-		if( !generator.isEmpty() )
+		if( !generator.isEmpty() && !generator.isFlagged() )
 		{
 			result.addGenerator( generator );
 		}
@@ -246,21 +276,11 @@ public class Bipartite
 		return result;
 	}
 
-	/* 
-	private Generator setDifference( MutableSet<String> hsub1, MutableSet<String> explanationsUnion) 
-	{
-		Generator result = new Generator();
-		
-		MutableSet<String> difference = hsub1.difference( explanationsUnion );
-		
-		result.addExplanationSet( difference );
-		
-		return result;
-	}
-	*/
 
-	private GeneratorSet resGeneratorSetByGeneratorSet( GeneratorSet G, GeneratorSet Q )
+	GeneratorSet resGeneratorSetByGeneratorSet( GeneratorSet G, GeneratorSet Q )
 	{
+		logger.info( "Entering resGeneratorSetByGeneratorSet()");
+		
 		GeneratorSet result = null;
 		
 		logger.debug( "in resGeneratorSetByGeneratorSet(), G = " + G );
@@ -269,21 +289,29 @@ public class Bipartite
 		if( Q.isEmpty())
 		{
 			logger.debug( "returning G, since Q is empty set" );
-			result = G;
+			try
+			{
+				result = G.clone();
+			}
+			catch( CloneNotSupportedException e )
+			{
+				throw new RuntimeException( e );
+			}
 		}
 		else
 		{	
 			// otherwise...
 			logger.debug( "selecting arbitrary Generator QsubJ from Q" );
+			
 			Generator QsubJ = Q.getArbitraryElement(0);
-			
 			logger.debug( "in resGeneratorSetByGeneratorSet(), QsubJ = " + QsubJ );
+			
 			GeneratorSet QminusQsubJ = Q.removeGenerator( QsubJ );
-			
 			logger.debug( "in resGeneratorSetByGeneratorSet(), QminusQsubJ = " + QminusQsubJ );
-			GeneratorSet temp = resGeneratorSetByGenerator(G, QsubJ);
 			
+			GeneratorSet temp = resGeneratorSetByGenerator(G, QsubJ);
 			logger.debug( "in resGeneratorSetByGeneratorSet(), temp = " + temp );
+			
 			result = resGeneratorSetByGeneratorSet( temp, QminusQsubJ );		
 		}
 		
@@ -292,18 +320,28 @@ public class Bipartite
 		return result;
 	}
 	
-	private GeneratorSet resGeneratorSetByGenerator( GeneratorSet Q, Generator F )
+	GeneratorSet resGeneratorSetByGenerator( GeneratorSet Q, Generator F )
 	{
+		logger.info( "Entering resGeneratorSetByGenerator()");
 		logger.debug( "in resGeneratorSetByGenerator(), Q = " + Q );
 		logger.debug( "in resGeneratorSetByGenerator(), F = " + F );
 		
 		GeneratorSet result = new GeneratorSet();
-
 		
 		MutableSet<Generator> generators = Q.getGenerators();
 		for( Generator generator : generators )
 		{
-			GeneratorSet temp = resGeneratorByGenerator(generator, F);
+			Generator clonedF = null;
+			try
+			{
+				clonedF = F.clone();
+			}
+			catch( CloneNotSupportedException e )
+			{
+				throw new RuntimeException( e );
+			}
+			
+			GeneratorSet temp = resGeneratorByGenerator(generator, clonedF );
 			logger.debug( "in resGeneratorSetByGenerator(), temp = " + temp );
 			
 			result.unionInto( temp );
@@ -314,8 +352,10 @@ public class Bipartite
 	}
 	
 	
-	private GeneratorSet resGeneratorByGenerator( Generator GsubI, Generator QsubJ )
+	GeneratorSet resGeneratorByGenerator( Generator GsubI, Generator QsubJ )
 	{
+		logger.info( "Entering resGeneratorByGenerator()");
+		
 		GeneratorSet result = null;	
 		
 		if( QsubJ.isEmpty())
@@ -327,22 +367,36 @@ public class Bipartite
 		else
 		{
 			MutableSet<String> qsubj = QsubJ.getArbitraryElement(0);
-			GeneratorSet temp = resGeneratorBySet( GsubI, qsubj );			
+			logger.debug( "qsubj" + qsubj );
 			
-			GeneratorSet temp2 = resGeneratorSetByGenerator( divideGeneratorByDisorderSet(GsubI, qsubj), QsubJ.removeSet( qsubj ) );
+			GeneratorSet tempResOfGsubI = resGeneratorBySet( GsubI, qsubj );			
+			logger.debug( "tempResOfGsubI: " + tempResOfGsubI );
+			// this should be GeneratorSet(0) |1| : { Generator(2) |4| % ( [d3, d4] | [d5] | [d9, d7] | [d8] ) } 
+			// in our test case, and it is.  So we're good down to here. Next...
 			
-			temp.unionInto(temp2);
+			GeneratorSet tempResultOfDivide = divideGeneratorByDisorderSet(GsubI, qsubj);
+			logger.debug( "tempResultOfDivide: " + tempResultOfDivide );
 			
-			result = temp;
+			
+			Generator QsubJAfterRemoveElement = QsubJ.removeSet( qsubj );
+			logger.debug( "QsubJAfterRemoveElement: " + QsubJAfterRemoveElement );
+			
+			GeneratorSet tempResGeneratorSetByGenerator = resGeneratorSetByGenerator( tempResultOfDivide, QsubJAfterRemoveElement );
+			logger.debug( "tempResGeneratorSetByGenerator: " + tempResGeneratorSetByGenerator );
+			
+			tempResOfGsubI.unionInto( tempResGeneratorSetByGenerator );
+			logger.debug( "tempResOfGsubI after unionInto() = " + tempResOfGsubI );
+			
+			result = tempResOfGsubI;
 		}
 		
 		return result;
 	}
 
 	
-	private GeneratorSet resGeneratorBySet(Generator GsubI, MutableSet<String> qsubj) 
+	GeneratorSet resGeneratorBySet(Generator GsubI, MutableSet<String> qsubj) 
 	{
-		
+		logger.info( "Entering resGeneratorBySet()");
 		logger.debug( "in resGeneratorBySet(), GsubI = " + GsubI );
 		logger.debug( "in resGeneratorBySet(), qsubj = " + qsubj );
 		
@@ -369,19 +423,27 @@ public class Bipartite
 				// do we make a new Generator for each of these, or ???
 				generator.addExplanationSet( temp );
 			}
+			else
+			{
+				generator.setFlagged(true);
+			}
 			
 			logger.debug( "in resGeneratorBySet, temp generator = " + generator );
 		}
 
-		result.addGenerator(generator);
+		if( !generator.isFlagged())
+		{
+			result.addGenerator(generator);
+		}
 		
+		logger.debug( "resGeneratorBySet(), returning: " + result);
 		return result;
 	}
 
 
-	private GeneratorSet union( GeneratorSet F, GeneratorSet Q )
+	GeneratorSet union( GeneratorSet F, GeneratorSet Q )
 	{
-		
+		logger.info( "Entering union()");
 		logger.debug( "in union() F = " + F );
 		logger.debug( "in union() Q = " + Q );
 		
@@ -402,8 +464,10 @@ public class Bipartite
 	}
 	
 	
-	private GeneratorSet revise( GeneratorSet G, MutableSet<String> Hsub1 ) throws Exception
+	GeneratorSet revise( GeneratorSet G, MutableSet<String> Hsub1 ) throws Exception
 	{
+		logger.info( "Entering revise()");
+		
 		if( Hsub1 == null || Hsub1.isEmpty() )
 		{
 			throw new RuntimeException( "no valid Hsub1 passed to revise!" );

@@ -7,7 +7,7 @@
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<!-- deny all events with a level below INFO, that is TRACE and DEBUG -->
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>INFO</level>
+			<level>DEBUG</level>
 		</filter>
 		<encoder>
 			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
@@ -15,27 +15,8 @@
 		</encoder>
 	</appender>
 
-	<appender name="ROLLINGFILE"
-		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>PCTAbduction-rolling.log</file>
-		<encoder>
-			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
-			</pattern>
-		</encoder>
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<!-- daily rollover -->
-			<fileNamePattern>logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
-
-			<!-- keep 30 days' worth of history capped at 3GB total size -->
-			<maxHistory>30</maxHistory>
-			<totalSizeCap>3GB</totalSizeCap>
-
-		</rollingPolicy>
-	</appender>
-
-	<appender name="FILE"
-		class="ch.qos.logback.core.FileAppender">
-		<file>PCTAbduction.log</file>
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<file>PCTAbductionTest.log</file>
 		<append>false</append>
 		<encoder>
 			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n

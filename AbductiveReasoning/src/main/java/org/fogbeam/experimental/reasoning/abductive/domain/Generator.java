@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 
+import org.apache.commons.lang3.SerializationUtils;
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.impl.set.mutable.SetAdapter;
 import org.slf4j.Logger;
@@ -21,6 +22,8 @@ public class Generator  implements Cloneable, Serializable
 	private static int instanceCount = 0;
 	private int id;
 	private MutableSet<MutableSet<String>> explanationSets = SetAdapter.adapt( new LinkedHashSet<MutableSet<String>>() );
+	
+	private boolean flagged;
 	
 	public Generator()
 	{
@@ -46,7 +49,7 @@ public class Generator  implements Cloneable, Serializable
 	{
 		if( q_kj.isEmpty() )
 		{
-			logger.debug( "passed empty ExplanationSet, ignoring...");
+			logger.warn( "passed empty ExplanationSet, ignoring...");
 			
 			return;
 		}
@@ -96,5 +99,40 @@ public class Generator  implements Cloneable, Serializable
 	public void initEmpty( MutableSet<String> empty ) 
 	{
 		this.explanationSets.add( empty );
+	}
+	
+	public void setFlagged(boolean flagged) 
+	{
+		this.flagged = flagged;
+	}
+	
+	public boolean isFlagged() 
+	{
+		return flagged;
+	}
+	
+	@Override
+	public boolean equals( Object rhs ) 
+	{
+		if( !(rhs instanceof Generator))
+		{
+			return false;
+		}
+		Generator other = (Generator)rhs;
+		
+		return this.id == other.id;
+	}
+	
+	@Override
+	public int hashCode() 
+	{
+		return Integer.hashCode(this.id);
+	}
+	
+	public Generator clone() throws CloneNotSupportedException
+	{
+		Generator clone = SerializationUtils.clone(this);
+		
+		return clone;
 	}
 }
