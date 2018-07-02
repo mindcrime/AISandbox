@@ -1,4 +1,4 @@
-package org.example.fogbeam.blackboard;
+package org.example.fogbeam.blackboard.agent;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -9,7 +9,10 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-public class AtCommandSubsystemObserver implements Observer 
+import org.example.fogbeam.blackboard.Conversation;
+import org.example.fogbeam.blackboard.callable.AtCommandSubsystemCallable;
+
+public class AutoSPARQLAgent implements Observer 
 {
 	
 	final ExecutorService executorService = Executors.newFixedThreadPool(1);

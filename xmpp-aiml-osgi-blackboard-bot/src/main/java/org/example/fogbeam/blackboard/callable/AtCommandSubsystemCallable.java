@@ -1,7 +1,8 @@
-package org.example.fogbeam.aisubsystem;
+package org.example.fogbeam.blackboard.callable;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.Callable;
 
 /* There's really nothing AI about this in its present incarnation.  The question is, can
  * we come up with a way for the bot to learn "@commands" dynamically?  Consider that an
@@ -9,27 +10,27 @@ import java.util.Date;
  * to use to control the bot, as well as a handy way to make it do actually useful stuff
  * until we figure out how to make it learn how.  
  */
-public class AtCommandSubsystem implements AISubsystem
+public class AtCommandSubsystemCallable implements Callable<String>
 {
-
 	SimpleDateFormat sdf = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss zzz" );
 	
-	@Override
-	public String processMessage( String msgBody ) 
+	private String message;
+	
+	public AtCommandSubsystemCallable( String message )
 	{
-		
-		if( msgBody == null )
-		{
-			return null;
-		}
-		
-		System.out.println( "received incoming message: " + msgBody );
+		this.message = message;
+	}
+	
+	@Override
+	public String call() 
+	{
+		System.out.println( "AtCommandSubsystem handling input: " + message );
 		
 		String response = "";
 		
-		if( !msgBody.isEmpty() && msgBody.startsWith("@"))
+		if( !message.isEmpty() && message.startsWith("@"))
 		{
-			switch( msgBody )
+			switch( message )
 			{
 				case "@time":
 					Date now = new Date();
@@ -42,18 +43,6 @@ public class AtCommandSubsystem implements AISubsystem
 		}
 		
 		System.out.println("RESPONSE: " + response);
-		
-		// A little pause here, it's creepy if the bot responds too fast.
-		try
-		{
-			Thread.sleep( 1250 );
-		}
-		catch( Exception e )
-		{
-			// NOP, doesn't matter if this sleep is interrupted
-		}
-		
-		return response;
-	}	
-	
+				
+		return response;	}	
 }

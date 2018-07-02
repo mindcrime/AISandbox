@@ -62,10 +62,9 @@ public class BotBundleActivator implements BundleActivator
 		
 		BlockingQueue<String> inputMessageQueue = new LinkedBlockingQueue<String>();
 		
-		ExecutiveRunnable blackboardExecutive = new ExecutiveRunnable( inputMessageQueue );
-		Thread blackboardThread = new Thread( blackboardExecutive );
-		
-		blackboardThread.start();
+		// ExecutiveRunnable blackboardExecutive = new ExecutiveRunnable( inputMessageQueue );
+		// Thread blackboardThread = new Thread( blackboardExecutive );
+		// blackboardThread.start();
 		
 		try
 		{				
@@ -79,7 +78,8 @@ public class BotBundleActivator implements BundleActivator
 	
 			// Log into the server
 			connection.login();
-	
+			System.out.println( "logged in to XMPP" );
+			
 			ChatManager chatManager = ChatManager.getInstanceFor(connection);
 			BlackboardXmppChatListener chatListener = new BlackboardXmppChatListener( inputMessageQueue );
 			chatManager.addChatListener(chatListener);	

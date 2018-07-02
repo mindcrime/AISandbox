@@ -1,4 +1,4 @@
-package org.example.fogbeam.blackboard;
+package org.example.fogbeam.blackboard.callable;
 
 import java.util.concurrent.Callable;
 

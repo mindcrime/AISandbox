@@ -20,12 +20,17 @@ public class Blackboard_MessageListener implements ChatMessageListener
 		this.executive = new ExecutiveRunnable( this.inputMessageQueue );
 		this.executiveThread = new Thread( this.executive );
 		this.executiveThread.start();
+		
+		System.out.println( "Started executive thread..." );
 	}
 	
 	
 	@Override
 	public void processMessage(Chat chat, Message message) 
 	{
+		
+		System.out.println( "Blackboard_MessageListener received message: " + message.getBody());
+		
 		// This is the highest level input / output system, which exists
 		// just to bridge between XMPP and the executive that manages the
 		// various processing sub-systems.
@@ -45,33 +50,43 @@ public class Blackboard_MessageListener implements ChatMessageListener
 
 		// hand message to the blackboard system and wait for a response.
 		this.executive.offerMessage( messageBody );
-		
+
+		int waitPeriod = 100;
+		int elapsedTime = 0;
 		while( ( response = this.executive.getResponse() ) == null )
 		{
 			// sleep a little while while the Blackboard system "thinks"
 			try
 			{
-				Thread.sleep( 1000 );
+				Thread.sleep( waitPeriod );
 			}
 			catch(Exception e )
 			{}
+			
+			elapsedTime += waitPeriod;
+			if( elapsedTime > 5000 )
+			{
+				// if the executive hasn't responded after 5 seconds, give up.
+				// later we have to figure out how to have the system learn to
+				// ask for more time.  Think of the way a human might go "uuuhhh..." 
+				// to stall, or go "hang on a second", etc.
+				break;
+			}
 		}
 		
-		if( response.isEmpty() )
+		if( response == null || response.isEmpty() )
 		{
 			response = "I have no response for that";
 		}
-		else
+		
+		try
 		{
-			try
-			{
-				chat.sendMessage( response );
-			}
-			catch( Exception e )
-			{
-				e.printStackTrace();
-			}		
+			chat.sendMessage( response );
 		}
+		catch( Exception e )
+		{
+			e.printStackTrace();
+		}		
 	}
 
 }

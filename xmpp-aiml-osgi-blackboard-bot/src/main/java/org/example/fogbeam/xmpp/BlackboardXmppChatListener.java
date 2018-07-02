@@ -11,6 +11,7 @@ public class BlackboardXmppChatListener implements ChatManagerListener
 	
 	public BlackboardXmppChatListener( final BlockingQueue<String> inputMessageQueue )
 	{
+		System.out.println( "instantiating BlackboardXmppChatListener");
 		this.inputMessageQueue = inputMessageQueue;
 	}
 	
@@ -19,6 +20,8 @@ public class BlackboardXmppChatListener implements ChatManagerListener
 	{
 		if (!createdLocally)
 		{
+			System.out.println( "adding Blackboard_MessageListener");
+			
 			chat.addMessageListener(new Blackboard_MessageListener(this.inputMessageQueue));
 		}
 	}
