@@ -8,6 +8,14 @@ import org.example.fogbeam.blackboard.agent.BlackboardAgent;
 
 public class Conversation extends Observable
 {	
+	/* TODO: should we have a "mode" flag that lets us toggle
+	 * something like a specific "teaching" mode, as a shortcut?
+	 * The idea is to have a mode where we are just sending direct commands
+	 * to the bot, which will be recognized by an agent that does
+	 * something that doens't generate any response, so there's no
+	 * need for interactivity.  
+	 */
+	
 	private boolean paused;
 	
 	private List<BlackboardFrame> frames = new ArrayList<BlackboardFrame>();
