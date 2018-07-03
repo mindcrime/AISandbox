@@ -8,7 +8,6 @@ import java.util.Properties;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import org.example.fogbeam.blackboard.ExecutiveRunnable;
 import org.jivesoftware.smack.AbstractXMPPConnection;
 import org.jivesoftware.smack.ReconnectionManager;
 import org.jivesoftware.smack.chat.ChatManager;
@@ -17,15 +16,30 @@ import org.jivesoftware.smack.tcp.XMPPTCPConnectionConfiguration;
 import org.jivesoftware.smack.util.TLSUtils;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import ch.qos.logback.classic.LoggerContext;
+import ch.qos.logback.core.status.OnConsoleStatusListener;
+import ch.qos.logback.core.status.StatusManager;
 
 public class BotBundleActivator implements BundleActivator
 {
+	Logger logger = LoggerFactory.getLogger(BotBundleActivator.class);
 	
 	AbstractXMPPConnection connection = null;
 	
 	@Override
 	public void start(BundleContext context) throws Exception 
 	{
+		LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory(); 
+		StatusManager statusManager = lc.getStatusManager();
+		OnConsoleStatusListener onConsoleListener = new OnConsoleStatusListener();
+		statusManager.add(onConsoleListener);
+		
+		
+		logger.info("Starting BotBundleActivator");
+		
 		Properties props = new Properties();
 
 		InputStream stream = new FileInputStream( "conf/aiml-xmpp-bot.properties" );
@@ -52,8 +66,6 @@ public class BotBundleActivator implements BundleActivator
 		
 		connection = new XMPPTCPConnection(configBuilder.build());
 		
-	
-	
 		
 		XmppMessageListener connectionListener = new XmppMessageListener();
 
@@ -62,12 +74,9 @@ public class BotBundleActivator implements BundleActivator
 		
 		BlockingQueue<String> inputMessageQueue = new LinkedBlockingQueue<String>();
 		
-		// ExecutiveRunnable blackboardExecutive = new ExecutiveRunnable( inputMessageQueue );
-		// Thread blackboardThread = new Thread( blackboardExecutive );
-		// blackboardThread.start();
-		
 		try
 		{				
+			logger.info( "Connecting to XMPP server" );
 			System.out.println( "Connecting...");
 				
 					
@@ -78,21 +87,21 @@ public class BotBundleActivator implements BundleActivator
 	
 			// Log into the server
 			connection.login();
+			logger.info( "Logged in to XMPP server" );
 			System.out.println( "logged in to XMPP" );
 			
 			ChatManager chatManager = ChatManager.getInstanceFor(connection);
 			BlackboardXmppChatListener chatListener = new BlackboardXmppChatListener( inputMessageQueue );
 			chatManager.addChatListener(chatListener);	
 		
+			logger.info( "Bot running..." );
 			System.out.println( "bot running..." );
-			
 		}
 		catch( Exception e )
 		{
 			System.err.println( "Uh oh... something broke!");
-			e.printStackTrace();
+			logger.error( "Exception starting BotBundleActivator", e );
 		}
-			
 	}
 	
 	@Override
