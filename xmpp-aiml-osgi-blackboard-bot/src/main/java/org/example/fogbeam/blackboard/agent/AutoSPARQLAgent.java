@@ -11,9 +11,12 @@ import java.util.concurrent.TimeoutException;
 
 import org.example.fogbeam.blackboard.Conversation;
 import org.example.fogbeam.blackboard.callable.AtCommandSubsystemCallable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class AutoSPARQLAgent implements Observer 
 {
+	Logger logger = LoggerFactory.getLogger( AutoSPARQLAgent.class );
 	
 	final ExecutorService executorService = Executors.newFixedThreadPool(1);
 
@@ -22,7 +25,7 @@ public class AutoSPARQLAgent implements Observer
 	{
 		Conversation conversation = (Conversation)input;
 		
-		System.out.println( this.getClass().getName() + " : received input message: " + conversation.toString());
+		logger.info( this.getClass().getName() + " : received input message: " + conversation.toString());
 				
 		AtCommandSubsystemCallable task = new AtCommandSubsystemCallable( conversation.toString() );
 		Future<String> taskFuture = executorService.submit(task);
@@ -34,7 +37,7 @@ public class AutoSPARQLAgent implements Observer
 				String response = taskFuture.get( 75, TimeUnit.MILLISECONDS);
 				if( response != null )
 				{
-					System.out.println( this.getClass().getName() + " thinks the answer is: " + response );
+					logger.info( this.getClass().getName() + " thinks the answer is: " + response );
 					break;
 				}
 			} 

@@ -3,9 +3,13 @@ package org.example.fogbeam.blackboard.callable;
 import java.util.concurrent.Callable;
 
 import org.alicebot.ab.Bot;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class AIML_InterpreterSubsystemCallable implements Callable<String> 
 {
+	Logger logger = LoggerFactory.getLogger( AIML_InterpreterSubsystemCallable.class );
+	
 	private String message;
 	private org.alicebot.ab.Chat chatSession;
 
@@ -22,7 +26,7 @@ public class AIML_InterpreterSubsystemCallable implements Callable<String>
 	@Override
 	public String call() 
 	{
-		System.out.println( "AIML_InterpreterSubsystem handling input: " + message );
+		logger.info( "AIML_InterpreterSubsystem handling input: " + message );
 		
 		String response = "";
 		
@@ -41,7 +45,7 @@ public class AIML_InterpreterSubsystemCallable implements Callable<String>
 					// NOP, we have a separate subsystem for processing @commands
 				}
 
-				System.out.println("RESPONSE: " + response);
+				logger.info("RESPONSE: " + response);
 			}
 			
 		}

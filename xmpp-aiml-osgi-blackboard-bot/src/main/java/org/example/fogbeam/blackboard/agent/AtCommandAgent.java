@@ -11,16 +11,20 @@ import org.example.fogbeam.blackboard.BlackboardFrame;
 import org.example.fogbeam.blackboard.Conversation;
 import org.example.fogbeam.blackboard.SimpleBlackboardFrame;
 import org.example.fogbeam.blackboard.callable.AtCommandSubsystemCallable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class AtCommandAgent extends SimpleBlackboardAgent
 {
+
+	Logger logger = LoggerFactory.getLogger( AtCommandAgent.class );
 	
 	final ExecutorService executorService = Executors.newFixedThreadPool(1);
 
 	@Override
 	protected void process( final Conversation conversation, final BlackboardFrame frame) 
 	{	
-		System.out.println( this.getClass().getName() + " : received input message: " + frame.getContents() );
+		logger.info( this.getClass().getName() + " : received input message: " + frame.getContents() );
 				
 		AtCommandSubsystemCallable task = new AtCommandSubsystemCallable( frame.getContents() );
 		Future<String> taskFuture = executorService.submit(task);
@@ -30,7 +34,7 @@ public class AtCommandAgent extends SimpleBlackboardAgent
 			String response = taskFuture.get( 75, TimeUnit.MILLISECONDS);
 			if( response != null && !response.isEmpty() )
 			{
-				System.out.println( this.getClass().getName() + " thinks the answer is: " + response );
+				logger.info( this.getClass().getName() + " thinks the answer is: " + response );
 				
 				SimpleBlackboardFrame newFrame = new SimpleBlackboardFrame( response );
 				newFrame.setSourceTag( this.getClass().getName() );

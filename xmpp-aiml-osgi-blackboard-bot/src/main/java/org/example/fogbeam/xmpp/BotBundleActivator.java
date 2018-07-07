@@ -77,8 +77,6 @@ public class BotBundleActivator implements BundleActivator
 		try
 		{				
 			logger.info( "Connecting to XMPP server" );
-			System.out.println( "Connecting...");
-				
 					
 			connection.addConnectionListener( connectionListener );
 			
@@ -88,14 +86,12 @@ public class BotBundleActivator implements BundleActivator
 			// Log into the server
 			connection.login();
 			logger.info( "Logged in to XMPP server" );
-			System.out.println( "logged in to XMPP" );
 			
 			ChatManager chatManager = ChatManager.getInstanceFor(connection);
 			BlackboardXmppChatListener chatListener = new BlackboardXmppChatListener( inputMessageQueue );
 			chatManager.addChatListener(chatListener);	
 		
 			logger.info( "Bot running..." );
-			System.out.println( "bot running..." );
 		}
 		catch( Exception e )
 		{
@@ -107,7 +103,7 @@ public class BotBundleActivator implements BundleActivator
 	@Override
 	public void stop(BundleContext context) throws Exception 
 	{
-		System.out.println( "Stopping bot...");
+		logger.info( "Stopping bot...");
 		connection.disconnect();
 	}
 }

@@ -7,9 +7,13 @@ import java.util.concurrent.BlockingQueue;
 
 import org.example.fogbeam.blackboard.agent.AIML_InterpreterAgent;
 import org.example.fogbeam.blackboard.agent.AtCommandAgent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ExecutiveRunnable implements Runnable,Observer 
 {
+	Logger logger = LoggerFactory.getLogger( ExecutiveRunnable.class );
+	
 	private volatile boolean keepRunning = true;
 	
 	private BlockingQueue<String> inputMessageQueue;
@@ -60,7 +64,7 @@ public class ExecutiveRunnable implements Runnable,Observer
 					continue;
 				}
 				
-				System.out.println( "Executive received message: " + input );
+				logger.info( "Executive received message: " + input );
 				
 				// is there a currently valid conversation?  If so, add this input to that
 				// conversation, otherwise, start a new one
@@ -78,7 +82,7 @@ public class ExecutiveRunnable implements Runnable,Observer
 				
 				if( extantConversations == null || extantConversations.isEmpty() )
 				{
-					System.out.println( "Starting new Conversation" );
+					logger.info( "Starting new Conversation" );
 					
 					Conversation conversation = new Conversation();
 					BlackboardFrame newFrame = new SimpleBlackboardFrame(input);
@@ -91,7 +95,7 @@ public class ExecutiveRunnable implements Runnable,Observer
 				}
 				else
 				{
-					System.out.println( "Found existing Conversation" );
+					logger.info( "Found existing Conversation" );
 					
 					Conversation conversation = extantConversations.get(extantConversations.size()-1);
 				
@@ -108,7 +112,7 @@ public class ExecutiveRunnable implements Runnable,Observer
 			}
 		}
 		
-		System.out.println( "DispatcherRunnable stopped..." );
+		logger.info( "DispatcherRunnable stopped..." );
 	}
 	
 	public void stop()
@@ -160,7 +164,7 @@ public class ExecutiveRunnable implements Runnable,Observer
 				// we've reached a frame we sent, so stop
 				if( currentHighScore != null && currentHighScore.getConfidence() > 35.0 )
 				{
-					System.out.println( "ExecutiveRunnable - setting response!" );
+					logger.info( "ExecutiveRunnable - setting response!" );
 					response = currentHighScore.getContents();
 					conversation.setPaused(true);
 				}
@@ -177,7 +181,7 @@ public class ExecutiveRunnable implements Runnable,Observer
 				{
 					if( candidateFrame.getConfidence() > currentHighScore.getConfidence() )
 					{
-						System.out.println( "swapping currentHighScore for candidateFrame" );
+						logger.info( "swapping currentHighScore for candidateFrame" );
 						currentHighScore = candidateFrame;
 					}
 				}
@@ -188,18 +192,18 @@ public class ExecutiveRunnable implements Runnable,Observer
 	@Override
 	public void update(Observable observable, Object arg) 
 	{
-		System.out.println( "ExecutiveRunnable - got update from observable" );
+		logger.info( "ExecutiveRunnable - got update from observable" );
 		
 		if( observable instanceof Blackboard && arg instanceof Conversation )
 		{
-			System.out.println( "ExecutiveRunnable - registering as Observer for Conversation" );
+			logger.info( "ExecutiveRunnable - registering as Observer for Conversation" );
 			
 			Conversation conversation = (Conversation)arg;
 			conversation.addObserver(this);
 		}
 		else if( observable instanceof Conversation && arg instanceof BlackboardFrame )
 		{
-			System.out.println( "ExecutiveRunnable - processing Conversation" );
+			logger.info( "ExecutiveRunnable - processing Conversation" );
 			BlackboardFrame frame = (BlackboardFrame) arg;
 			if( !frame.getSourceTag().equals(this.getClass().getName()))
 			{

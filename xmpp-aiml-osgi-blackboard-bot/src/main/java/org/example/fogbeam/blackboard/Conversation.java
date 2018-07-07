@@ -5,9 +5,13 @@ import java.util.List;
 import java.util.Observable;
 
 import org.example.fogbeam.blackboard.agent.BlackboardAgent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Conversation extends Observable
 {	
+	Logger logger = LoggerFactory.getLogger( Conversation.class );
+	
 	/* TODO: should we have a "mode" flag that lets us toggle
 	 * something like a specific "teaching" mode, as a shortcut?
 	 * The idea is to have a mode where we are just sending direct commands
@@ -22,7 +26,7 @@ public class Conversation extends Observable
 	
 	public void addMessage( final BlackboardFrame message )
 	{
-		System.out.println( "Conversation - got new BlackboardFrame" );
+		logger.info( "Conversation - got new BlackboardFrame" );
 		
 		frames.add( message );
 		this.setChanged();

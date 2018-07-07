@@ -11,16 +11,19 @@ import org.example.fogbeam.blackboard.BlackboardFrame;
 import org.example.fogbeam.blackboard.Conversation;
 import org.example.fogbeam.blackboard.SimpleBlackboardFrame;
 import org.example.fogbeam.blackboard.callable.AIML_InterpreterSubsystemCallable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class AIML_InterpreterAgent extends SimpleBlackboardAgent
 {
-
+	Logger logger = LoggerFactory.getLogger( AIML_InterpreterAgent.class );
+	
 	final ExecutorService executorService = Executors.newFixedThreadPool(1);
 	
 	@Override
 	protected void process(Conversation conversation, BlackboardFrame frame) 
 	{	
-		System.out.println( this.getClass().getName() + " : received input message: " + frame.getContents() );
+		logger.info( this.getClass().getName() + " : received input message: " + frame.getContents() );
 		
 		AIML_InterpreterSubsystemCallable task = new AIML_InterpreterSubsystemCallable( frame.getContents() );
 		Future<String> taskFuture = executorService.submit(task);
@@ -30,7 +33,7 @@ public class AIML_InterpreterAgent extends SimpleBlackboardAgent
 			String response = taskFuture.get( 75, TimeUnit.MILLISECONDS);
 			if( response != null && !response.isEmpty() )
 			{
-				System.out.println( this.getClass().getName() + " thinks the answer is: " + response );
+				logger.info( this.getClass().getName() + " thinks the answer is: " + response );
 
 				SimpleBlackboardFrame newFrame = new SimpleBlackboardFrame( response );
 				newFrame.setSourceTag( this.getClass().getName() );

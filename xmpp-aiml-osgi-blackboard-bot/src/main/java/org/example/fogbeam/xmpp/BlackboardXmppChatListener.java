@@ -4,14 +4,18 @@ import java.util.concurrent.BlockingQueue;
 
 import org.jivesoftware.smack.chat.Chat;
 import org.jivesoftware.smack.chat.ChatManagerListener;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class BlackboardXmppChatListener implements ChatManagerListener
 {
+	Logger logger = LoggerFactory.getLogger( BlackboardXmppChatListener.class );
+	
 	private BlockingQueue<String> inputMessageQueue;
 	
 	public BlackboardXmppChatListener( final BlockingQueue<String> inputMessageQueue )
 	{
-		System.out.println( "instantiating BlackboardXmppChatListener");
+		logger.info( "instantiating BlackboardXmppChatListener");
 		this.inputMessageQueue = inputMessageQueue;
 	}
 	
@@ -20,7 +24,7 @@ public class BlackboardXmppChatListener implements ChatManagerListener
 	{
 		if (!createdLocally)
 		{
-			System.out.println( "adding Blackboard_MessageListener");
+			logger.info( "adding Blackboard_MessageListener");
 			
 			chat.addMessageListener(new Blackboard_MessageListener(this.inputMessageQueue));
 		}

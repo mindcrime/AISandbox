@@ -2,10 +2,13 @@ package org.example.fogbeam.xmpp;
 
 import org.jivesoftware.smack.ConnectionListener;
 import org.jivesoftware.smack.XMPPConnection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class XmppMessageListener implements ConnectionListener
 {
+	Logger logger = LoggerFactory.getLogger( XmppMessageListener.class );
 	
 	boolean m_reconnect = false;
 	
@@ -16,44 +19,44 @@ public class XmppMessageListener implements ConnectionListener
 	
 	@Override
 	public void connectionClosedOnError(Exception arg0) {
-		System.out.println( "connectionClosedOnError called!");
+		logger.info( "connectionClosedOnError called!");
 		m_reconnect = true;
 		Thread.currentThread().interrupt();
 	}
 
 	@Override
 	public void authenticated(XMPPConnection arg0, boolean arg1) {
-		System.out.println( "authenticated called!");
+		logger.info( "authenticated called!");
 		
 	}
 
 	@Override
 	public void connected(XMPPConnection arg0) {
-		System.out.println( "connected called!");
+		logger.info( "connected called!");
 		
 	}
 
 	@Override
 	public void connectionClosed() {
-		System.out.println( "connectionClosed called!");
+		logger.info( "connectionClosed called!");
 		
 	}
 
 	@Override
 	public void reconnectingIn(int arg0) {
-		System.out.println( "reconnectingIn called!");
+		logger.info( "reconnectingIn called!");
 		
 	}
 
 	@Override
 	public void reconnectionFailed(Exception arg0) {
-		System.out.println( "reconnectionFailed called!");
+		logger.info( "reconnectionFailed called!");
 		
 	}
 
 	@Override
 	public void reconnectionSuccessful() {
-		System.out.println( "reconnectionSuccessful called!");
+		logger.info( "reconnectionSuccessful called!");
 		
 	}
 };		

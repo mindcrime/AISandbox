@@ -2,8 +2,12 @@ package org.example.fogbeam.blackboard.callable;
 
 import java.util.concurrent.Callable;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class AutoSPARQLSubsystemCallable implements Callable<String>
 {
+	Logger logger = LoggerFactory.getLogger( AutoSPARQLSubsystemCallable.class );
 	
 	private String message;
 	
@@ -15,7 +19,7 @@ public class AutoSPARQLSubsystemCallable implements Callable<String>
 	@Override
 	public String call() 
 	{
-		System.out.println( "AutoSPARQLSubsystem handling input: " + message );
+		logger.info( "AutoSPARQLSubsystem handling input: " + message );
 				
 		String response = "Yeah, right!";
 		

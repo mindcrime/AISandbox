@@ -5,9 +5,13 @@ import java.util.Observable;
 import org.example.fogbeam.blackboard.Blackboard;
 import org.example.fogbeam.blackboard.BlackboardFrame;
 import org.example.fogbeam.blackboard.Conversation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class SimpleBlackboardAgent implements BlackboardAgent 
 {
+	Logger logger = LoggerFactory.getLogger( SimpleBlackboardAgent.class );
+	
 	/* all the real work happens here */
 	protected abstract void process( final Conversation conversation, final BlackboardFrame frame );
 	
@@ -16,7 +20,7 @@ public abstract class SimpleBlackboardAgent implements BlackboardAgent
 	{
 		if( observable instanceof Blackboard && arg instanceof Conversation )
 		{	
-			System.out.println( this.getClass().getName() + " - Registering as Observer of Conversation" );
+			logger.info( this.getClass().getName() + " - Registering as Observer of Conversation" );
 			
 			Conversation conversation = (Conversation)arg;
 			conversation.addObserver(this);
@@ -24,7 +28,7 @@ public abstract class SimpleBlackboardAgent implements BlackboardAgent
 		}
 		else if( observable instanceof Conversation && arg instanceof BlackboardFrame )
 		{
-			System.out.println( this.getClass().getName() + " - sending Conversation/Frame to process() method" );
+			logger.info( this.getClass().getName() + " - sending Conversation/Frame to process() method" );
 
 			Conversation conversation = (Conversation)observable;
 			if( conversation.isPaused())
