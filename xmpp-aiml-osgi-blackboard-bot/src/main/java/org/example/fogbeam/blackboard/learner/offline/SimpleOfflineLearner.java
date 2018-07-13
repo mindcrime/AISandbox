@@ -1,4 +1,4 @@
-package org.example.fogbeam.blackboard.agent;
+package org.example.fogbeam.blackboard.learner.offline;
 
 
 public class SimpleOfflineLearner
