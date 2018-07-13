@@ -165,7 +165,7 @@ public class ExecutiveRunnable implements Runnable,Observer
 				if( currentHighScore != null && currentHighScore.getConfidence() > 35.0 )
 				{
 					logger.info( "ExecutiveRunnable - setting response!" );
-					response = currentHighScore.getContents();
+					response = currentHighScore.getContent();
 					conversation.setPaused(true);
 				}
 				

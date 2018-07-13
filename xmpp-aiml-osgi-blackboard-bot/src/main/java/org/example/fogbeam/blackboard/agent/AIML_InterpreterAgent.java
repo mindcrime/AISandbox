@@ -23,9 +23,9 @@ public class AIML_InterpreterAgent extends SimpleBlackboardAgent
 	@Override
 	protected void process(Conversation conversation, BlackboardFrame frame) 
 	{	
-		logger.info( this.getClass().getName() + " : received input message: " + frame.getContents() );
+		logger.info( this.getClass().getName() + " : received input message: " + frame.getContent() );
 		
-		AIML_InterpreterSubsystemCallable task = new AIML_InterpreterSubsystemCallable( frame.getContents() );
+		AIML_InterpreterSubsystemCallable task = new AIML_InterpreterSubsystemCallable( frame.getContent() );
 		Future<String> taskFuture = executorService.submit(task);
 		
 		try 

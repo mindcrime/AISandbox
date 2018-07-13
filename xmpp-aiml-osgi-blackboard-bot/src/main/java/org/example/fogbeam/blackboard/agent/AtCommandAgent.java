@@ -24,9 +24,9 @@ public class AtCommandAgent extends SimpleBlackboardAgent
 	@Override
 	protected void process( final Conversation conversation, final BlackboardFrame frame) 
 	{	
-		logger.info( this.getClass().getName() + " : received input message: " + frame.getContents() );
+		logger.info( this.getClass().getName() + " : received input message: " + frame.getContent() );
 				
-		AtCommandSubsystemCallable task = new AtCommandSubsystemCallable( frame.getContents() );
+		AtCommandSubsystemCallable task = new AtCommandSubsystemCallable( frame.getContent() );
 		Future<String> taskFuture = executorService.submit(task);
 		
 		try 
