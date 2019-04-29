@@ -1,0 +1,1503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="search" href="http://weka.wikispaces.com/space/opensearch" type="application/opensearchdescription+xml" title="Wikispaces Search (weka Wiki)" />
+<link rel="alternate" type="application/x-wiki" title="Edit This Page" href="/page/edit/ARFF+%28stable+version%29" />
+<link rel="alternate" title="weka - All Changes" href="http://weka.wikispaces.com/wiki/xmla?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="weka : ARFF (stable version) - Discussion" href="http://weka.wikispaces.com/message/xml/ARFF+%28stable+version%29?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="weka : ARFF (stable version) - Edits" href="http://weka.wikispaces.com/page/xml/ARFF+%28stable+version%29?v=rss_2_0" type="application/rss+xml" />
+<link rel="microsummary" href="/page/microsummary/ARFF+%28stable+version%29/edits"/>
+<link rel="microsummary" href="/page/microsummary/ARFF+%28stable+version%29/messages"/>
+<script type="text/javascript">
+  
+if (typeof ws === 'undefined') ws = {};
+ws.context = {
+  instance: {
+    id: '1',
+    url: 'wikispaces.com',
+    isMain: true,
+    supportsGoogleDocs: false,
+    isTesClassroom: false,
+  },
+  user: {
+    id: '',
+    username: '',
+    status: '',
+    locale: 'en_US',
+    imageUrlPrefix: 'http://www.wikispaces.com/i/user_none_',
+    isTeacher: false,
+    canAdministerWiki: false,
+  },
+  wiki: {
+    id: '2171807',
+    name: 'weka',
+    text: 'weka',
+    module: 'B',
+    isClassroom: false,
+    isTesClassroom: false
+    ,defaultSpaceId: 2171807
+    ,isWwwWiki: false
+  },
+  project: {
+    id: '2171807',
+    name: ''
+  },
+  space: {
+    id: '2171807',
+    name: 'weka',
+    isDefaultSpace: true,
+    isDefaultTemplate: false
+  },
+
+  environment_name: 'prod',
+
+  path: {
+    object: 'page',
+    method: 'view',
+    page: 'ARFF (stable version)',
+    id: ''
+  },
+
+  settings: {
+    main_domain: 'wikispaces.com',
+    session_url: 'https://session.wikispaces.com/1/',
+    asset_url_prefix: 'http://www.wikispaces.com',
+    beta_features: false,
+    isMobileSite: false,
+    isUploadCapable: true,
+    can_discuss: false,
+    has_gdocs: false,
+    isDialog: false,
+    pwin: ''
+  },
+  clockSkewMillis: 1529733519950 - ((window.performance && window.performance.timing.responseStart > 0) ? window.performance.timing.responseStart : (new Date()).getTime())
+}
+
+
+// legacy javascript API variables, use the above instead
+var wikispaces_isUserLoggedIn = !!ws.context.user.id;
+var wikispaces_isMain = ws.context.instance.isMain;
+var wikispaces_username = ws.context.user.username;
+var wikispaces_spaceName = ws.context.space.name;
+var wikispaces_projectName = ws.context.project.name;
+var wikispaces_wikiName = ws.context.wiki.name;
+var wikispaces_wikiText = ws.context.wiki.text;
+var wikispaces_isDefaultSpace = ws.context.space.isDefaultSpace;
+var wikispaces_method = ws.context.path.method;
+var wikispaces_object = ws.context.path.object;
+var wikispaces_page = ws.context.path.page;
+var wikispaces_id = ws.context.path.id;
+var wikispaces_domain = ws.context.instance.url;
+var wikispaces_isUserOrganizer = false;
+var wikispaces_main_domain = ws.context.settings.asset_url_prefix;
+var wikispaces_asset_url_prefix = ws.context.settings.asset_url_prefix;
+var wikispaces_beta_features = ws.context.settings.beta_features;
+var wikispaces_isMobileSite = ws.context.settings.isMobileSite;
+var wikispaces_isUploadCapable = ws.context.settings.isUploadCapable;
+var wikispaces_can_discuss = ws.context.settings.can_discuss;
+var wikispaces_has_gdocs = ws.context.settings.has_gdocs;
+
+</script><title>weka - ARFF (stable version)</title>
+<meta charset="utf-8" />
+<link rel="apple-touch-icon" sizes="144x144" href="http://www.wikispaces.com/_/z6371z4x/i/logo-144.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.wikispaces.com/_/j5j77xz3/i/logo-114.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://www.wikispaces.com/_/vq8j5432/i/logo-72.png" />
+<link rel="apple-touch-icon" href="http://www.wikispaces.com/_/38515190/i/logo-57.png" />
+<link rel="shortcut icon" href="http://www.wikispaces.com/_/55v9k02z/i/logo-16.png" />
+<style type="text/css">
+/* Standard theme styles */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+.ws-theme-header-inner,
+.ws-theme-body-inner,
+.ws-theme-footer-inner,
+.ws-theme-content-inner,
+.ws-theme-sidebar-inner {
+  position: relative;
+}
+.ws-theme-header-inner:after,
+.ws-theme-body-inner:after,
+.ws-theme-footer-inner:after,
+.ws-theme-content-inner:after,
+.ws-theme-sidebar-inner:after,
+.ws-theme-menu-inner:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.ws-theme-content, .ws-theme-sidebar {
+  overflow-x: auto;
+}
+.ws-theme-footer {
+  text-align: right;
+}
+.ws-theme-footer a, .ws-theme-footer a:hover {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .ws-theme-container {
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .ws-theme-content {
+    width: 550px;
+    min-height: 384px;
+    float: right;
+  }
+  .ws-theme-sidebar {
+    width: 200px;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .ws-theme-container {
+    width: 970px;
+  }
+  .ws-theme-content {
+    width: 770px;
+    min-height: 496px;
+  }
+}
+@media (min-width: 1200px) {
+  .ws-theme-container {
+    width: 1170px;
+  }
+  .ws-theme-content {
+    width: 970px;
+    min-height: 600px;
+  }
+}
+/* End standard theme styles */
+</style>
+<style type="text/css">
+/* Theme-specific styles */
+body {
+  background-color: #ECEFED;
+}
+
+.ws-theme-header .WikiSearch .WikiSearchInput,
+.ws-theme-sidebar .WikiSearch .WikiSearchInput,
+.ws-theme-footer .WikiSearch .WikiSearchInput {
+  width: 100%;
+}
+
+.ws-theme-header a,
+.ws-theme-sidebar a,
+.ws-theme-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+.ws-theme-header a:hover,
+.ws-theme-sidebar a:hover,
+.ws-theme-footer a:hover {
+  text-decoration: underline;
+}
+.ws-theme-header img,
+.ws-theme-sidebar img,
+.ws-theme-footer img {
+  border: none;
+}
+
+.ws-theme-header,
+.ws-theme-sidebar {
+  display: none;
+}
+
+.ws-theme-sidebar,
+.ws-theme-footer {
+  color: #000000;
+}
+
+.ws-theme-body-inner {
+  padding: 8px 5px;
+}
+
+.ws-theme-content {
+  overflow-x: visible;
+}
+.ws-theme-content-inner {
+  background-color: #FFF;
+  padding: 15px;
+}
+
+.ws-theme-footer {
+  font-size: 12px;
+}
+.ws-theme-footer-inner {
+  padding: 0 15px 15px 15px;
+}
+.ws-theme-footer .WikiLicense img {
+  vertical-align: text-bottom;
+}
+
+@media (min-width: 768px) {
+  .ws-theme-container {
+    width: auto;
+  }
+
+  .ws-theme-header,
+  .ws-theme-sidebar {
+    display: block;
+  }
+
+  .ws-theme-header {
+    color: #FFF;
+    background: #CCCCCC url('http://www.wikispaces.com/_/94v39788/i/theme_swoop.png') no-repeat 100% -25px;
+  }
+  .ws-theme-header-inner {
+    padding: 15px 0;
+  }
+
+  .ws-theme-body-inner {
+    padding: 15px;
+  }
+
+  .ws-theme-content {
+    width: auto;
+    float: none;
+    margin-left: 215px;
+  }
+  .ws-theme-content-inner {
+    width: 100%;
+    float: left;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+  }
+
+  .ws-theme-sidebar .WikiActions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .ws-theme-sidebar .WikiActions > li {
+    padding: 2px;
+  }
+  .ws-theme-sidebar .WikiCustomNav ol {
+    padding-left: 16px;
+  }
+  .ws-theme-sidebar .WikiCustomNav ol.includePageList {
+    padding-left: 0;
+  }
+  .ws-theme-sidebar .ws-theme-nav-edit {
+    color: #666;
+    text-align: center;
+  }
+}
+/* End theme-specific styles */
+</style>
+<link rel="stylesheet" href="http://www.wikispaces.com/stylesheet/viewi/217420326D.gz.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/gz/9jvvjv40-internal-bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/gz/vz033906-internal.css" type="text/css" />
+<script src="http://www.wikispaces.com/s/gz/768846k4-top.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+
+  var wsGoogleAccount = 'UA-80504-1';
+  _gaq.push(['_setAccount', wsGoogleAccount]);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', 'wikispaces.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setCustomVar', 2, 'Authenticated', 'Guest', 2]);
+  _gaq.push(['_trackPageview']);
+</script></head>
+<body><a href="#WikiContent" class="hidden sr-only sr-only-focusable">Skip to main content</a><div id="js-fixed-header-holder" class="fixed"><div class="WikispacesContent WikispacesBs3" role="banner">
+      
+    <div class="ws-main-top-nav visible-xs">
+    <div class="navbar navbar-static-top" style="margin-bottom: 0;">
+      <div class="container">
+                <div class="navbar-header">
+          <div class="visible-xs pull-left">
+            <a href="/space/menu" class="WikispacesDialogLink btn navbar-btn">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <div class="visible-xs pull-right js-globalnav-popover-container">
+                        <a href="http://www.wikispaces.com/site/signin?goto=http%3A%2F%2Fweka.wikispaces.com%2FARFF%2B%2528stable%2Bversion%2529" class="btn navbar-btn ws-mobile-guest-username js-globalnav-popover-trigger">
+              guest
+            </a>
+                        <div class="hidden js-globalnav-popover-content">
+              <div class="WikispacesContent WikispacesBs3">
+                <div class="WikiInternalHeaderNav noHide">
+  <div class="WikiInternalHeaderNavMenu">
+                          
+                  <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/user/join?goto=http%3A%2F%2Fweka.wikispaces.com%2Fspace%2Fjoin" rel="nofollow" class="WikispacesXDomainDialogLink">Join</a></span>
+
+          <span class="divider">|</span>
+        
+        <span class="WikiInternalHeaderNavMenuArea"><a class="js-help-trigger" rel="nofollow" href="http://helpcenter.wikispaces.com/">Help</a></span>
+
+        <span class="divider">|</span>
+      
+      <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/site/signin?goto=http%3A%2F%2Fweka.wikispaces.com%2FARFF%2B%2528stable%2Bversion%2529" rel="nofollow" class="WikispacesXDomainDialogLink">Sign In</a></span>
+      </div>
+</div>              </div>
+            </div>
+          </div>
+          <div class="ws-navbar-middle-xs">
+            <div class="navbar-brand" role="navigation">
+              <a href="http://www.wikispaces.com/" class="ws-logo"></a>
+              <i class="fa fa-angle-right"></i>
+              <a href="http://weka.wikispaces.com/">weka</a>
+                              <i class="fa fa-angle-right"></i> <a href="http://weka.wikispaces.com/home">Home</a>
+              
+            </div>
+          </div>
+                    <form action="/search/view" method="post" class="navbar-form ws-include-xs pull-left ws-navbar-search hidden-xs" role="search"><input type="hidden" name="wikispacesFormToken" value="62772d1c60c01568241c3a925a02c3b09e9a8701"/><input type="text" class="form-control search-query" name="q" value="" placeholder="Search" /> </form>
+                  </div>
+      </div>
+    </div>
+  </div>
+      <div class="hidden-xs"><div class="WikiInternalHeaderNav WikiElement floating">
+  <div class="WikiInternalHeaderNavMenu">
+                                    <span class="WikiInternalHeaderNavMenuArea guestUserName">guest</span><span class="slideMarker divider">|</span>
+        
+                  <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/user/join?goto=http%3A%2F%2Fweka.wikispaces.com%2Fspace%2Fjoin" rel="nofollow" class="WikispacesXDomainDialogLink">Join</a></span>
+
+          <span class="divider">|</span>
+        
+        <span class="WikiInternalHeaderNavMenuArea"><a class="js-help-trigger" rel="nofollow" href="http://helpcenter.wikispaces.com/">Help</a></span>
+
+        <span class="divider">|</span>
+      
+      <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/site/signin?goto=http%3A%2F%2Fweka.wikispaces.com%2FARFF%2B%2528stable%2Bversion%2529" rel="nofollow" class="WikispacesXDomainDialogLink">Sign In</a></span>
+      </div>
+</div></div>
+  </div></div><div id="js-fixed-header-offset">
+<header class="ws-theme-header" role="banner">
+  <div class="ws-theme-container">
+    <div class="ws-theme-header-inner">
+      <a href="http://weka.wikispaces.com/" class="WikiLogo WikiElement"><img src="http://weka.wikispaces.com/space/showlogo/1410973685/logo.gif" alt="weka" /></a>    </div>
+  </div>
+</header>
+
+<div class="ws-theme-body">
+  <div class="ws-theme-container">
+    <div class="ws-theme-body-inner">
+      <nav class="ws-theme-sidebar" role="navigation">
+        <div class="ws-theme-sidebar-inner">
+          <div class="ws-theme-menu">
+            <div class="ws-theme-menu-inner">
+              <ul class="WikiActions WikiElement WikiControls">
+    <li id="WikiActionHome"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="http://weka.wikispaces.com/"><i class="fa fa-home fa-fw"></i></a><a href="http://weka.wikispaces.com/">Wiki Home</a></div></li>
+    <li id="WikiActionChanges"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="/wiki/changes"><i class="fa fa-clock-o fa-fw"></i></a><a href="/wiki/changes">Recent Changes</a></div></li>
+    <li id="WikiActionPagesAndFiles"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="/space/content"><i class="fa fa-file-text-o fa-fw"></i></a><a href="/space/content">Pages and Files</a></div></li>
+    <li id="WikiActionMembers"><div class="js-member-link"><span class="WikiActionSupplemental" style="float: right;"></span><a href="/wiki/members"><i class="fa fa-user fa-fw"></i></a><a href="/wiki/members">Members</a></div></li>
+</ul>
+              <form action="/search/view" method="post" class="WikiSearch WikiElement" role="search"><input type="text" class="form-control WikiSearchInput" name="q" value="" placeholder="Search" /> </form>              <div class="WikiCustomNav WikiElement wiki"><a href="http://weka.wikispaces.com/">Home</a><br />
+<a class="wiki_link_ext" href="http://weka.wikispaces.com/space/pagelist" rel="nofollow">All pages</a><br />
+<a class="wiki_link_ext" href="http://weka.wikispaces.com/tag/list" rel="nofollow">All tags</a><br />
+<a class="wiki_link_ext" href="http://weka.wikispaces.com/space/filelist" rel="nofollow">All files</a><br />
+<a class="wiki_link" href="/Packages">Packages</a><br />
+<a class="wiki_link" href="/FAQ">FAQ</a><br />
+<a class="wiki_link" href="/Not%20So%20FAQ">Not So FAQ</a><br />
+<a class="wiki_link" href="/Troubleshooting">Troubleshooting</a><br />
+<a class="wiki_link" href="/Learning%20Resources">Learning Resources</a><br />
+<a class="wiki_link" href="/WEKA%20Mailing%20List">Mailing List</a></div>              <div class="ws-theme-nav-edit">
+                              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="ws-theme-content" role="main">
+        <div class="ws-theme-content-inner">
+          <div class="contentBox"><div class="innerContentBox" id="WikiContent">
+
+<script type="text/template" id="comment-footer-template">
+
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</script>
+
+<script type="text/template" id="comment-content-template">
+<div class="ws-box commentView">
+  <div class="comment-close">
+    <button type="button" class="closeme close" aria-hidden="true"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="commentHeader">
+    <p class="ws-stream-meta command-context">
+      <a class="userLink userLinkPicture" href="<%= userCreated.url %>"><img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16"></a>
+      <a href="<%= userCreated.url %>"><%= userCreated.username %></a>
+      <% if (smartDate == '__live__') { %>
+      <abbr class="timeago" title="<%= (new Date(parseInt(dateCreated, 10) * 1000)).toISOString() %>">
+        <%= dateCreated %>
+      </abbr>
+      <% } else { %>
+        <%- smartDate %>
+      <% } %>
+      <% if (ws.context.user.canAdministerWiki && ws.comments.Manager.readOnly) { %>
+        <i class="fa fa-trash-o contextual-command delete ws-tip" title="Delete Comment"></i>
+      <% } %>
+    </p>
+  </div>
+
+  <div class="commentBody">
+    <div class="commentContent">
+      <%= description %>
+    </div>
+
+      <% for(i = 0; i < replyPages.length; i++) { %>
+        <% for(var j = 0; j < replyPages[i].digests.length; j++) { %>
+      <div class="commentReply" data-id="<%= replyPages[i].digests[j].id %>">
+        <p class="ws-stream-meta command-context">
+          <a class="userLink userLinkPicture" href="<%= replyPages[i].digests[j].userCreated.url %>"><img class="userPicture" src="<%= replyPages[i].digests[j].userCreated.imageUrl %>" width="16" height="16"></a>
+          <a href="<%= replyPages[i].digests[j].userCreated.url %>"><%= replyPages[i].digests[j].userCreated.username %></a>
+          <% if (smartDate == '__live__') { %>
+          <abbr class="timeago" title="<%= (new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000)).toISOString() %>">
+            <%= new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000).toLocaleString() %>
+          </abbr>
+          <% } else { %>
+            <%- smartDate %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+          <i class="fa fa-trash-o contextual-command delete-reply ws-tip" title="Delete Reply"></i>
+          <% } %>
+          </p>
+        <div class="commentContent"><%= replyPages[i].digests[j].body %></div>
+      </div>
+        <% } %>
+      <% } %>
+
+      <form class="reply commentReply">
+        <div class="form-group">
+          <textarea name="reply" placeholder="Reply" class="form-control" /></textarea>
+        </div>
+        <div class="btn-toolbar">
+          <button type="submit" class="btn btn-primary btn-sm" name="go" value="1">Post</button>
+
+          <% if (ws.context.user.id) { %>
+            <% if (monitored) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip active" title="You are monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip" title="You are not monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+            <% if (locked) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip active" title="Replies are not allowed."><i class="fa fa-lock"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip" title="Replies are allowed."><i class="fa fa-lock"></i></button>
+            <% } %>
+          <% } %>
+
+          <i class="fa fa-spinner fa-spin spinner pull-right hidden"></i>
+        </div>
+      </form>
+   </div>
+
+   
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-composer-template">
+<div class="ws-box commentView">
+  <div class="commentComposer">
+    <div class="comment-close">
+      &nbsp;<button type="button" class="close closeme" aria-hidden="true"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="commentHeader">
+      <p class="ws-stream-meta command-context">
+        <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+        <a href="#" onclick="return false;"><%= userCreated.username %></a>
+      </p>
+    </div>
+    <div class="commentBody">
+      <textarea name="comment" class="compose form-control" placeholder="Comment"/></textarea><br/>
+      <div class="btn-toolbar">
+        <button type="button" class="btn btn-default btn-sm monitored active pull-right" style="margin-left: 6px" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-eye"></i></button>
+        <button type="button" class="btn btn-default btn-sm locked btn-toggle pull-right" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-lock"></i></button>
+        <button type="button" class="btn btn-primary btn-sm closeme">Save</button>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-proxy-template">
+<div class="comment-proxy">
+  <span class="commentUser">
+  <% if (userCreated) { %>
+    <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+  <% } else { %>
+    <img class="userPicture" src="<%= ws.context.user.imageUrlPrefix %>sm.jpg" width="16" height="16">
+  <% } %>
+  </span>
+  <span class="commentReplies"><%= 1 + _(replyPages).reduce(function(memo, page){ return memo + page.digests.length; }, 0) %></span>
+</div>
+</script>
+
+<div class="ws-menu-bar WikiControls WikispacesContent WikispacesBs3">
+  
+    <h1 class="pageTitle"><a href="/ARFF+%28stable+version%29">ARFF (stable version)</a></h1>
+      <div class="btn-group pull-right">
+          <span class="btn btn-default disabled tipme" title="you do not have permission to edit this page"><i class="fa fa-pencil fa-fw"></i> Edit</span>          <a class="btn btn-default tipme" title="no discussion posts" href="/ARFF+%28stable+version%29#discussion"><i class="fa fa-comments fa-fw"></i> 0</a>          <a class="btn btn-default tipme" title="view 4 revisions" href="/page/history/ARFF+%28stable+version%29"><i class="fa fa-clock-o fa-fw"></i> 4</a>          <a class="btn btn-default ws-btn-more dropdown-toggle tipme" title="more options" href="/page/menu/ARFF+%28stable+version%29"><i class="icon-height-only fa-fw"></i>&hellip;</a>        <ul class="ws-more-menu dropdown-menu dropdown-menu-right">
+              <li class=" dropdown"><a class=" ws-tag-dropdown-toggle" href="/page/tags/ARFF+%28stable+version%29"><span class="pull-right">1</span> <i class="fa fa-tag fa-fw"></i> Tags</a>
+          <div class="dropdown-menu dropdown-menu-right ws-tag-dropdown-menu">
+          
+
+
+
+<form action="#" name="WikiTagForm" class="WikiTagForm"><input type="hidden" name="wikispacesFormToken" value="d819929b4b60528a47de443e806fc1555acbb977"/><input type="hidden" name="wikispacesFormToken" value="d819929b4b60528a47de443e806fc1555acbb977"/>
+  <div class="WikiTagList">
+    <i class="fa fa-tag ws-action"></i>
+        <ul class="list-unstyled">
+                          <li><a href="/space/content?tag=file%20format">file format</a></li>
+              </ul>
+      </div>
+  </form>      </div>
+    </li>
+              <li class="divider"></li>
+            <li class=""><a class=" WikispacesDialogLink" href="http://weka.wikispaces.com/wiki/addmonitor?monitorLink=page%3AARFF%20%28stable%20version%29"><i class="fa fa-eye fa-fw"></i> Notify</a>
+    </li>
+        <li class=""><a class=" WikispacesDialogLink" href="/page/rss/ARFF+%28stable+version%29"><i class="fa fa-rss fa-fw"></i> RSS</a>
+    </li>
+        <li class=""><a class="" href="/page/links/ARFF+%28stable+version%29"><i class="fa fa-link fa-fw"></i> Backlinks</a>
+    </li>
+              <li class="divider"></li>
+            <li class=""><a class="" href="/page/code/ARFF+%28stable+version%29"><i class="fa fa-code fa-fw"></i> Source</a>
+    </li>
+        <li class=""><a class="" href="/ARFF+%28stable+version%29?f=print"><i class="fa fa-print fa-fw"></i> Print</a>
+    </li>
+        <li class=""><a class="" href="/page/pdf/ARFF+%28stable+version%29"><i class="fa fa-cloud-download fa-fw"></i> Export (PDF)</a>
+    </li>
+      </ul>  </div>
+  </div>
+
+
+
+
+  <textarea class="form-control" id="autosaveContent" style="display:none;" rows="1" cols="1"></textarea>
+  <div id="autosavePrompt" style="display:none;"></div>
+
+<div class="commentContainer">
+  <div class="commentSubject">
+  <div class="wiki wikiPage" id="content_view">
+  <!-- ws:start:WikiTextTocRule:52:&lt;img id=&quot;wikitext@@toc@@normal&quot; class=&quot;WikiMedia WikiMediaToc&quot; title=&quot;Table of Contents&quot; src=&quot;/site/embedthumbnail/toc/normal?w=225&amp;h=100&quot;/&gt; --><div id="toc"><h1 class="nopad">Table of Contents</h1><!-- ws:end:WikiTextTocRule:52 --><!-- ws:start:WikiTextTocRule:53: --><div style="margin-left: 1em;"><a href="#Overview"> Overview </a></div>
+<!-- ws:end:WikiTextTocRule:53 --><!-- ws:start:WikiTextTocRule:54: --><div style="margin-left: 1em;"><a href="#Examples"> Examples </a></div>
+<!-- ws:end:WikiTextTocRule:54 --><!-- ws:start:WikiTextTocRule:55: --><div style="margin-left: 2em;"><a href="#Examples-The ARFF Header Section"> The ARFF Header Section </a></div>
+<!-- ws:end:WikiTextTocRule:55 --><!-- ws:start:WikiTextTocRule:56: --><div style="margin-left: 2em;"><a href="#Examples-The @relation Declaration"> The @relation Declaration </a></div>
+<!-- ws:end:WikiTextTocRule:56 --><!-- ws:start:WikiTextTocRule:57: --><div style="margin-left: 2em;"><a href="#Examples-The @attribute Declarations"> The @attribute Declarations </a></div>
+<!-- ws:end:WikiTextTocRule:57 --><!-- ws:start:WikiTextTocRule:58: --><div style="margin-left: 3em;"><a href="#Examples-The @attribute Declarations-Numeric attributes"> Numeric attributes </a></div>
+<!-- ws:end:WikiTextTocRule:58 --><!-- ws:start:WikiTextTocRule:59: --><div style="margin-left: 3em;"><a href="#Examples-The @attribute Declarations-Nominal attributes"> Nominal attributes </a></div>
+<!-- ws:end:WikiTextTocRule:59 --><!-- ws:start:WikiTextTocRule:60: --><div style="margin-left: 3em;"><a href="#Examples-The @attribute Declarations-String attributes"> String attributes </a></div>
+<!-- ws:end:WikiTextTocRule:60 --><!-- ws:start:WikiTextTocRule:61: --><div style="margin-left: 3em;"><a href="#Examples-The @attribute Declarations-Date attributes"> Date attributes </a></div>
+<!-- ws:end:WikiTextTocRule:61 --><!-- ws:start:WikiTextTocRule:62: --><div style="margin-left: 3em;"><a href="#Examples-The @attribute Declarations-Relational attributes"> Relational attributes </a></div>
+<!-- ws:end:WikiTextTocRule:62 --><!-- ws:start:WikiTextTocRule:63: --><div style="margin-left: 2em;"><a href="#Examples-The ARFF Data Section"> The ARFF Data Section </a></div>
+<!-- ws:end:WikiTextTocRule:63 --><!-- ws:start:WikiTextTocRule:64: --><div style="margin-left: 2em;"><a href="#Examples-The @data Declaration"> The @data Declaration</a></div>
+<!-- ws:end:WikiTextTocRule:64 --><!-- ws:start:WikiTextTocRule:65: --><div style="margin-left: 2em;"><a href="#Examples-The instance data"> The instance data </a></div>
+<!-- ws:end:WikiTextTocRule:65 --><!-- ws:start:WikiTextTocRule:66: --><div style="margin-left: 1em;"><a href="#Sparse ARFF files"> Sparse ARFF files </a></div>
+<!-- ws:end:WikiTextTocRule:66 --><!-- ws:start:WikiTextTocRule:67: --><div style="margin-left: 1em;"><a href="#Instance weights in ARFF files"> Instance weights in ARFF files </a></div>
+<!-- ws:end:WikiTextTocRule:67 --><!-- ws:start:WikiTextTocRule:68: --><div style="margin-left: 1em;"><a href="#See also"> See also </a></div>
+<!-- ws:end:WikiTextTocRule:68 --><!-- ws:start:WikiTextTocRule:69: --><div style="margin-left: 1em;"><a href="#Links"> Links </a></div>
+<!-- ws:end:WikiTextTocRule:69 --><!-- ws:start:WikiTextTocRule:70: --></div>
+<!-- ws:end:WikiTextTocRule:70 -->An ARFF (Attribute-Relation File Format) file is an ASCII text file that describes a list of instances sharing a set of attributes. <br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:18:&lt;h1&gt; --><h1 id="toc0"><a name="Overview"></a><!-- ws:end:WikiTextHeadingRule:18 --> Overview </h1>
+ARFF files have two distinct sections. The first section is the <strong>Header</strong> information, which is followed the <strong>Data</strong> information.<br />
+<br />
+The <strong>Header</strong> of the ARFF file contains the name of the relation, a list of the attributes (the columns in the data), and their types. An example header on the standard IRIS dataset looks like this:<br />
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;   % 1. Title: Iris Plants Database&lt;br/&gt;   % &lt;br/&gt;   % 2. Sources:&lt;br/&gt;   %      (a) Creator: R.A. Fisher&lt;br/&gt;   %      (b) Donor: Michael Marshall (MARSHALL%PLU@io.arc.nasa.gov)&lt;br/&gt;   %      (c) Date: July, 1988&lt;br/&gt;   % &lt;br/&gt;   @RELATION iris&lt;br/&gt;   &lt;br/&gt;   @ATTRIBUTE sepallength  NUMERIC&lt;br/&gt;   @ATTRIBUTE sepalwidth   NUMERIC&lt;br/&gt;   @ATTRIBUTE petallength  NUMERIC&lt;br/&gt;   @ATTRIBUTE petalwidth   NUMERIC&lt;br/&gt;   @ATTRIBUTE class        {Iris-setosa,Iris-versicolor,Iris-virginica}&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">   % 1. Title: Iris Plants Database
+   % 
+   % 2. Sources:
+   %      (a) Creator: R.A. Fisher
+   %      (b) Donor: Michael Marshall (MARSHALL%PLU@io.arc.nasa.gov)
+   %      (c) Date: July, 1988
+   % 
+   @RELATION iris
+&nbsp;
+   @ATTRIBUTE sepallength  NUMERIC
+   @ATTRIBUTE sepalwidth   NUMERIC
+   @ATTRIBUTE petallength  NUMERIC
+   @ATTRIBUTE petalwidth   NUMERIC
+   @ATTRIBUTE class        {Iris-setosa,Iris-versicolor,Iris-virginica}</pre>
+
+<!-- ws:end:WikiTextCodeRule:0 -->The <strong>Data</strong> of the ARFF file looks like the following:<br />
+<!-- ws:start:WikiTextCodeRule:1:
+&lt;pre class=&quot;text&quot;&gt;   @DATA&lt;br/&gt;   5.1,3.5,1.4,0.2,Iris-setosa&lt;br/&gt;   4.9,3.0,1.4,0.2,Iris-setosa&lt;br/&gt;   4.7,3.2,1.3,0.2,Iris-setosa&lt;br/&gt;   4.6,3.1,1.5,0.2,Iris-setosa&lt;br/&gt;   5.0,3.6,1.4,0.2,Iris-setosa&lt;br/&gt;   5.4,3.9,1.7,0.4,Iris-setosa&lt;br/&gt;   4.6,3.4,1.4,0.3,Iris-setosa&lt;br/&gt;   5.0,3.4,1.5,0.2,Iris-setosa&lt;br/&gt;   4.4,2.9,1.4,0.2,Iris-setosa&lt;br/&gt;   4.9,3.1,1.5,0.1,Iris-setosa&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">   @DATA
+   5.1,3.5,1.4,0.2,Iris-setosa
+   4.9,3.0,1.4,0.2,Iris-setosa
+   4.7,3.2,1.3,0.2,Iris-setosa
+   4.6,3.1,1.5,0.2,Iris-setosa
+   5.0,3.6,1.4,0.2,Iris-setosa
+   5.4,3.9,1.7,0.4,Iris-setosa
+   4.6,3.4,1.4,0.3,Iris-setosa
+   5.0,3.4,1.5,0.2,Iris-setosa
+   4.4,2.9,1.4,0.2,Iris-setosa
+   4.9,3.1,1.5,0.1,Iris-setosa</pre>
+
+<!-- ws:end:WikiTextCodeRule:1 -->Lines that begin with a <tt>%</tt> are comments. The <strong>@RELATION</strong>, <strong>@ATTRIBUTE</strong> and <strong>@DATA</strong> declarations are case insensitive.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:20:&lt;h1&gt; --><h1 id="toc1"><a name="Examples"></a><!-- ws:end:WikiTextHeadingRule:20 --> Examples </h1>
+Several well-known machine learning datasets are distributed with Weka in the <tt>$WEKAHOME/data</tt> directory as ARFF files.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:22:&lt;h2&gt; --><h2 id="toc2"><a name="Examples-The ARFF Header Section"></a><!-- ws:end:WikiTextHeadingRule:22 --> The ARFF Header Section </h2>
+The ARFF Header section of the file contains the relation declaration and attribute declarations.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:24:&lt;h2&gt; --><h2 id="toc3"><a name="Examples-The @relation Declaration"></a><!-- ws:end:WikiTextHeadingRule:24 --> The @relation Declaration </h2>
+The relation name is defined as the first line in the ARFF file. The format is:<br />
+<!-- ws:start:WikiTextCodeRule:2:
+&lt;pre class=&quot;text&quot;&gt;    @relation &amp;lt;relation-name&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @relation &lt;relation-name&gt;</pre>
+
+<!-- ws:end:WikiTextCodeRule:2 -->where <em>&lt;relation-name&gt;</em> is a string. The string must be quoted if the name includes spaces. Furthermore, relation names or attribute names (see below) cannot begin with<br />
+<ul><li>a character below \u0021</li><li>'{', '}', ',', or '%'</li></ul><br />
+Moreover, it can only begin with a single or double quote if there is a corresponding quote at the end of the name.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:26:&lt;h2&gt; --><h2 id="toc4"><a name="Examples-The @attribute Declarations"></a><!-- ws:end:WikiTextHeadingRule:26 --> The @attribute Declarations </h2>
+Attribute declarations take the form of an ordered sequence of <strong>@attribute</strong> statements. Each attribute in the data set has its own <strong>@attribute</strong> statement which uniquely defines the name of that attribute and its data type. The order the attributes are declared indicates the column position in the data section of the file. For example, if an attribute is the third one declared then Weka expects that all that attributes values will be found in the third comma delimited column.<br />
+<br />
+The format for the <strong>@attribute</strong> statement is:<br />
+<!-- ws:start:WikiTextCodeRule:3:
+&lt;pre class=&quot;text&quot;&gt;    @attribute &amp;lt;attribute-name&amp;gt; &amp;lt;datatype&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @attribute &lt;attribute-name&gt; &lt;datatype&gt;</pre>
+
+<!-- ws:end:WikiTextCodeRule:3 -->where the <em>&lt;attribute-name&gt;</em> must adhere to the constraints specified in the above section on the @relation declaration.<br />
+<br />
+The &lt;datatype&gt; can be any of the four types supported by Weka:<br />
+<ul><li><em>numeric</em></li><li><em>integer</em> is treated as <em>numeric</em></li><li><em>real</em> is treated as <em>numeric</em></li><li>&lt;nominal-specification&gt;</li><li><em>string</em></li><li><em>date</em> [&lt;date-format&gt;]</li><li><em>relational</em> for multi-instance data (for future use)</li></ul>where <em>&lt;nominal-specification&gt;</em> and <em>&lt;date-format&gt;</em> are defined below. The keywords <strong>numeric</strong>, <strong>real</strong>, <strong>integer</strong>, <strong>string</strong> and <strong>date</strong> are case insensitive.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:28:&lt;h3&gt; --><h3 id="toc5"><a name="Examples-The @attribute Declarations-Numeric attributes"></a><!-- ws:end:WikiTextHeadingRule:28 --> Numeric attributes </h3>
+Numeric attributes can be real or integer numbers.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:30:&lt;h3&gt; --><h3 id="toc6"><a name="Examples-The @attribute Declarations-Nominal attributes"></a><!-- ws:end:WikiTextHeadingRule:30 --> Nominal attributes </h3>
+Nominal values are defined by providing an &lt;nominal-specification&gt; listing the possible values: {&lt;nominal-name1&gt;, &lt;nominal-name2&gt;, &lt;nominal-name3&gt;, ...}<br />
+<br />
+For example, the class value of the Iris dataset can be defined as follows:<br />
+<!-- ws:start:WikiTextCodeRule:4:
+&lt;pre class=&quot;text&quot;&gt;    @ATTRIBUTE class        {Iris-setosa,Iris-versicolor,Iris-virginica}&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @ATTRIBUTE class        {Iris-setosa,Iris-versicolor,Iris-virginica}</pre>
+
+<!-- ws:end:WikiTextCodeRule:4 -->Values that contain spaces must be quoted.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:32:&lt;h3&gt; --><h3 id="toc7"><a name="Examples-The @attribute Declarations-String attributes"></a><!-- ws:end:WikiTextHeadingRule:32 --> String attributes </h3>
+String attributes allow us to create attributes containing arbitrary textual values. This is very useful in text-mining applications, as we can create datasets with string attributes, then write Weka Filters to manipulate strings (like <tt>StringToWordVectorFilter</tt>). String attributes are declared as follows:<br />
+<!-- ws:start:WikiTextCodeRule:5:
+&lt;pre class=&quot;text&quot;&gt;    @ATTRIBUTE LCC    string&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @ATTRIBUTE LCC    string</pre>
+
+<!-- ws:end:WikiTextCodeRule:5 --><br />
+<!-- ws:start:WikiTextHeadingRule:34:&lt;h3&gt; --><h3 id="toc8"><a name="Examples-The @attribute Declarations-Date attributes"></a><!-- ws:end:WikiTextHeadingRule:34 --> Date attributes </h3>
+Date attribute declarations take the form:<br />
+<!-- ws:start:WikiTextCodeRule:6:
+&lt;pre class=&quot;text&quot;&gt;    @attribute &amp;lt;name&amp;gt; date [&amp;lt;date-format&amp;gt;]&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @attribute &lt;name&gt; date [&lt;date-format&gt;]</pre>
+
+<!-- ws:end:WikiTextCodeRule:6 -->where &lt;name&gt; is the name for the attribute and <em>&lt;date-format&gt;</em> is an optional string specifying how date values should be parsed and printed (this is the same format used by <tt>SimpleDateFormat</tt>). The default format string accepts the ISO-8601 combined date and time format: <tt>yyyy-MM-dd'T'HH:mm:ss</tt>. Check out the Javadoc of the <tt><a class="wiki_link_ext" href="http://java.sun.com/j2se/1.4.2/docs/api/java/text/SimpleDateFormat.html" rel="nofollow">java.text.SimpleDateFormat</a></tt> class for supported character patterns.<br />
+<br />
+Dates must be specified in the data section as the corresponding string representations of the date/time (see example below).<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:36:&lt;h3&gt; --><h3 id="toc9"><a name="Examples-The @attribute Declarations-Relational attributes"></a><!-- ws:end:WikiTextHeadingRule:36 --> Relational attributes </h3>
+Relational attribute declarations take the form:<br />
+<!-- ws:start:WikiTextCodeRule:7:
+&lt;pre class=&quot;text&quot;&gt;    @attribute &amp;lt;name&amp;gt; relational&lt;br/&gt;      &amp;lt;further attribute definitions&amp;gt;&lt;br/&gt;    @end &amp;lt;name&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @attribute &lt;name&gt; relational
+      &lt;further attribute definitions&gt;
+    @end &lt;name&gt;</pre>
+
+<!-- ws:end:WikiTextCodeRule:7 -->For the multi-instance dataset <em>MUSK1</em> the definition would look like this (<strong>&quot;...&quot;</strong> denotes an omission):<br />
+<!-- ws:start:WikiTextCodeRule:8:
+&lt;pre class=&quot;text&quot;&gt; @attribute molecule_name {MUSK-jf78,...,NON-MUSK-199}&lt;br/&gt; @attribute bag relational&lt;br/&gt;   @attribute f1 numeric&lt;br/&gt;   ...&lt;br/&gt;   @attribute f166 numeric&lt;br/&gt; @end bag&lt;br/&gt; @attribute class {0,1}&lt;br/&gt; ...&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text"> @attribute molecule_name {MUSK-jf78,...,NON-MUSK-199}
+ @attribute bag relational
+   @attribute f1 numeric
+   ...
+   @attribute f166 numeric
+ @end bag
+ @attribute class {0,1}
+ ...</pre>
+
+<!-- ws:end:WikiTextCodeRule:8 --><br />
+<!-- ws:start:WikiTextHeadingRule:38:&lt;h2&gt; --><h2 id="toc10"><a name="Examples-The ARFF Data Section"></a><!-- ws:end:WikiTextHeadingRule:38 --> The ARFF Data Section </h2>
+The ARFF Data section of the file contains the data declaration line and the actual instance lines.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:40:&lt;h2&gt; --><h2 id="toc11"><a name="Examples-The @data Declaration"></a><!-- ws:end:WikiTextHeadingRule:40 --> The @data Declaration</h2>
+The <strong>@data</strong> declaration is a single line denoting the start of the data segment in the file. The format is:<br />
+<!-- ws:start:WikiTextCodeRule:9:
+&lt;pre class=&quot;text&quot;&gt;    @data&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @data</pre>
+
+<!-- ws:end:WikiTextCodeRule:9 --><br />
+<!-- ws:start:WikiTextHeadingRule:42:&lt;h2&gt; --><h2 id="toc12"><a name="Examples-The instance data"></a><!-- ws:end:WikiTextHeadingRule:42 --> The instance data </h2>
+Each instance is represented on a single line, with carriage returns denoting the end of the instance.  A percent sign (%) introduces a comment, which continues to the end of the line.<br />
+<br />
+Attribute values for each instance can be delimited by commas or tabs. A comma/tab may be followed by zero or more spaces. Attribute values must appear in the order in which they were declared in the header section (i.e., the data corresponding to the nth <strong>@attribute</strong> declaration is always the nth field of the attribute).<br />
+<br />
+A missing value is represented by a single question mark, as in:<br />
+<!-- ws:start:WikiTextCodeRule:10:
+&lt;pre class=&quot;text&quot;&gt;    @data&lt;br/&gt;    4.4,?,1.5,?,Iris-setosa&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @data
+    4.4,?,1.5,?,Iris-setosa</pre>
+
+<!-- ws:end:WikiTextCodeRule:10 -->Values of string and nominal attributes are case sensitive, and any that contain space or the comment-delimiter character % must be quoted.  (The code suggests that double-quotes are acceptable and that a backslash will escape individual characters.)  An example follows:<br />
+<!-- ws:start:WikiTextCodeRule:11:
+&lt;pre class=&quot;text&quot;&gt;    @relation LCCvsLCSH&lt;br/&gt;    &lt;br/&gt;    @attribute LCC string&lt;br/&gt;    @attribute LCSH string&lt;br/&gt;    &lt;br/&gt;    @data&lt;br/&gt;    AG5,   'Encyclopedias and dictionaries.;Twentieth century.'&lt;br/&gt;    AS262, 'Science &amp;#45;- Soviet Union &amp;#45;- History.'&lt;br/&gt;    AE5,   'Encyclopedias and dictionaries.'&lt;br/&gt;    AS281, 'Astronomy, Assyro-Babylonian.;Moon &amp;#45;- Phases.'&lt;br/&gt;    AS281, 'Astronomy, Assyro-Babylonian.;Moon &amp;#45;- Tables.'&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @relation LCCvsLCSH
+&nbsp;
+    @attribute LCC string
+    @attribute LCSH string
+&nbsp;
+    @data
+    AG5,   'Encyclopedias and dictionaries.;Twentieth century.'
+    AS262, 'Science -- Soviet Union -- History.'
+    AE5,   'Encyclopedias and dictionaries.'
+    AS281, 'Astronomy, Assyro-Babylonian.;Moon -- Phases.'
+    AS281, 'Astronomy, Assyro-Babylonian.;Moon -- Tables.'</pre>
+
+<!-- ws:end:WikiTextCodeRule:11 -->Dates must be specified in the data section using the string representation specified in the attribute declaration. For example:<br />
+<!-- ws:start:WikiTextCodeRule:12:
+&lt;pre class=&quot;text&quot;&gt;    @RELATION Timestamps&lt;br/&gt;    &lt;br/&gt;    @ATTRIBUTE timestamp DATE &amp;quot;yyyy-MM-dd HH:mm:ss&amp;quot;&lt;br/&gt;    &lt;br/&gt;    @DATA &lt;br/&gt;    &amp;quot;2001-04-03 12:12:12&amp;quot;&lt;br/&gt;    &amp;quot;2001-05-03 12:59:55&amp;quot;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @RELATION Timestamps
+&nbsp;
+    @ATTRIBUTE timestamp DATE &quot;yyyy-MM-dd HH:mm:ss&quot;
+&nbsp;
+    @DATA 
+    &quot;2001-04-03 12:12:12&quot;
+    &quot;2001-05-03 12:59:55&quot;</pre>
+
+<!-- ws:end:WikiTextCodeRule:12 -->Relational data must be enclosed within double quotes <em>&quot;</em>. For example an instance of the <em>MUSK1</em> dataset (<em>&quot;...&quot;</em> denotes an omission):<br />
+<!-- ws:start:WikiTextCodeRule:13:
+&lt;pre class=&quot;text&quot;&gt; MUSK-188,&amp;quot;42,...,30&amp;quot;,1&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text"> MUSK-188,&quot;42,...,30&quot;,1</pre>
+
+<!-- ws:end:WikiTextCodeRule:13 --><br />
+<!-- ws:start:WikiTextHeadingRule:44:&lt;h1&gt; --><h1 id="toc13"><a name="Sparse ARFF files"></a><!-- ws:end:WikiTextHeadingRule:44 --> Sparse ARFF files </h1>
+Sparse ARFF files are very similar to ARFF files, but data with value 0 are not be explicitly represented.<br />
+<br />
+Sparse ARFF files have the same header (i.e <strong>@relation</strong> and <strong>@attribute</strong> tags) but the data section is different. Instead of representing each value in order, like this:<br />
+<!-- ws:start:WikiTextCodeRule:14:
+&lt;pre class=&quot;text&quot;&gt;    @data&lt;br/&gt;    0, X, 0, Y, &amp;quot;class A&amp;quot;&lt;br/&gt;    0, 0, W, 0, &amp;quot;class B&amp;quot;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @data
+    0, X, 0, Y, &quot;class A&quot;
+    0, 0, W, 0, &quot;class B&quot;</pre>
+
+<!-- ws:end:WikiTextCodeRule:14 -->the non-zero attributes are explicitly identified by attribute number and their value stated, like this:<br />
+<!-- ws:start:WikiTextCodeRule:15:
+&lt;pre class=&quot;text&quot;&gt;    @data&lt;br/&gt;    {1 X, 3 Y, 4 &amp;quot;class A&amp;quot;}&lt;br/&gt;    {2 W, 4 &amp;quot;class B&amp;quot;}&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @data
+    {1 X, 3 Y, 4 &quot;class A&quot;}
+    {2 W, 4 &quot;class B&quot;}</pre>
+
+<!-- ws:end:WikiTextCodeRule:15 -->Each instance is surrounded by curly braces, and the format for each entry is: &lt;index&gt; &lt;space&gt; &lt;value&gt; where index is the attribute index (starting from 0).<br />
+<br />
+Note that the omitted values in a sparse instance are 0, they are not &quot;missing&quot; values! If a value is unknown, you must explicitly represent it with a question mark (?).<br />
+<br />
+<strong>Warning:</strong> There is a known problem saving SparseInstance objects from datasets that have string attributes. In Weka, string and nominal data values are stored as numbers; these numbers act as indexes into an array of possible attribute values (this is very efficient). However, the first string value is assigned index 0: this means that, internally, this value is stored as a 0. When a SparseInstance is written, string instances with internal value 0 are not output, so their string value is lost (and when the arff file is read again, the default value 0 is the index of a different string value, so the attribute value appears to change). To get around this problem, add a dummy string value at index 0 that is never used whenever you declare string attributes that are likely to be used in SparseInstance objects and saved as Sparse ARFF files.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:46:&lt;h1&gt; --><h1 id="toc14"><a name="Instance weights in ARFF files"></a><!-- ws:end:WikiTextHeadingRule:46 --> Instance weights in ARFF files </h1>
+This feature exists in versions of Weka &gt;= 3.5.8.<br />
+<br />
+A weight can be associated with an instance in a standard ARFF file by appending it to the end of the line for that instance and enclosing the value in curly braces. E.g:<br />
+<!-- ws:start:WikiTextCodeRule:16:
+&lt;pre class=&quot;text&quot;&gt;    @data&lt;br/&gt;    0, X, 0, Y, &amp;quot;class A&amp;quot;, {5}&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @data
+    0, X, 0, Y, &quot;class A&quot;, {5}</pre>
+
+<!-- ws:end:WikiTextCodeRule:16 -->For a sparse instance, this example would look like:<br />
+<!-- ws:start:WikiTextCodeRule:17:
+&lt;pre class=&quot;text&quot;&gt;    @data&lt;br/&gt;    {1 X, 3 Y, 4 &amp;quot;class A&amp;quot;}, {5}&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">    @data
+    {1 X, 3 Y, 4 &quot;class A&quot;}, {5}</pre>
+
+<!-- ws:end:WikiTextCodeRule:17 -->Note that any instance without a weight value specified is assumed to have a weight of 1 for backwards compatibility.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:48:&lt;h1&gt; --><h1 id="toc15"><a name="See also"></a><!-- ws:end:WikiTextHeadingRule:48 --> See also </h1>
+<ul><li><a class="wiki_link" href="/Add%20weights%20to%20dataset">Add weights to dataset</a></li><li><a class="wiki_link" href="/ARFF%20Syntax%20Highlighting">ARFF Syntax Highlighting</a> for various editors</li></ul><br />
+<!-- ws:start:WikiTextHeadingRule:50:&lt;h1&gt; --><h1 id="toc16"><a name="Links"></a><!-- ws:end:WikiTextHeadingRule:50 --> Links </h1>
+<ul><li><a class="wiki_link_ext" href="http://www.iso.org/iso/en/prods-services/popstds/datesandtime.html" rel="nofollow">ISO-8601</a></li><li>Javadoc of <tt><a class="wiki_link_ext" href="http://java.sun.com/j2se/1.4.2/docs/api/java/text/SimpleDateFormat.html" rel="nofollow">java.text.SimpleDateFormat</a></tt> (lists the supported character patterns)</li><li><a class="wiki_link_ext" href="https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2008-January/012153.html" rel="nofollow">ANTLR syntax</a> by Staal A. Vinterbo <!-- ws:start:WikiTextFileRule:107:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/file/arff.g?h=52&amp;w=320&quot; class=&quot;WikiFile&quot; id=&quot;wikitext@@file@@arff.g&quot; title=&quot;File: arff.g&quot; width=&quot;320&quot; height=&quot;52&quot; /&gt; --><div class="objectEmbed"><a href="/file/view/arff.g/82916685/arff.g" onclick="ws.common.trackFileLink('/file/view/arff.g/82916685/arff.g');"><img src="http://c1.wikicdn.com/i/mime/32/text/x-c.png" height="32" width="32" alt="arff.g" /></a><div><a href="/file/view/arff.g/82916685/arff.g" onclick="ws.common.trackFileLink('/file/view/arff.g/82916685/arff.g');" class="filename" title="arff.g">arff.g</a><br /><ul><li><a href="/file/detail/arff.g">Details</a></li><li><a href="/file/view/arff.g/82916685/arff.g">Download</a></li><li style="color: #666">8 KB</li></ul></div></div><!-- ws:end:WikiTextFileRule:107 --></li></ul>
+  </div>
+
+<div id="pageEditor" class="editorWrapper editorLayer">
+  <iframe id="target_editor" name="target_editor" src="/s/blank.html" style="width:0px;height:0px;border:0"></iframe>
+    <form action="/page/edit/ARFF+%28stable+version%29" method="post" class="editorForm" id="editorForm"><input type="hidden" name="wikispacesFormToken" value="c3294c0dd1a00041dbeb20800a76b6d9b1b2e1ef"/><div class="wsh"><input type="text" class="form-control" name="wikispaces_user_id" value="user-1529733519"/></div><div class="jowic"><input type="text" class="form-control" name="goto" autocomplete = "off"/></div><div class="jovise"><input type="text" class="form-control" name="mode" autocomplete = "off"/></div><div class="mimw"><input type="text" class="form-control" name="version" autocomplete = "off"/></div><div class="jowic"><input type="text" class="form-control" name="pageComments" autocomplete = "off"/></div><div class="wsh"><input type="text" class="form-control" name="saveAndContinue" autocomplete = "off"/></div><div class="mimw"><input type="text" class="form-control" name="comment" autocomplete = "off"/></div><div class="jowic"><input type="text" class="form-control" name="commentsDisabled" autocomplete = "off"/></div><div class="jovise"><input type="text" class="form-control" name="contentPresent" autocomplete = "off"/></div><div class="wsh"><input type="text" class="form-control" name="editorCleanup" autocomplete = "off"/></div><div class="jovise"><input type="text" class="form-control" name="WikispacesEditorContent" autocomplete = "off"/></div><input type="hidden" name="wikispacesASFormToken" value="3d782924d631ff752e526bbf1252482c3f57e675"/>
+    <input type="hidden" title="goto" name="7f8509f6b3027e3fa6a61b9ae89ddc9f07193776" value=""/>
+    <input type="hidden" title="mode" name="0591b1d80f58cb9fd9b90b8f5577bbb716c5e896" autocomplete="off" value="visual"/>
+    <input type="hidden" title="version" name="1bae47ca90480a2fb76578282d13f11f583d53a5" autocomplete="off" value="562015917"/>
+    <input type="hidden" title="pageComments" name="8b3df1c2f0e55ace08c47de9d6b091c4803a69fc" autocomplete="off" value=""/>
+    <input type="hidden" title="saveAndContinue" name="e69fad2f17fce178d68c3eccaaae30da01a207fe" value="0"/>
+    <input type="hidden" title="comment" name="1a2a9f3c5c4949314ef27854125e865281ae1795" value=""/>
+    <input type="hidden" title="commentsDisabled" name="aac9e93e701be960bbe9403f27b8e4a22735e5f8" autocomplete="off" value=""/>
+    <input type="hidden" title="contentPresent" name="009137629a500ad40274ca6b7a7d1011328d8d38" autocomplete="off" value=""/>
+    <input type="hidden" title="editorCleanup" name="b267c534a398fb0d0177509394c8f7aefd93d7cb" autocomplete="off" value=""/>
+
+    <textarea id="wsMainEditor" title="content" class="noContentHide" name="2b044dddc2b5f32ce755966ea0891c4f09f892cb" style="width: 100%; position: absolute; top: -50000px; left: -50000px;" autocomplete="off"></textarea>
+
+  <noscript>
+    <h2>Javascript Required</h2>
+    <p>You need to enable Javascript in your browser to edit pages.</p>
+  </noscript>
+
+  </form>
+  
+  
+  <div id="plainTextEditor" style="position:relative;display:none" class="editorLayer" >
+    <textarea id="textEditor" class="autogrow"></textarea>
+    <p style="clear:both;" align="right"><a href="http://helpcenter.wikispaces.com/customer/portal/articles/1959131-wikitext">help on how to format text</a></p>
+  </div>
+</div>
+
+
+
+
+  </div>
+  <div class="commentColumn WikispacesStream"><div class="WikispacesContent WikispacesBs3"><div class="commentList"></div></div></div>
+</div>
+
+  
+
+
+
+
+<script type="text/template" id="js-event-template">
+  <small>
+    <%- startDateShortFormat %>
+    <a href="<%- ws.common.pathFor('event', 'view', id) %>" class="WikispacesDialogLink">
+      <%- ws.common.truncate(title, 15) %>
+    </a>
+  </small>
+</script>
+
+<script type="text/template" id="js-reply-template">
+  <div class="tc-timeline-comment media">
+
+    <a class="pull-left userLink" href="<%- userCreated.url %>">
+      <img src="<%- userCreated.imageUrl %>" width="30" height="30" class="author-avatar" alt="" />
+    </a>
+    <div class="media-body" data-id="<%= id %>">
+      <% if (ws.context.user.canAdministerWiki) { %>
+        <i class="tc-delete-comment fa fa-trash-o contextual-command destroy-message ws-tip" title="Delete reply"></i>
+      <% } %>
+      <div class="tc-box-name-date">
+        <span class="tc-commenter"><a href="<%- userCreated.url %>"><%- userCreated.username %></a></span>
+        <% if (smartDate == '__live__') { %>
+        <abbr style="border-bottom-style: none;" class="timeago tc-comment-date" title="<%- (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+          <%- (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+        </abbr>
+        <% } else { %>
+          <abbr style="border-bottom-style: none;" class="tc-comment-date"><%- smartDate %></abbr>
+        <% } %>
+      </div>
+      <% if (body) { %>
+      <p>
+        <%= body %>
+      </p>
+      <% } %>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-share-template">
+  <div class="tc-timeline-block tc-<%= ws.stream.typeToBlockType(sharedType) %>-block" <%= (ws.stream.hideTimeline ? 'style="padding-left: 0px;"' : '') %>>
+
+    <% if (!ws.stream.hideTimeline) { %>
+      <div class="tc-timeline-icon">
+        <i class="fa fa-<%= ws.stream.typeToIcon(sharedType) %>"></i>
+      </div>
+      <div class="tc-timeline-triangle-man"></div>
+    <% } %>
+
+    <div class="tc-timeline-box" data-id="<%= id %>">
+      <div class="media">
+        <a class="pull-left userLink" href="<%- userCreated.url %>">
+          <img src="<%- userCreated.imageUrl %>" width="48" height="48" class="author-avatar media-object" alt="" />
+        </a>
+
+        <div class="media-body">
+
+          <div class="tc-stream-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <% if (ws.context.user.id) { %>
+              <li>
+                <a class="js-toggle-monitor" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-eye"></i>
+                  <span><%= monitored ? 'Start Monitoring' : 'Stop Monitoring' %></span>
+                </a>
+              </li>
+              <% } %>
+
+              <% if (ws.context.user.canAdministerWiki) { %>
+              <li>
+                <a class="js-toggle-lock" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-lock"></i>
+                  <span><%= locked ? 'Unlock Replies' : 'Lock Replies' %></span>
+                </a>
+              </li>
+              <% if (sharedType == 'discussion' || sharedType == 'comment' || sharedType == 'event') { %>
+              <li>
+                <a class="js-destroy-share" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-trash-o"></i>
+                  Delete <%= ws.stream.typeToName(sharedType) %>
+                </a>
+              </li>
+              <% } %>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="tc-timeline-box-header ws-reveal media-heading">
+              <h3 class="tc-box-title">
+              <% if (typeof adminLink !== 'undefined' && adminLink && ws.context.user.canAdministerWiki) { %>
+                <a href="<%- adminLink %>"><%- title %></a>
+              <% } else { %>
+                <%- title %>
+              <% } %>
+              <% if (typeof startDate !== 'undefined' && startDate) { %> - <%= startDateShortFormat %> <%= ws.stream.getYearFromStartDate(startDate) %><% } %>
+              </h3>
+              <div class="tc-box-name-date">
+                <% if (ws.context.instance.isTesClassroom) { %>
+                  <%- userCreated.username %>
+                <% } else { %>
+                  <a class="author-name" href="<%- userCreated.url %>"><%- userCreated.username %></a>
+                <% } %>
+                <% if (typeof recipients !== 'undefined' && recipients) { %>
+                  <i class="fa fa-angle-right"></i>
+                  <% if (typeof recipientsLink !== 'undefined') { %>
+                    <a href="<%- recipientsLink %>"><%- recipients %></a>
+                  <% } else { %>
+                    <span class="recipients"><%- recipients %></span>
+                  <% } %>
+                <% } %>
+                <% if (smartDate == '__live__') { %>
+                  <abbr style="border-bottom-style: none;" class="timeago tc-block-date" title="<%= (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+                    <%= (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+                  </abbr>
+                <% } else { %>
+                  <abbr style="border-bottom-style: none;" class="tc-block-date"><%- smartDate %></abbr>
+                <% } %>
+              </div>
+          </div>
+
+          <div class="<%= sharedType == 'comment' && !orphaned && !ws.stream.noCollapse ? 'hidden ' : '' %>tc-block-content">
+            <div class="clearfix">
+              <% if (typeof rangeActions !== 'undefined') { %>
+                <div class="tc-range-actions">
+                  <% for(var i = 0; i < rangeActions.length; i++) { %>
+                  <%= ws.stream.rangeActionTemplate(rangeActions[i]) %>
+                  <% } %>
+                </div>
+              <% } %>
+              <% if (description) { %>
+                <p><%= description %></p>
+              <% } %>
+            </div>
+          </div>
+
+          <% if (replyPages.length > 0 && !(replyPages.length === 1 && replyPages[0].digests.length === 0)) { %>
+            <div class="tc-timeline-comments">
+            <% for (var i = 0; i < replyPages.length; i++) { %>
+              <% if (i == 0 && replyPages[i].more) { %>
+                <a href="#" class="tc-show-more" onclick="ws.stream.pageReplies(<%= id %>, <%= replyPages[i].page + 1 %>); return false">Show more replies (<%= replyPages[i].more %> hidden) </a>
+              <% } else { %>
+                <div></div>
+              <% } %>
+              <% for (var j = 0; j < replyPages[i].digests.length; j++) { %>
+                <%= ws.stream.replyTemplate(replyPages[i].digests[j]) %>
+              <% } %>
+            <% } %>
+            </div>
+          <% } %>
+
+          <% if ((ws.stream.userCanPostMessage && !locked) || ws.context.user.canAdministerWiki) { %>
+          <div class="tc-add-comment media <%= ws.stream.noCollapse ? 'add-active' : ''%>">
+            <img src="<%- ws.context.user.imageUrlPrefix %>lg.jpg" width="30" height="30" class="pull-left author-avatar" alt="" />
+            <div class="media-body">
+              <textarea name="reply" placeholder="Comment" class="form-control form-control-tc ws-reveal <%= !ws.stream.noCollapse ? 'ws-unrevealed' : ''%> reply" /></textarea>
+              <button type="button" class="btn-tc btn-info-tc btn-sm-tc add-reply">Post</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-range-action-template">
+  <div>
+    <strong><%- name %></strong>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      <a href="<%- diffUrl %>">
+    <% } %>
+    <%= new Date(dateCreated * 1000).toLocaleString() %>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      </a>
+    <% } %>
+    <% if (typeof(rangeText) !== 'undefined') { %>
+      <div>
+        <span class="commentExtent">
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          <a href="<%- diffUrl %>">
+        <% } %>
+        <%= rangeText %>
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          </a>
+        <% } %>
+        </span>
+      </div>
+    <% } %>
+  </div>
+</script>
+
+<script type="text/template" id="js-stream-end-template">
+  <div class="tc-timeline-block tc-end-block">
+    <div class="tc-timeline-icon" style="margin-top: -10px;" />
+    <div class="tc-timeline-box" style="visibility: hidden;">
+      <p class="tc-box-title"></p>
+    </div>
+  </div>
+</script>
+
+<a name="discussion"></a>
+<div class="timeline WikispacesBs3 tc-timeline-embedded show-border">
+  <div class="timeline-line"></div>
+    <div id="js-share-list">
+    <div class="spinner hidden"><i class="fa fa-spinner fa-spin"></i></div>
+  </div>
+</div></div></div><div id="sentinel" style="clear:both"></div>        </div>
+      </main>
+    </div>
+  </div>
+</div>
+
+<footer class="ws-theme-footer" role="contentinfo">
+  <div class="ws-theme-container">
+    <div class="ws-theme-footer-inner">
+      <div class="WikiFooterNav WikiElement">
+<a href="http://helpcenter.wikispaces.com/" rel="nofollow" class="js-help-trigger">Help</a> &middot;
+<a href="http://www.wikispaces.com/about">About</a> &middot;
+<a href="http://www.wikispaces.com/content/pricing" rel="nofollow">Pricing</a> &middot;
+<a href="http://www.wikispaces.com/privacy" rel="nofollow">Privacy</a> &middot;
+<a href="http://www.wikispaces.com/terms" rel="nofollow">Terms</a> &middot;
+<a href="http://www.wikispaces.com/site/help?url=http%3A%2F%2Fweka.wikispaces.com%2FARFF%2B%2528stable%2Bversion%2529" rel="nofollow"><strong>Support</strong></a> &middot;
+<a href="/space/subscribe/upgrade"><strong>Upgrade</strong></a>
+</div>      <div class="WikiLicense WikiElement">Contributions to http://weka.wikispaces.com/ are licensed under a <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0">Creative Commons Attribution Share-Alike 3.0 License</a>. <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0"><img src="http://www.wikispaces.com/i/creativecommons/by-sa_3.0_80x15.png" width="85" height="15" alt="Creative Commons Attribution Share-Alike 3.0 License"/></a><br />Portions not contributed by visitors are Copyright 2018 Tangient LLC<br /><a href="https://www.tes.com/us/?utm_source=wikispaces&utm_medium=link&utm_campaign=US-52-footer">TES: The largest network of teachers in the world</a></div>    </div>
+  </div>
+</footer>
+
+
+<script type="text/template" id="dialog-template">
+<div class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+        <h4 class="modal-title"><%= header %></h4>
+      </div>
+      <div class="modal-body">
+        <%= body %>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+
+<div id="js-help-template" class="hidden">
+  <div class="ws-help">
+    <div class="js-help-controls WikispacesContent WikispacesBs3">
+      <a href="http://www.wikispaces.com/site/gettingstarted/off" class="btn btn-default hidden js-getting-started-off pull-right">Turn off "Getting Started"</a>
+      <ol class="breadcrumb">
+        <li class="js-special-breadcrumb active">
+          <a href="http://helpcenter.wikispaces.com/" data-breadcrumb="0">Home</a>
+        </li>
+        <li class="js-ellipsis hidden js-special-breadcrumb">
+          ...
+        </li>
+        <li class="js-spinner hidden js-special-breadcrumb"><i class="fa fa-spinner fa-spin"></i></li>
+      </ol>
+    </div>
+    <div class="ws-help-content wiki">Loading...</div>
+  </div>
+</div>
+</div>
+<script src="http://www.wikispaces.com/s/gz/94kxjvkz-common.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/gz/70163536-editorc.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/gz/85k7018k-stream.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/gz/91k8z207-contentbar.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/gz/395j1vq7-component.stream-vo.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ws.namespace('ws.attributes');
+ws.namespace('ws.stream');
+ws.attributes.DISCUSSION_COUNT = 0;
+ws.attributes.pageId = 24758671;
+ws.attributes.version = 562015917;
+ws.attributes.showEditor = true;
+ws.attributes.editUrl = "http:\/\/weka.wikispaces.com\/page\/edit\/ARFF+%28stable+version%29?goto=http%3A%2F%2Fweka.wikispaces.com%2FARFF%2B%2528stable%2Bversion%2529";
+ws.attributes.userCanEdit = false;
+ws.stream.userCanPostMessage = false;
+ws.stream.hideTimeline = true;
+ws.stream.shareSource = "http:\/\/weka.wikispaces.com\/page\/shares\/ARFF+%28stable+version%29";
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+jQuery(document).ready(function() {
+  ws.common.addJsonNotices({"warning":[],"error":[],"info":[],"success":[]});
+});
+
+jQuery(document).ready(function() {
+  ws.common.addNotice("<script type=\"text\/javascript\">function wsDismissBanner() { ws.common.removeNotice();  ws.cookie.set(\"wsAnnouncement\", 1, {expires: 365 * 86400, domain: \".wikispaces.com\"}); return false;}$(\".ui-pnotify-closer\").remove();<\/script><i class=\"fa fa-times fa-fw ws-close\" onclick=\"wsDismissBanner();\"><\/i>It's time for us to say farewell\u2026 Regretfully, we've made the tough decision to close Wikispaces. Find out why, and what will happen, <a href='http:\/\/blog.wikispaces.com' target='_top'>here<a\/>", "warning");
+});
+
+jQuery(document).ready(function($) {
+  
+  function tipPlacement() {
+    return this.$element.closest('.ws-menu-bar .btn-group').is('.open') ? 'top' : 'bottom';
+  }
+
+  
+
+  $('.ws-menu-bar').each(function() {
+    var $menuBar = $(this);
+    var $tagDropdown = $menuBar.find('.ws-tag-dropdown-menu');
+    $menuBar.find('.tipme').tooltip({placement: tipPlacement, container: '.ws-menu-bar'});
+
+    
+    $menuBar.find('.ws-btn-more').click(ws.common.makeLinkClickFunction(function(e) {
+      if ($(this).closest('.ws-menu-bar .btn-group').is('.open')) {
+        ws.common.hideMorePageBar();
+      } else {
+        ws.common.showMorePageBar();
+      }
+    }));
+
+    $menuBar.on('click', '.ws-tag-dropdown-toggle', ws.common.makeLinkClickFunction(function(e) {
+      if ($(this).closest('.ws-menu-bar .dropdown').is('.open')) {
+        ws.common.hideTagDropdown();
+      } else {
+        ws.common.showTagDropdown();
+      }
+    }));
+
+    $(document.body).click(function(e) {
+      var $target = $(e.target);
+      if (!$target.closest('.ws-more-menu').closest('.ws-menu-bar').is($menuBar)
+          || $target.closest('a').is('.WikispacesDialogLink')) {
+        ws.common.hideMorePageBar();
+      }
+      if ($tagDropdown.length && !$target.closest('.ws-tag-dropdown-menu').is($tagDropdown)) {
+        ws.common.hideTagDropdown();
+      }
+    });
+    
+  });
+});
+
+
+jQuery(document).ready(function($) {
+  $('.ws-more-menu').on('click', 'a', function(e) {
+    if ($(this).is('.disabled')) {
+      e.preventDefault();
+    }
+  });
+});
+
+
+jQuery(document).ready(function() {
+  ws.editor.canEdit = false;
+  var editUrl = 'http://weka.wikispaces.com/page/edit/ARFF+%28stable+version%29?goto=http%3A%2F%2Fweka.wikispaces.com%2FARFF%2B%2528stable%2Bversion%2529';
+
+  jQuery('#js-edit-from-template').change(function() {
+    window.location = ws.common.addUriParams(editUrl, [['template', jQuery(this).val()]]);
+  });
+});
+
+
+jQuery(document).ready(function() {
+  ws.editor.loadEditorLibs('http://www.wikispaces.com/site/editorlibs/en_US/11kk95v9.gz.js');
+});
+
+
+ws.editor.startEditor = function (moreCoreOptions, moreMainOptions) {
+  ws.editor.canEdit = true;
+
+  var coreOptions = {
+    'content_css': ['http://www.wikispaces.com/stylesheet/editori/217420326D.gz.css']
+  };
+
+  // The stylesheet is passed in as a string, turn it into an array
+  // Add bootstrap styles to the editor, if we are in a theme that has full screen bootstrap
+  if (jQuery('body').is('.WikispacesBs3')) {
+    coreOptions.content_css.push('http://www.wikispaces.com//s/internal-bootstrap-body.css');
+  }
+
+  var mainOptions = {
+    'wssave_cancel_url': '/ARFF+%28stable+version%29',
+    'wsimage_upload_url': 'http://weka.wikispaces.com/file/multiupload',
+    'wsimage_max_file_size_mb': '50',
+    'wsimage_page_view_group': ''
+  };
+
+  ws.editor.loadEditor(jQuery.extend(coreOptions, moreCoreOptions), jQuery.extend(mainOptions, moreMainOptions));
+};
+
+  var wikispaces_page_version = '562015917';
+
+  jQuery(document).ready(function() {
+    ws.editor.enableButtons();
+  });
+
+
+
+--></script><!-- w21 99 mem:2:13(29) wki:2:3(2) tot:99:99(1) -->
+
+</body>
+</html>

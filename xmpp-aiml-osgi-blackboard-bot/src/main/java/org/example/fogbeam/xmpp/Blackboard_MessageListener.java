@@ -62,7 +62,7 @@ public class Blackboard_MessageListener implements ChatMessageListener
 		// longer to generate an answer.
 		try
 		{
-			Thread.sleep( 5000 );
+			Thread.sleep( 1850 );
 		}
 		catch(Exception e )
 		{

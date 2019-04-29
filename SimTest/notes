@@ -1,0 +1,12 @@
+What's the idea here?
+
+* Simulation to test a hypothesis.  Given a MODEL of the world, if we are trying to explain something, and no
+existing rules satisfy the problem, the SPECULATE a new rule.  Then, use SIMULATION as a means of establishing
+the likelihood that the new rule is compatible with the MODEL as we know it today. If the new rule is
+"compatible enough" insert it into the MODEL and move forward. Remove the rule later if it is specifically
+invalidated.
+
+Note: what kind of simulation lets us do this? Numerical only, with something like a Monte Carlo
+approach, or do we need discrete event simulation, or "other"? Or some combination of all of the
+above.
+

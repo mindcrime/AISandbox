@@ -2,7 +2,7 @@
 
 mvn clean compile package
 sleep .5s
-ssh fogbeam-dev 'kill -9 $(ps -A | grep java | grep pts | cut -d " " -f 1)'
+ssh fogbeam-dev 'kill -9 $(ps -A | grep java | grep pts | cut -d " " -f 2)'
 sleep .5s
 ssh fogbeam-dev rm -rf  /home/aimlbot/felix-framework-4.0.2/felix-cache/
 sleep .5s

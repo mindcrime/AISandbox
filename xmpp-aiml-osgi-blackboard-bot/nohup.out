@@ -1,0 +1,2752 @@
+
+TigerVNC Viewer 64-bit v1.8.0
+Built on: 2017-05-17 05:45
+Copyright (C) 1999-2017 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+
+Sun Jul  8 01:03:51 2018
+ DecodeManager: Detected 8 CPU core(s)
+ DecodeManager: Creating 4 decoder thread(s)
+ CConn:       connected to host doctorfeelgood port 5900
+
+Sun Jul  8 01:03:52 2018
+ CConnection: Server supports RFB protocol version 3.8
+ CConnection: Using RFB protocol version 3.8
+ CConnection: Choosing security type None(1)
+ CConn:       Using pixel format depth 24 (32bpp) little-endian rgb888
+ CConn:       Using Tight encoding
+
+Sun Jul  8 01:04:01 2018
+ CConn:       Throughput 9298 kbit/s - changing to quality 6
+
+Sun Jul  8 01:04:02 2018
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:17:08 2018
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:17:10 2018
+ CConn:       Throughput 15976 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:17:12 2018
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:17:13 2018
+ CConn:       Throughput 15981 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:17:17 2018
+ CConn:       Throughput 15982 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:17:19 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:17:31 2018
+ CConn:       Throughput 15982 kbit/s - changing to quality 6
+
+Sun Jul  8 04:17:32 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:18:28 2018
+ CConn:       Throughput 15613 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:18:30 2018
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:18:31 2018
+ CConn:       Throughput 15985 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:18:35 2018
+ CConn:       Throughput 15928 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:19:56 2018
+ CConn:       Throughput 15796 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:20:05 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:20:57 2018
+ CConn:       Throughput 15947 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15990 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:20:58 2018
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:20:59 2018
+ CConn:       Throughput 15981 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16015 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15972 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:21:00 2018
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:21:14 2018
+ CConn:       Throughput 15976 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:21:15 2018
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16020 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:21:18 2018
+ CConn:       Throughput 15940 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16021 kbit/s - changing to quality 8
+
+Sun Jul  8 04:21:19 2018
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:21:20 2018
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15930 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:21:23 2018
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:21:28 2018
+ CConn:       Throughput 15733 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:21:29 2018
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:21:57 2018
+ CConn:       Throughput 15929 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:22:00 2018
+ CConn:       Throughput 16033 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:22:06 2018
+ CConn:       Throughput 15968 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:22:07 2018
+ CConn:       Throughput 15983 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15816 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:22:08 2018
+ CConn:       Throughput 16016 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:22:30 2018
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16015 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:26:10 2018
+ CConn:       Throughput 15989 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:26:44 2018
+ CConn:       Throughput 15519 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:26:46 2018
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15954 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:26:47 2018
+ CConn:       Throughput 15937 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15977 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:26:48 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:28:00 2018
+ CConn:       Throughput 15818 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15989 kbit/s - changing to quality 6
+
+Sun Jul  8 04:28:01 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16010 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:28:28 2018
+ CConn:       Throughput 15649 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:28:29 2018
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:28:41 2018
+ CConn:       Throughput 15932 kbit/s - changing to quality 6
+
+Sun Jul  8 04:28:42 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:28:43 2018
+ CConn:       Throughput 15977 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:30:21 2018
+ CConn:       Throughput 15661 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:30:23 2018
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:30:26 2018
+ CConn:       Throughput 15930 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:30:27 2018
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15989 kbit/s - changing to quality 6
+
+Sun Jul  8 04:30:28 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16010 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:30:33 2018
+ CConn:       Throughput 15973 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:30:34 2018
+ CConn:       Throughput 16010 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:30:35 2018
+ CConn:       Throughput 15964 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:31:57 2018
+ CConn:       Throughput 15086 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:02 2018
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16020 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:03 2018
+ CConn:       Throughput 15945 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:04 2018
+ CConn:       Throughput 15979 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16016 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:06 2018
+ CConn:       Throughput 15739 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:08 2018
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:09 2018
+ CConn:       Throughput 15986 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:10 2018
+ CConn:       Throughput 16015 kbit/s - changing to quality 8
+
+Sun Jul  8 04:32:11 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15797 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:12 2018
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:15 2018
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16010 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15987 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:19 2018
+ CConn:       Throughput 15993 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:20 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15989 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:21 2018
+ CConn:       Throughput 15887 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:24 2018
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:31 2018
+ CConn:       Throughput 15946 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:32 2018
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:34 2018
+ CConn:       Throughput 15930 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:32:37 2018
+ CConn:       Throughput 15956 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15985 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:33:58 2018
+ CConn:       Throughput 15957 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16019 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:33:59 2018
+ CConn:       Throughput 15837 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:00 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:02 2018
+ CConn:       Throughput 16019 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:05 2018
+ CConn:       Throughput 15941 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:06 2018
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16022 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:07 2018
+ CConn:       Throughput 15786 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:10 2018
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15968 kbit/s - changing to quality 6
+
+Sun Jul  8 04:34:11 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:13 2018
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:14 2018
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:17 2018
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:18 2018
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15939 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:19 2018
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:20 2018
+ CConn:       Throughput 15929 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:21 2018
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16022 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:22 2018
+ CConn:       Throughput 15843 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:24 2018
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15998 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+
+Sun Jul  8 04:34:25 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15957 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15993 kbit/s - changing to quality 6
+
+Sun Jul  8 04:34:26 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:27 2018
+ CConn:       Throughput 15584 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:31 2018
+ CConn:       Throughput 16016 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15965 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16023 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:32 2018
+ CConn:       Throughput 15947 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:33 2018
+ CConn:       Throughput 15923 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:34 2018
+ CConn:       Throughput 15968 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:35 2018
+ CConn:       Throughput 15989 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16025 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:37 2018
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16021 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:38 2018
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15923 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:39 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15986 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15957 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:34:40 2018
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15990 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:35:04 2018
+ CConn:       Throughput 15957 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:35:05 2018
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:35:06 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:35:56 2018
+ CConn:       Throughput 15949 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:35:59 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:00 2018
+ CConn:       Throughput 15980 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16024 kbit/s - changing to quality 8
+
+Sun Jul  8 04:36:01 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16022 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15956 kbit/s - changing to quality 6
+
+Sun Jul  8 04:36:02 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16016 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:03 2018
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16037 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15902 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:04 2018
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15986 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:05 2018
+ CConn:       Throughput 16023 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:06 2018
+ CConn:       Throughput 15826 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:07 2018
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15950 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:20 2018
+ CConn:       Throughput 15537 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:22 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:23 2018
+ CConn:       Throughput 15917 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:24 2018
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:32 2018
+ CConn:       Throughput 15990 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16015 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15962 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:33 2018
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+
+Sun Jul  8 04:36:34 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15996 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:41 2018
+ CConn:       Throughput 15741 kbit/s - changing to quality 6
+
+Sun Jul  8 04:36:42 2018
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:44 2018
+ CConn:       Throughput 16031 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:53 2018
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+
+Sun Jul  8 04:36:54 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16020 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15984 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16023 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:55 2018
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:56 2018
+ CConn:       Throughput 15988 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:57 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15996 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15985 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15977 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:36:58 2018
+ CConn:       Throughput 16010 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15504 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:37:00 2018
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:37:02 2018
+ CConn:       Throughput 15897 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:37:05 2018
+ CConn:       Throughput 15960 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:37:46 2018
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:37:47 2018
+ CConn:       Throughput 15738 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:37:48 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:37:50 2018
+ CConn:       Throughput 15932 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:37:51 2018
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+
+Sun Jul  8 04:37:52 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15983 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:37:53 2018
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:37:54 2018
+ CConn:       Throughput 15996 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15977 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:37:56 2018
+ CConn:       Throughput 15949 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16010 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 14440 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:08 2018
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15945 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:09 2018
+ CConn:       Throughput 16027 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:13 2018
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15933 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+
+Sun Jul  8 04:38:14 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:15 2018
+ CConn:       Throughput 15990 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:16 2018
+ CConn:       Throughput 15990 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16025 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:17 2018
+ CConn:       Throughput 16016 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:18 2018
+ CConn:       Throughput 15954 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+
+Sun Jul  8 04:38:19 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16026 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:25 2018
+ CConn:       Throughput 15998 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16022 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15926 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:26 2018
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15980 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15996 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+
+Sun Jul  8 04:38:27 2018
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:40 2018
+ CConn:       Throughput 15785 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:42 2018
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15983 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:43 2018
+ CConn:       Throughput 15042 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:38:49 2018
+ CConn:       Throughput 16010 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:39:58 2018
+ CConn:       Throughput 15776 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:39:59 2018
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15962 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:40:00 2018
+ CConn:       Throughput 16022 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15850 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:40:02 2018
+ CConn:       Throughput 16024 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:40:03 2018
+ CConn:       Throughput 15989 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15981 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:40:04 2018
+ CConn:       Throughput 15786 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:40:05 2018
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 04:40:16 2018
+ CConn:       Throughput 15482 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:19:54 2018
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:19:56 2018
+ CConn:       Throughput 15993 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15996 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:19:57 2018
+ CConn:       Throughput 15981 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15958 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:02 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15973 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15931 kbit/s - changing to quality 6
+
+Sun Jul  8 05:20:03 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15980 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:04 2018
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:05 2018
+ CConn:       Throughput 15998 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16015 kbit/s - changing to quality 8
+
+Sun Jul  8 05:20:06 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15913 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:08 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:09 2018
+ CConn:       Throughput 15903 kbit/s - changing to quality 6
+
+Sun Jul  8 05:20:10 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:21 2018
+ CConn:       Throughput 15816 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:23 2018
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15979 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:24 2018
+ CConn:       Throughput 15988 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:25 2018
+ CConn:       Throughput 15990 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+
+Sun Jul  8 05:20:26 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15957 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:27 2018
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:39 2018
+ CConn:       Throughput 15955 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:40 2018
+ CConn:       Throughput 15779 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:41 2018
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15989 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15988 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15943 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:42 2018
+ CConn:       Throughput 16020 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:43 2018
+ CConn:       Throughput 15054 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:20:48 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15977 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:10 2018
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:11 2018
+ CConn:       Throughput 16030 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15981 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15984 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:12 2018
+ CConn:       Throughput 16026 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15936 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:13 2018
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15986 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+
+Sun Jul  8 05:21:14 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:17 2018
+ CConn:       Throughput 15965 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16024 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:20 2018
+ CConn:       Throughput 15998 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16029 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:21 2018
+ CConn:       Throughput 15974 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:22 2018
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15844 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:23 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:53 2018
+ CConn:       Throughput 15803 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:54 2018
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:56 2018
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:21:57 2018
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:06 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:07 2018
+ CConn:       Throughput 15936 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:08 2018
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:09 2018
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15924 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:10 2018
+ CConn:       Throughput 16019 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16033 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15993 kbit/s - changing to quality 6
+
+Sun Jul  8 05:22:11 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:15 2018
+ CConn:       Throughput 15978 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:21 2018
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16019 kbit/s - changing to quality 8
+
+Sun Jul  8 05:22:22 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15939 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15981 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:23 2018
+ CConn:       Throughput 16019 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15967 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:25 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:27 2018
+ CConn:       Throughput 15912 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:28 2018
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15987 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:29 2018
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15998 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16010 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15933 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:30 2018
+ CConn:       Throughput 16032 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15987 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:32 2018
+ CConn:       Throughput 15898 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:33 2018
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15982 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16021 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15972 kbit/s - changing to quality 6
+
+Sun Jul  8 05:22:34 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16023 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15996 kbit/s - changing to quality 6
+
+Sun Jul  8 05:22:35 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15878 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:36 2018
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15978 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15987 kbit/s - changing to quality 6
+
+Sun Jul  8 05:22:37 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15961 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:38 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:40 2018
+ CConn:       Throughput 15969 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16021 kbit/s - changing to quality 8
+
+Sun Jul  8 05:22:41 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15867 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:42 2018
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15971 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:57 2018
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:22:58 2018
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:23:00 2018
+ CConn:       Throughput 15969 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:23:02 2018
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:23:40 2018
+ CConn:       Throughput 15987 kbit/s - changing to quality 6
+
+Sun Jul  8 05:23:41 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15966 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15976 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15903 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:23:42 2018
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15821 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:23:44 2018
+ CConn:       Throughput 16031 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:23:45 2018
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16015 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15981 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16016 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15988 kbit/s - changing to quality 6
+
+Sun Jul  8 05:23:46 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:23:57 2018
+ CConn:       Throughput 15970 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15962 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:23:59 2018
+ CConn:       Throughput 16019 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15915 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:00 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15969 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:01 2018
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:02 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:14 2018
+ CConn:       Throughput 15891 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:15 2018
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:16 2018
+ CConn:       Throughput 15973 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16028 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15960 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16023 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15987 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:17 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:21 2018
+ CConn:       Throughput 15685 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:22 2018
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:33 2018
+ CConn:       Throughput 15954 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:34 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:35 2018
+ CConn:       Throughput 15996 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15986 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+
+Sun Jul  8 05:24:36 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15989 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:38 2018
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15926 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:39 2018
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15846 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:45 2018
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:54 2018
+ CConn:       Throughput 15957 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+
+Sun Jul  8 05:24:55 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15974 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+
+Sun Jul  8 05:24:56 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15985 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15967 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:24:57 2018
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15984 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15980 kbit/s - changing to quality 6
+
+Sun Jul  8 05:24:58 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15966 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15463 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:25:01 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:25:25 2018
+ CConn:       Throughput 15871 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:25:27 2018
+ CConn:       Throughput 15835 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:25:28 2018
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16021 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:25:32 2018
+ CConn:       Throughput 15873 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:25:36 2018
+ CConn:       Throughput 16026 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:25:42 2018
+ CConn:       Throughput 15935 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:25:46 2018
+ CConn:       Throughput 15893 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:25:47 2018
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15975 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:25:48 2018
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:06 2018
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:07 2018
+ CConn:       Throughput 16021 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:09 2018
+ CConn:       Throughput 15989 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15928 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+
+Sun Jul  8 05:26:10 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15998 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16021 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:12 2018
+ CConn:       Throughput 15962 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:13 2018
+ CConn:       Throughput 16028 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15981 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:14 2018
+ CConn:       Throughput 16023 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15993 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15989 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15923 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:15 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:24 2018
+ CConn:       Throughput 15981 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:25 2018
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15996 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15955 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:26 2018
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:27 2018
+ CConn:       Throughput 15972 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15986 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:28 2018
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:29 2018
+ CConn:       Throughput 15959 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:30 2018
+ CConn:       Throughput 15990 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15977 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:31 2018
+ CConn:       Throughput 16023 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15981 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16023 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:35 2018
+ CConn:       Throughput 15982 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16023 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:44 2018
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15947 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:49 2018
+ CConn:       Throughput 15988 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16020 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:51 2018
+ CConn:       Throughput 15832 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:52 2018
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:53 2018
+ CConn:       Throughput 15979 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15937 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:54 2018
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15975 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:26:55 2018
+ CConn:       Throughput 16026 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:18 2018
+ CConn:       Throughput 15969 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:19 2018
+ CConn:       Throughput 16020 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:21 2018
+ CConn:       Throughput 15950 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:22 2018
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15972 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:23 2018
+ CConn:       Throughput 15957 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15970 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15964 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:24 2018
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15970 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16015 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15961 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:25 2018
+ CConn:       Throughput 16015 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15993 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15973 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:26 2018
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15990 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16010 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:27 2018
+ CConn:       Throughput 15990 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:28 2018
+ CConn:       Throughput 15993 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16019 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:29 2018
+ CConn:       Throughput 15811 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:31 2018
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:33 2018
+ CConn:       Throughput 15974 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16023 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:34 2018
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15909 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:36 2018
+ CConn:       Throughput 15975 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16024 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:48 2018
+ CConn:       Throughput 15868 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+
+Sun Jul  8 05:27:49 2018
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:50 2018
+ CConn:       Throughput 15878 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:27:51 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:28:08 2018
+ CConn:       Throughput 15986 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:28:16 2018
+ CConn:       Throughput 15676 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:28:18 2018
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15942 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:28:19 2018
+ CConn:       Throughput 15935 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:28:20 2018
+ CConn:       Throughput 15990 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+
+Sun Jul  8 05:28:21 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15932 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:29:30 2018
+ CConn:       Throughput 15947 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+
+Sun Jul  8 05:29:31 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15939 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15981 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16018 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:29:53 2018
+ CConn:       Throughput 15923 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:29:54 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:29:55 2018
+ CConn:       Throughput 15881 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:29:56 2018
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:29:57 2018
+ CConn:       Throughput 15750 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:29:59 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:00 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15983 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:01 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15984 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16029 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15984 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:02 2018
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:03 2018
+ CConn:       Throughput 15968 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15986 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15962 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:04 2018
+ CConn:       Throughput 16016 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:05 2018
+ CConn:       Throughput 15842 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:06 2018
+ CConn:       Throughput 15984 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:07 2018
+ CConn:       Throughput 16020 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15985 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15934 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:08 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15846 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:10 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15793 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:11 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:42 2018
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16022 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:57 2018
+ CConn:       Throughput 15926 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:30:58 2018
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15985 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15993 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16022 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:00 2018
+ CConn:       Throughput 15990 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:01 2018
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:07 2018
+ CConn:       Throughput 15904 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:09 2018
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:11 2018
+ CConn:       Throughput 15853 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15982 kbit/s - changing to quality 6
+
+Sun Jul  8 05:31:12 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15966 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15973 kbit/s - changing to quality 6
+
+Sun Jul  8 05:31:13 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15986 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16021 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:14 2018
+ CConn:       Throughput 15971 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:21 2018
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:22 2018
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:25 2018
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:26 2018
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16027 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16028 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:27 2018
+ CConn:       Throughput 15961 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:28 2018
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:31:29 2018
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16025 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:32:02 2018
+ CConn:       Throughput 15987 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15711 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:32:05 2018
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:32:10 2018
+ CConn:       Throughput 15975 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:32:22 2018
+ CConn:       Throughput 15813 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:32:23 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15985 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16011 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15974 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:32:24 2018
+ CConn:       Throughput 15988 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:02 2018
+ CConn:       Throughput 15861 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:06 2018
+ CConn:       Throughput 16021 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15988 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15975 kbit/s - changing to quality 6
+
+Sun Jul  8 05:33:07 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:08 2018
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15983 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:09 2018
+ CConn:       Throughput 15898 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:10 2018
+ CConn:       Throughput 16029 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:12 2018
+ CConn:       Throughput 15971 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:14 2018
+ CConn:       Throughput 15978 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16023 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15985 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16020 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15979 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:15 2018
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15971 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15989 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:16 2018
+ CConn:       Throughput 15987 kbit/s - changing to quality 6
+
+Sun Jul  8 05:33:17 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15950 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16010 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:24 2018
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16026 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:28 2018
+ CConn:       Throughput 15996 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16015 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15908 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:29 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15913 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:30 2018
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15997 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15949 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:31 2018
+ CConn:       Throughput 16002 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15977 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:32 2018
+ CConn:       Throughput 16010 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:33 2018
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15941 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:34 2018
+ CConn:       Throughput 15999 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16026 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:35 2018
+ CConn:       Throughput 15966 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:33:55 2018
+ CConn:       Throughput 15645 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:03 2018
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15964 kbit/s - changing to quality 6
+
+Sun Jul  8 05:34:04 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16025 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15738 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:05 2018
+ CConn:       Throughput 16001 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:07 2018
+ CConn:       Throughput 15991 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16017 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:08 2018
+ CConn:       Throughput 15993 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16007 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15923 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:09 2018
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:33 2018
+ CConn:       Throughput 15977 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16003 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+
+Sun Jul  8 05:34:34 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16016 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:39 2018
+ CConn:       Throughput 15995 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:40 2018
+ CConn:       Throughput 16013 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15935 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16006 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:41 2018
+ CConn:       Throughput 15920 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16016 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:49 2018
+ CConn:       Throughput 15993 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16014 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15906 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:50 2018
+ CConn:       Throughput 16012 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15934 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16016 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:57 2018
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16025 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15848 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:34:58 2018
+ CConn:       Throughput 16005 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Sun Jul  8 05:35:04 2018
+ CConn:       Throughput 14950 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:04:06 2018
+ CConn:       Throughput 16294 kbit/s - changing to quality 8
+
+Mon Jul  9 23:04:07 2018
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:04:09 2018
+ CConn:       Throughput 15792 kbit/s - changing to quality 6
+
+Mon Jul  9 23:04:10 2018
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:04:12 2018
+ CConn:       Throughput 16008 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:04:17 2018
+ CConn:       Throughput 15994 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16004 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:04:21 2018
+ CConn:       Throughput 12908 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:10:40 2018
+ CConn:       Throughput 16071 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:10:44 2018
+ CConn:       Throughput 11012 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:11:52 2018
+ CConn:       Throughput 16044 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15795 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16024 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:11:53 2018
+ CConn:       Throughput 15764 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:12:31 2018
+ CConn:       Throughput 16054 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:12:33 2018
+ CConn:       Throughput 15685 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:12:44 2018
+ CConn:       Throughput 16033 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:12:45 2018
+ CConn:       Throughput 15053 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:12:56 2018
+ CConn:       Throughput 16111 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:12:57 2018
+ CConn:       Throughput 15442 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:13:12 2018
+ CConn:       Throughput 16042 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:13:13 2018
+ CConn:       Throughput 15920 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:13:15 2018
+ CConn:       Throughput 16131 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:13:17 2018
+ CConn:       Throughput 15324 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:13:35 2018
+ CConn:       Throughput 16046 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15918 kbit/s - changing to quality 6
+
+Mon Jul  9 23:13:36 2018
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:13:55 2018
+ CConn:       Throughput 16118 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:13:57 2018
+ CConn:       Throughput 15860 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:13:58 2018
+ CConn:       Throughput 16149 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:14:01 2018
+ CConn:       Throughput 15973 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:15:37 2018
+ CConn:       Throughput 16020 kbit/s - changing to quality 8
+
+Mon Jul  9 23:15:38 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15851 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:15:39 2018
+ CConn:       Throughput 16031 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15975 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16021 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:15:40 2018
+ CConn:       Throughput 15998 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:16:02 2018
+ CConn:       Throughput 16062 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15896 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16116 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:16:03 2018
+ CConn:       Throughput 15992 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:16:04 2018
+ CConn:       Throughput 16038 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15971 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16111 kbit/s - changing to quality 8
+
+Mon Jul  9 23:16:05 2018
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15183 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:17:20 2018
+ CConn:       Throughput 16047 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15470 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:17:35 2018
+ CConn:       Throughput 16009 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:17:37 2018
+ CConn:       Throughput 15835 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:17:40 2018
+ CConn:       Throughput 16042 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:17:45 2018
+ CConn:       Throughput 15858 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Mon Jul  9 23:17:48 2018
+ CConn:       Throughput 16068 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16000 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+ CConn:       Throughput 16095 kbit/s - changing to quality 8
+ CConn:       Using Tight encoding
+ CConn:       Throughput 15718 kbit/s - changing to quality 6
+ CConn:       Using Tight encoding
+
+Tue Jul 10 06:42:18 2018
+ CConn:       read: No route to host (113)
