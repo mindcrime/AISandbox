@@ -27,6 +27,11 @@ public class ObjectFIFO
 		return ( size == capacity );
 	}
 	
+	public synchronized boolean isEmpty()
+	{
+		return ( size == 0 );
+	}
+	
 	public synchronized void add( Object obj ) throws InterruptedException
 	{
 		while( isFull() )
