@@ -4,6 +4,7 @@ public class SimpleBlackboardFrame implements BlackboardFrame
 {
 	/* Non FIPA-ACL fields */
 	private String sourceTag;
+	private String sourceChannel;  // TODO: should we have an enum for this?
 	private double confidence;
 	boolean input;
 	boolean output;
@@ -31,6 +32,18 @@ public class SimpleBlackboardFrame implements BlackboardFrame
 		this.content = content;
 	}
 		
+	@Override
+	public String getSourceChannel()
+	{
+		return this.sourceChannel;
+	}
+	
+	@Override
+	public void setSourceChannel( String sourceChannel )
+	{
+		this.sourceChannel = sourceChannel;
+	}
+	
 	@Override
 	public String getSourceTag() 
 	{

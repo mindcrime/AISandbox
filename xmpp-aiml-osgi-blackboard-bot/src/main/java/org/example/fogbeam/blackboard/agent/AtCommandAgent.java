@@ -48,7 +48,8 @@ public class AtCommandAgent extends SimpleBlackboardAgent
 		} 
 		catch (ExecutionException e) 
 		{
-		} catch (TimeoutException e) 
+		} 
+		catch (TimeoutException e) 
 		{
 		}			
 	}

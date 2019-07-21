@@ -13,11 +13,19 @@ public interface BlackboardFrame
 	public void setConfidence( double confidence );
 	public double getConfidence();
 
-	/* can replace with FIPA-ACL 'sender' field?? */
+	/* SourceChannel would be something like (Auditory|Visual|Haptic|etc)
+	 * including "channels" for various kinds of sensors we might include
+	 * in an embodied bot. Humidity sensor, temperature sensor, ultrasonic
+	 * range detector, etc.  Also, should include something like "autonomic"
+	 * or "internal" for "self talk"
+	 */
+	public void setSourceChannel( String sourceChannel );
+	public String getSourceChannel();
+	
+	/* can replace with FIPA-ACL 'sender' field?? Or
+	 * does this mean something else... */
 	public void setSourceTag( String sourceTag );
 	public String getSourceTag();
-
-	
 	
 	/* FIPA_ACL fields */
 		
